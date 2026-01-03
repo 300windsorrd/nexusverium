@@ -13,15 +13,13 @@ export function Hero({ title, subtitle, ctaLabel, ctaHref }: HeroProps) {
     <section className="nv-reveal relative left-1/2 right-1/2 min-h-screen w-screen -ml-[50vw] -mr-[50vw] overflow-hidden rounded-none border border-[var(--nv-border)] bg-[radial-gradient(120%_120%_at_20%_0%,rgba(0,120,179,0.45)_0%,rgba(0,11,20,0.96)_60%)] shadow-[var(--shadow-card)]">
       <div className="absolute inset-0">
         <Image
-          src="/hero-water.svg"
-          alt="Wetlands with technology overlay"
+          src="/images/IMG-20260103-WA0003.jpg"
+          alt="Wetlands restoration scene"
           fill
           priority
           className="object-cover opacity-70"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-l from-[var(--nv-primary-strong)]/35 via-[var(--nv-bg)]/35 to-transparent" />
-        <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(0,210,255,0.18),transparent_55%)]" />
       </div>
       <div className="relative z-10 flex min-h-screen w-full flex-col justify-center px-6 py-10 sm:py-14 md:items-end md:px-10">
         <div className="w-full max-w-xl text-right md:ml-auto">
