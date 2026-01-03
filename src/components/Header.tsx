@@ -44,7 +44,7 @@ export function Header({ searchItems }: HeaderProps) {
             width={44}
             height={44}
             sizes="(min-width: 768px) 44px, (min-width: 640px) 40px, 36px"
-            className="h-9 w-9 rounded-full bg-white/70 object-cover shadow sm:h-10 sm:w-10 md:h-11 md:w-11"
+            className="h-9 w-9 rounded-full bg-white/70 object-cover sm:h-10 sm:w-10 md:h-11 md:w-11"
           />
           <div className="leading-tight">
             <span className="block text-xs uppercase tracking-[0.2em] text-[var(--nv-muted)]">
