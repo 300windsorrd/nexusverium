@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-labelledby="title desc">
+  <title>Biloxi brackish pilot</title>
+  <desc>Stylized water grid for Biloxi project</desc>
+  <defs>
+    <linearGradient id="p1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b3c7c"/>
+      <stop offset="100%" stop-color="#0f6fbf"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="320" fill="url(#p1)" rx="16"/>
+  <g stroke="#f6a623" stroke-width="3" opacity="0.5">
+    <path d="M60 200 Q200 150 420 210"/>
+    <path d="M80 240 Q240 190 400 240"/>
+  </g>
+  <text x="40" y="60" fill="#f6f8fb" font-size="20" font-family="Inter, Arial">Biloxi Pilot</text>
+</svg>

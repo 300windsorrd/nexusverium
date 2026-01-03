@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" role="img" aria-labelledby="title desc">
+  <title>Portrait placeholder for Partnerships</title>
+  <desc>Abstract portrait background with network motif</desc>
+  <defs>
+    <linearGradient id="t5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b2f5a"/>
+      <stop offset="100%" stop-color="#1b5fa7"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="320" fill="url(#t5)" rx="18"/>
+  <g opacity="0.45" stroke="#8bc4ff" stroke-width="2">
+    <circle cx="140" cy="150" r="30"/>
+    <circle cx="260" cy="140" r="26"/>
+    <circle cx="200" cy="210" r="34"/>
+    <path d="M170 150 L234 140"/>
+    <path d="M200 176 L200 210"/>
+  </g>
+  <circle cx="200" cy="150" r="54" fill="#0e2141" opacity="0.6"/>
+  <circle cx="200" cy="150" r="42" fill="#f6f8fb" opacity="0.85"/>
+  <text x="200" y="270" text-anchor="middle" fill="#f6f8fb" font-size="19" font-family="Inter, Arial, sans-serif">Partner</text>
+</svg>

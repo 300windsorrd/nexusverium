@@ -1,0 +1,104 @@
+[
+  {
+    "slug": "watershed-digital-twins",
+    "title": "Watershed Digital Twins",
+    "metaTitle": "Watershed Digital Twins | Nexus Verium Environmental AI",
+    "metaDescription": "AI-driven digital twins for wetlands and brackish water systems to simulate remediation pathways and reduce risk before field deployment.",
+    "h1": "AI digital twins for wetlands and brackish water",
+    "intro": "We build layered digital twins of estuaries and wetlands that blend satellite, sensor, and community inputs to test remediation moves before crews touch the field.",
+    "bullets": [
+      "Integrates water chemistry, flow dynamics, and habitat signals",
+      "Predictive scenarios to vet dredging, aeration, and planting plans",
+      "Dashboards for agencies and partners with evidence-first reporting"
+    ],
+    "processSteps": [
+      "Site intake and data stitching across historical + live sources",
+      "Hypothesis modeling using physics-informed AI",
+      "Interventions simulated with risk envelopes",
+      "Co-designed playbooks with field teams",
+      "Monitoring loops that refine the twin each sprint"
+    ],
+    "faq": [
+      {
+        "question": "What data do you need to start a digital twin?",
+        "answer": "We can start with as little as basin boundaries and historical flow/quality records. Higher fidelity comes from bathymetry, vegetation maps, and live sensors, which we help deploy if needed."
+      },
+      {
+        "question": "How do you validate the AI recommendations?",
+        "answer": "We benchmark against hydrologic models, run sensitivity analyses, and compare with small field pilots. We only ship interventions with defensible uncertainty ranges."
+      }
+    ],
+    "primaryKeywords": ["wetland digital twin", "brackish water AI", "environmental restoration simulation"],
+    "secondaryKeywords": ["hydrology model", "environmental engineering", "AI for sustainability"],
+    "schemaType": "Service",
+    "related": ["brackish-remediation-blueprints", "sensor-fusion-monitoring"]
+  },
+  {
+    "slug": "brackish-remediation-blueprints",
+    "title": "Brackish Remediation Blueprints",
+    "metaTitle": "Brackish Remediation Blueprints | Nexus Verium",
+    "metaDescription": "Gemini-assisted blueprints for brackish water clean-up, combining biomimicry structures, low-energy aeration, and adaptive planting.",
+    "h1": "Blueprints for faster brackish water recovery",
+    "intro": "We turn research on biomimicry reefs and oxygenation into actionable blueprints partners can pull off the shelf, adapting to site-specific constraints.",
+    "bullets": [
+      "Gemini-generated layouts and bills of materials",
+      "Phased interventions with community-safe rollouts",
+      "Instrumentation plan plus low-noise telemetry"
+    ],
+    "processSteps": [
+      "Assess salinity, flow, and contamination sources",
+      "Generate multi-option blueprints (reef-inspired, plant-first, aeration-first)",
+      "Safety checks and permitting notes",
+      "Implementation sprints with paired field engineers",
+      "Performance review with measurable deltas"
+    ],
+    "faq": [
+      {
+        "question": "Do the blueprints include permitting guidance?",
+        "answer": "We outline typical regulatory checkpoints and required studies; local counsel finalizes the submissions."
+      },
+      {
+        "question": "Can the designs use locally available materials?",
+        "answer": "Yes. We bias toward locally sourced media and modular components to reduce logistics and reuse existing infrastructure where practical."
+      }
+    ],
+    "primaryKeywords": ["brackish water remediation", "biomimicry reef design", "environmental engineering AI"],
+    "secondaryKeywords": ["wetland restoration", "sustainable water treatment", "AI blueprinting"],
+    "schemaType": "Service",
+    "related": ["watershed-digital-twins", "sensor-fusion-monitoring"]
+  },
+  {
+    "slug": "sensor-fusion-monitoring",
+    "title": "Sensor Fusion Monitoring",
+    "metaTitle": "Sensor Fusion Monitoring for Restoration | Nexus Verium",
+    "metaDescription": "Field-ready sensor fusion with AI-assisted QA to track restoration impact, reduce downtime, and keep data trustworthy.",
+    "h1": "Trustworthy monitoring for restoration sites",
+    "intro": "We combine edge sensors, satellite feeds, and manual sampling schedules so teams see quality trends without drowning in noisy data.",
+    "bullets": [
+      "Telemetry design for wetlands, estuaries, and canals",
+      "Anomaly detection tuned for low-and-slow environmental drift",
+      "Human-in-the-loop QA and transparent audit trails"
+    ],
+    "processSteps": [
+      "Gap assessment of existing sensing and sampling",
+      "Sensor and network design with redundancy",
+      "AI QA pipelines with drift and false-positive guards",
+      "Training for field teams on calibration and maintenance",
+      "Monthly reporting with restoration scorecards"
+    ],
+    "faq": [
+      {
+        "question": "Do you supply the hardware?",
+        "answer": "We are hardware-agnostic. We spec resilient vendors, integrate what you already have, and prioritize maintainability over novelty."
+      },
+      {
+        "question": "How is data secured?",
+        "answer": "Data is encrypted in transit and at rest, with role-based access and optional air-gapped exports for sensitive sites."
+      }
+    ],
+    "primaryKeywords": ["environmental monitoring", "sensor fusion AI", "wetland telemetry"],
+    "secondaryKeywords": ["data quality", "responsible AI", "field operations"],
+    "schemaType": "Service",
+    "related": ["watershed-digital-twins"]
+  }
+]

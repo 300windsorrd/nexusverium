@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 700" role="img" aria-labelledby="title desc">
+  <title>Wetland horizon illustration</title>
+  <desc>Soft gradient landscape suggesting wetlands and technology overlays</desc>
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0b2b50"/>
+      <stop offset="50%" stop-color="#0f3b6e"/>
+      <stop offset="100%" stop-color="#0b2b50"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f6fbf" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0b3c7c" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="700" fill="url(#sky)"/>
+  <rect y="260" width="1440" height="440" fill="url(#water)"/>
+  <circle cx="200" cy="180" r="90" fill="#ffffff" opacity="0.08"/>
+  <circle cx="1240" cy="140" r="140" fill="#ffffff" opacity="0.06"/>
+  <path d="M0 340 C200 310 360 330 540 350 C760 374 900 360 1180 330 C1320 316 1440 330 1440 330 L1440 420 L0 440 Z" fill="#0c4b8a" opacity="0.7"/>
+  <path d="M0 410 C260 440 560 430 740 420 C990 404 1180 426 1440 460 L1440 520 L0 520 Z" fill="#0a305d" opacity="0.8"/>
+  <g opacity="0.35" stroke="#8bc4ff" stroke-width="3" fill="none">
+    <path d="M200 520 Q340 420 520 500"/>
+    <path d="M520 500 Q700 600 900 480"/>
+    <path d="M900 480 Q1120 360 1300 450"/>
+    <circle cx="320" cy="460" r="30"/>
+    <circle cx="760" cy="430" r="40"/>
+    <circle cx="1120" cy="420" r="28"/>
+  </g>
+</svg>

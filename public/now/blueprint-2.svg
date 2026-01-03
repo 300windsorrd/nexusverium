@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-labelledby="title desc">
+  <title>AI blueprint concept</title>
+  <desc>Geometric blueprint with layered arcs</desc>
+  <defs>
+    <linearGradient id="b2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0b2746"/>
+      <stop offset="100%" stop-color="#1b5fa7"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" rx="20" fill="url(#b2)"/>
+  <g stroke="#8bc4ff" stroke-width="2" opacity="0.5">
+    <path d="M120 280 C180 140 420 140 480 280" fill="none"/>
+    <circle cx="200" cy="190" r="46"/>
+    <circle cx="360" cy="180" r="60"/>
+    <rect x="160" y="120" width="280" height="40" rx="8"/>
+  </g>
+</svg>

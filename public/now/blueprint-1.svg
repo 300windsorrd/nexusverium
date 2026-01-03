@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-labelledby="title desc">
+  <title>AI-generated blueprint placeholder</title>
+  <desc>Technical blueprint grid</desc>
+  <defs>
+    <linearGradient id="b1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c2f5c"/>
+      <stop offset="100%" stop-color="#0f6fbf"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" rx="20" fill="url(#b1)"/>
+  <g stroke="#8bc4ff" stroke-width="2" opacity="0.45">
+    <rect x="80" y="80" width="220" height="140" rx="8"/>
+    <rect x="320" y="110" width="180" height="80" rx="8"/>
+    <circle cx="230" cy="220" r="40"/>
+    <path d="M150 120 L430 190"/>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" role="img" aria-labelledby="title desc">
+  <title>Water clarity forecast</title>
+  <desc>Stylized graph lines</desc>
+  <defs>
+    <linearGradient id="r3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f3b6e"/>
+      <stop offset="100%" stop-color="#1b5fa7"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="220" rx="14" fill="url(#r3)"/>
+  <polyline points="40,170 100,140 160,150 220,110 280,130 340,90 380,110" fill="none" stroke="#8bc4ff" stroke-width="4" opacity="0.7"/>
+  <polyline points="40,150 100,120 180,130 240,90 300,120 360,80" fill="none" stroke="#f6a623" stroke-width="3" opacity="0.7"/>
+</svg>

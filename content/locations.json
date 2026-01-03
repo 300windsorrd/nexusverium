@@ -1,0 +1,89 @@
+[
+  {
+    "slug": "gulf-coast",
+    "title": "Gulf Coast Wetlands",
+    "metaTitle": "Gulf Coast Wetland Restoration AI | Nexus Verium",
+    "metaDescription": "AI-assisted restoration support for Gulf Coast wetlands facing salinity creep, storm surge, and infrastructure stress.",
+    "h1": "Gulf Coast restoration support",
+    "intro": "We help agencies along the Gulf Coast counter salinity creep and storm impacts with digital twins, blueprint kits, and on-the-ground monitoring.",
+    "bullets": [
+      "Models tuned for hurricanes and tidal push",
+      "Community updates in both English and Spanish",
+      "Partnerships with local universities and coastal labs"
+    ],
+    "processSteps": [
+      "Rapid data intake including historical surge events",
+      "Scenario modeling for levees, reefs, and planting",
+      "Deployment of monitoring kits with local crews",
+      "Monthly reporting with actionable adjustments",
+      "Shared learnings across Gulf partners"
+    ],
+    "faq": [
+      {"question": "Do you work with fisheries?", "answer": "Yes. We align with fisheries to ensure interventions protect livelihoods and habitats."},
+      {"question": "How local are your teams?", "answer": "We build mixed teams with local technicians and Nexus Verium engineers to keep knowledge in-region."}
+    ],
+    "primaryKeywords": ["Gulf Coast restoration", "brackish wetlands", "storm surge modeling"],
+    "secondaryKeywords": ["community engagement", "digital twin", "coastal resilience"],
+    "schemaType": "Service",
+    "location": {"city": "Biloxi", "region": "MS", "country": "USA"},
+    "related": ["watershed-digital-twins", "brackish-remediation-blueprints"]
+  },
+  {
+    "slug": "chesapeake-bay",
+    "title": "Chesapeake Bay",
+    "metaTitle": "Chesapeake Bay Water Quality AI | Nexus Verium",
+    "metaDescription": "Sensor fusion and AI QA to reduce nutrient overload and improve clarity across Chesapeake Bay tributaries.",
+    "h1": "Keeping Chesapeake waters clearer",
+    "intro": "For Bay tributaries under nutrient pressure, we deploy monitoring, QA pipelines, and digital twins to prioritize interventions.",
+    "bullets": [
+      "Telemetry tuned for slow-changing estuarine systems",
+      "Transparency for regulators and citizen science groups",
+      "Blueprints for low-impact aeration and planting"
+    ],
+    "processSteps": [
+      "Tributary selection and instrumentation",
+      "Modeling nutrient and flow dynamics",
+      "Intervention playbooks validated with partners",
+      "Real-time dashboards with alerts",
+      "Seasonal recalibration with shared lessons"
+    ],
+    "faq": [
+      {"question": "Do you integrate citizen science data?", "answer": "Yes. We include vetted community samples and flag anomalies before they skew models."},
+      {"question": "Is shoreline access required?", "answer": "We can blend shoreline sensors with satellite and drone data when direct access is limited."}
+    ],
+    "primaryKeywords": ["Chesapeake Bay AI", "water quality monitoring", "nutrient reduction"],
+    "secondaryKeywords": ["estuary restoration", "sensor fusion", "responsible AI"],
+    "schemaType": "Service",
+    "location": {"city": "Annapolis", "region": "MD", "country": "USA"},
+    "related": ["sensor-fusion-monitoring", "watershed-digital-twins"]
+  },
+  {
+    "slug": "andes-wetlands",
+    "title": "Andean High Wetlands",
+    "metaTitle": "Andean Wetland Monitoring | Nexus Verium",
+    "metaDescription": "Responsible AI and lightweight sensing for remote Andean wetlands and páramo systems.",
+    "h1": "Responsible monitoring for Andean wetlands",
+    "intro": "In high-altitude wetlands, we prioritize low-power sensing, resilient telemetry, and culturally respectful deployment.",
+    "bullets": [
+      "Low-power kits with solar and offline-first design",
+      "Training local stewards to maintain instrumentation",
+      "Ethical AI review to prevent misuse of sensitive data"
+    ],
+    "processSteps": [
+      "Landscape scan with local partners",
+      "Sensor kit selection and hardening",
+      "Data governance and consent protocols",
+      "Deployment and training",
+      "Impact review with ecosystem health indicators"
+    ],
+    "faq": [
+      {"question": "How do you operate with limited connectivity?", "answer": "We use store-and-forward and minimal bandwidth protocols, syncing when backhaul is available."},
+      {"question": "Who owns the data?", "answer": "Data ownership stays with local partners; we operate under explicit agreements and transparent access logs."}
+    ],
+    "primaryKeywords": ["Andes wetlands", "responsible AI", "remote sensing"],
+    "secondaryKeywords": ["páramo", "community stewardship", "low-power telemetry"],
+    "schemaType": "Service",
+    "location": {"city": "Quito", "region": "Pichincha", "country": "Ecuador"},
+    "related": ["sensor-fusion-monitoring"]
+  }
+]

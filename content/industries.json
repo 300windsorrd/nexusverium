@@ -1,0 +1,86 @@
+[
+  {
+    "slug": "coastal-restoration",
+    "title": "Coastal Restoration Agencies",
+    "metaTitle": "Coastal Restoration Partners | Nexus Verium",
+    "metaDescription": "Support for agencies restoring coastal and brackish water systems with AI modeling, field-ready blueprints, and monitoring.",
+    "h1": "Partners for coastal and brackish restorers",
+    "intro": "We align with public agencies and nonprofits tasked with bringing coastal wetlands back online, adding AI where it de-risks decisions.",
+    "bullets": [
+      "Evidence-first recommendations packaged for councils and boards",
+      "Community-safe rollout plans with transparent reporting",
+      "Training for local crews on sensors and stewardship"
+    ],
+    "processSteps": [
+      "Baseline assessment and data readiness",
+      "Scenario modeling with digital twins",
+      "Blueprint selection with stakeholders",
+      "Field sprints and monitoring",
+      "Continuous improvement and knowledge transfer"
+    ],
+    "faq": [
+      {"question": "Do you engage community groups?", "answer": "Yes. We facilitate co-design sessions and translate technical results into public-friendly updates."},
+      {"question": "How fast can you start?", "answer": "Within 2-4 weeks with available data; faster if baseline sensing already exists."}
+    ],
+    "primaryKeywords": ["coastal restoration", "wetland recovery", "environmental AI partner"],
+    "secondaryKeywords": ["public agencies", "community engagement", "brackish water"],
+    "schemaType": "Service",
+    "related": ["watershed-digital-twins", "brackish-remediation-blueprints"]
+  },
+  {
+    "slug": "water-utilities",
+    "title": "Water Utilities & Operators",
+    "metaTitle": "Water Utility Modernization | Nexus Verium",
+    "metaDescription": "Sensor fusion and predictive maintenance for utilities managing complex water networks near coasts and wetlands.",
+    "h1": "Monitoring and resilience for water utilities",
+    "intro": "For utilities managing brackish interfaces and distribution assets, we provide monitoring, anomaly detection, and crew-ready runbooks.",
+    "bullets": [
+      "Predictive maintenance signals for pumps and aerators",
+      "Quality drift alerts before compliance thresholds break",
+      "Audit trails that fit existing SCADA and IT policies"
+    ],
+    "processSteps": [
+      "Network and asset mapping",
+      "Telemetry gap analysis",
+      "Model tuning for local operating envelopes",
+      "Rollout with playbooks and escalation paths",
+      "Post-incident reviews with data-backed actions"
+    ],
+    "faq": [
+      {"question": "Can you deploy on-prem?", "answer": "Yes. We support on-prem or hybrid deployments when cloud use is restricted."},
+      {"question": "Will this replace crews?", "answer": "No. We build assistive signals so crews can act sooner with clearer evidence."}
+    ],
+    "primaryKeywords": ["water utilities", "predictive maintenance", "sensor fusion"],
+    "secondaryKeywords": ["SCADA integration", "resilience", "AI monitoring"],
+    "schemaType": "Service",
+    "related": ["sensor-fusion-monitoring"]
+  },
+  {
+    "slug": "research-institutions",
+    "title": "Research Institutions",
+    "metaTitle": "Research Collaborations | Nexus Verium",
+    "metaDescription": "Collaborations with universities and labs studying biomimicry, water quality, and responsible AI for the environment.",
+    "h1": "Applied research partners",
+    "intro": "We partner with universities and labs on biomimicry structures, responsible AI evaluation, and field trials for restoration technologies.",
+    "bullets": [
+      "Shared protocols and reproducible pipelines",
+      "Ethics and AI safety reviews for environmental deployments",
+      "Joint publications with transparent data handling"
+    ],
+    "processSteps": [
+      "Define research questions with measurable outcomes",
+      "Co-develop instrumentation and data governance",
+      "Run phased pilots with safety guards",
+      "Analyze efficacy with shared methods",
+      "Publish results with open summaries"
+    ],
+    "faq": [
+      {"question": "Do you share datasets?", "answer": "We share de-identified datasets and synthetic data where appropriate, respecting community and regulatory constraints."},
+      {"question": "How do you handle dual-use risks?", "answer": "We run risk reviews, limit model capabilities when necessary, and involve third-party advisors for critical deployments."}
+    ],
+    "primaryKeywords": ["environmental research", "biomimicry", "responsible AI"],
+    "secondaryKeywords": ["university partner", "field trials", "open science"],
+    "schemaType": "Service",
+    "related": ["brackish-remediation-blueprints", "watershed-digital-twins"]
+  }
+]

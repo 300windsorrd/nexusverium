@@ -1,0 +1,29 @@
+[
+  {
+    "id": "2025-h1",
+    "year": "2025",
+    "partner": "Coastal Innovation Lab",
+    "title": "Gemini-assisted reef blueprints",
+    "description": "Generating and validating modular reef layouts with Gemini for brackish aeration while keeping human review in the loop.",
+    "image": "/timeline/reef.svg",
+    "link": "#"
+  },
+  {
+    "id": "2025-h2",
+    "year": "2025",
+    "partner": "USDA Research Event",
+    "title": "Field trial dashboards",
+    "description": "Building dashboards that blend USDA field data with Nexus Verium QA layers to keep pilots auditable.",
+    "image": "/timeline/usda.svg",
+    "link": "#"
+  },
+  {
+    "id": "2026-h1",
+    "year": "2026",
+    "partner": "Water Utility Coalition",
+    "title": "Predictive clarity alerts",
+    "description": "Rolling out turbidity forecast signals with clear escalation paths for utility crews.",
+    "image": "/timeline/clarity.svg",
+    "link": "#"
+  }
+]
