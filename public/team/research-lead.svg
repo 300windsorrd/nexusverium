@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" role="img" aria-labelledby="title desc">
+  <title>Portrait placeholder for Research Lead</title>
+  <desc>Abstract portrait background with layered circles</desc>
+  <defs>
+    <linearGradient id="t3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b2b50"/>
+      <stop offset="100%" stop-color="#164d8b"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="320" fill="url(#t3)" rx="18"/>
+  <circle cx="200" cy="150" r="72" fill="#0f6fbf" opacity="0.35"/>
+  <circle cx="190" cy="150" r="55" fill="#f4f7fb" opacity="0.85"/>
+  <text x="200" y="270" text-anchor="middle" fill="#f6f8fb" font-size="19" font-family="Inter, Arial, sans-serif">Research</text>
+</svg>

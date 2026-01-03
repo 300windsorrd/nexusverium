@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" role="img" aria-labelledby="title desc">
+  <title>Portrait placeholder for Jonathan Eleonidas Arroyo Yunda</title>
+  <desc>Abstract portrait background in blue gradient</desc>
+  <defs>
+    <linearGradient id="t1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b3c7c"/>
+      <stop offset="100%" stop-color="#0f6fbf"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="320" fill="url(#t1)" rx="18"/>
+  <circle cx="200" cy="150" r="78" fill="#0e2141" opacity="0.6"/>
+  <circle cx="190" cy="150" r="62" fill="#f6f8fb" opacity="0.8"/>
+  <text x="200" y="270" text-anchor="middle" fill="#f6f8fb" font-size="20" font-family="Inter, Arial, sans-serif">Jonathan</text>
+</svg>

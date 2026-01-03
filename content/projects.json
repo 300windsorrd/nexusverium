@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "biloxi-brackish-pilot",
+    "title": "Biloxi Brackish Water Pilot",
+    "location": "Biloxi, Mississippi",
+    "summary": "Deploying biomimicry reef inserts and low-energy aeration to lift dissolved oxygen in a storm-stressed canal system.",
+    "image": "/projects/biloxi.svg",
+    "tags": ["brackish", "aeration", "pilot"]
+  },
+  {
+    "slug": "chesapeake-monitoring",
+    "title": "Chesapeake QA Dashboards",
+    "location": "Annapolis, Maryland",
+    "summary": "Sensor fusion and QA to keep citizen science data usable for regulatory decision-making.",
+    "image": "/projects/chesapeake.svg",
+    "tags": ["monitoring", "citizen science", "QA"]
+  },
+  {
+    "slug": "andes-low-power",
+    "title": "Andes Low-Power Monitoring",
+    "location": "Quito, Ecuador",
+    "summary": "Offline-first telemetry kits for high-altitude wetlands with community stewards.",
+    "image": "/projects/andes.svg",
+    "tags": ["low-power", "telemetry", "community"]
+  },
+  {
+    "slug": "ai-safety-harness",
+    "title": "AI Safety Harness",
+    "location": "Remote",
+    "summary": "Evaluation harness for AI copilots used in environmental engineering workflows to avoid unsafe recommendations.",
+    "image": "/projects/ai-safety.svg",
+    "tags": ["responsible AI", "evaluation"]
+  }
+]

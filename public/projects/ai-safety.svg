@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-labelledby="title desc">
+  <title>AI safety harness</title>
+  <desc>Stylized shield and code blocks</desc>
+  <defs>
+    <linearGradient id="p4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b2b50"/>
+      <stop offset="100%" stop-color="#0f6fbf"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="320" rx="16" fill="url(#p4)"/>
+  <path d="M240 100 L310 130 L290 210 L240 240 L190 210 L170 130 Z" fill="#0e2141" opacity="0.7" stroke="#8bc4ff" stroke-width="3"/>
+  <text x="60" y="70" fill="#f6f8fb" font-size="20" font-family="Inter, Arial">AI Safety</text>
+</svg>

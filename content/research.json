@@ -1,0 +1,86 @@
+[
+  {
+    "slug": "biomimicry-brackish-reef",
+    "title": "Biomimicry Reef for Brackish Water",
+    "metaTitle": "Biomimicry Reef Research | Nexus Verium",
+    "metaDescription": "Evaluating modular reef structures that oxygenate brackish water while sheltering juvenile species.",
+    "h1": "Biomimicry reef for oxygenation",
+    "intro": "We are testing modular reef geometries that mimic mangrove root flow to lift dissolved oxygen without heavy energy use.",
+    "bullets": [
+      "3D-printed clay and recycled aggregate variants",
+      "Flow bench tests paired with digital twin simulations",
+      "Monitoring for turbidity, DO, and habitat benefits"
+    ],
+    "processSteps": [
+      "Bench testing in controlled flumes",
+      "Gemini-assisted CFD concepting",
+      "Field micro-pilots with redundant sensing",
+      "Model calibration with real-world drift",
+      "Publish safety and efficacy notes"
+    ],
+    "faq": [
+      {"question": "Is this ready for production?", "answer": "Not yet. We are in limited field pilots to validate durability and ecological impact."},
+      {"question": "What are the energy requirements?", "answer": "The designs are passive; energy is only needed for sensing, which can run on solar."}
+    ],
+    "primaryKeywords": ["biomimicry reef", "brackish water research", "oxygenation"],
+    "secondaryKeywords": ["dissolved oxygen", "environmental engineering", "AI simulation"],
+    "schemaType": "ResearchProject",
+    "related": ["brackish-remediation-blueprints"]
+  },
+  {
+    "slug": "responsible-ai-evaluation",
+    "title": "Responsible AI Evaluation for Field Systems",
+    "metaTitle": "Responsible AI for Environmental Systems | Nexus Verium",
+    "metaDescription": "Evaluation protocols to keep AI assistants safe, transparent, and aligned with environmental and community goals.",
+    "h1": "Responsible AI for environmental work",
+    "intro": "We are building evaluation harnesses so AI copilots used in environmental engineering stay transparent, accountable, and useful to field teams.",
+    "bullets": [
+      "Risk reviews for dual-use and data sensitivity",
+      "Red-team prompts against ecological and equity harms",
+      "Human-in-the-loop safeguards and escalation paths"
+    ],
+    "processSteps": [
+      "Map AI roles and decision points",
+      "Define misuse scenarios and guardrails",
+      "Test models against safety suites",
+      "Document mitigations and monitoring",
+      "Publish patterns for partners"
+    ],
+    "faq": [
+      {"question": "Do you support on-prem models?", "answer": "Yes. We evaluate open and closed models and can lock deployments to on-prem or VPC environments."},
+      {"question": "Who signs off on safety?", "answer": "Decisions stay with accountable humans. We provide evidence and tracking, not automation of authority."}
+    ],
+    "primaryKeywords": ["responsible AI", "AI safety", "environmental AI"],
+    "secondaryKeywords": ["evaluation", "alignment", "field safety"],
+    "schemaType": "ResearchProject",
+    "related": ["watershed-digital-twins"]
+  },
+  {
+    "slug": "water-clarity-ml",
+    "title": "Water Clarity Machine Learning",
+    "metaTitle": "Water Clarity ML | Nexus Verium",
+    "metaDescription": "Models that predict turbidity and clarity shifts using satellite, sensor, and weather signals for wetlands and estuaries.",
+    "h1": "Predicting clarity to prioritize action",
+    "intro": "We are testing models that forecast turbidity swings 48-96 hours ahead to pre-stage crews and equipment.",
+    "bullets": [
+      "Satellite reflectance plus in-situ QA",
+      "Bias checks to avoid overfitting storm cycles",
+      "Action-oriented alerts for field teams"
+    ],
+    "processSteps": [
+      "Data fusion and labeling",
+      "Model training with physical constraints",
+      "Backtesting against historical events",
+      "Pilot deployments with clear escalation rules",
+      "Continuous error analysis with partners"
+    ],
+    "faq": [
+      {"question": "How accurate are the forecasts?", "answer": "Early pilots show useful directional signals; we publish confidence bounds and avoid overclaiming."},
+      {"question": "Can this reduce costs?", "answer": "It helps crews focus on hotspots and avoid unnecessary deployments, saving fuel and time."}
+    ],
+    "primaryKeywords": ["water clarity", "turbidity forecast", "environmental ML"],
+    "secondaryKeywords": ["remote sensing", "wetland monitoring", "AI predictions"],
+    "schemaType": "ResearchProject",
+    "related": ["sensor-fusion-monitoring", "watershed-digital-twins"]
+  }
+]
