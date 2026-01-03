@@ -6,15 +6,16 @@ export function Footer() {
     <footer className="mt-16 bg-[var(--nv-primary-strong)] text-white">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-10 sm:grid sm:grid-cols-[1.2fr_1fr_1fr] sm:gap-12">
         <div className="space-y-3">
-            <div className="flex items-center gap-2">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 p-2">
-                <Image
-                  src="/logo.svg"
-                  alt="Nexus Verium logo"
-                  width={48}
-                  height={48}
-                  className="h-full w-full"
-                />
+          <div className="flex items-start gap-2">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 p-2 sm:h-11 sm:w-11 md:h-12 md:w-12">
+              <Image
+                src="/image.png"
+                alt="Nexus Verium logo"
+                width={48}
+                height={48}
+                sizes="(min-width: 768px) 48px, (min-width: 640px) 44px, 40px"
+                className="h-full w-full rounded-full object-cover"
+              />
             </div>
             <div>
               <p className="text-xs uppercase tracking-[0.25em] text-white/70">

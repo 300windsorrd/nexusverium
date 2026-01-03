@@ -37,13 +37,14 @@ export function Header({ searchItems }: HeaderProps) {
   return (
     <header className="glass-surface border-b border-white/40 bg-white/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3 sm:gap-6">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-start gap-2">
           <Image
-            src="/logo.svg"
+            src="/image.png"
             alt="Nexus Verium logo"
-            width={42}
-            height={42}
-            className="rounded-full bg-white/70 shadow"
+            width={44}
+            height={44}
+            sizes="(min-width: 768px) 44px, (min-width: 640px) 40px, 36px"
+            className="h-9 w-9 rounded-full bg-white/70 object-cover shadow sm:h-10 sm:w-10 md:h-11 md:w-11"
           />
           <div className="leading-tight">
             <span className="block text-xs uppercase tracking-[0.2em] text-[var(--nv-muted)]">
