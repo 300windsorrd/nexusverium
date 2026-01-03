@@ -35,7 +35,7 @@ export function Header({ searchItems }: HeaderProps) {
   }, [query, searchItems]);
 
   return (
-    <header className="glass-surface border-b border-white/40 bg-white/80 backdrop-blur-md">
+    <header className="glass-surface border-b border-[var(--nv-border)]/60 bg-[var(--nv-surface)]/80 backdrop-blur-md shadow-[0_12px_30px_rgba(0,11,20,0.55)]">
       <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3 sm:gap-6">
         <Link href="/" className="flex items-start gap-2">
           <Image
@@ -44,13 +44,13 @@ export function Header({ searchItems }: HeaderProps) {
             width={44}
             height={44}
             sizes="(min-width: 768px) 44px, (min-width: 640px) 40px, 36px"
-            className="h-9 w-9 rounded-full bg-white/70 object-cover sm:h-10 sm:w-10 md:h-11 md:w-11"
+            className="h-9 w-9 rounded-full bg-[var(--nv-bg)]/40 object-cover sm:h-10 sm:w-10 md:h-11 md:w-11"
           />
           <div className="leading-tight">
             <span className="block text-xs uppercase tracking-[0.2em] text-[var(--nv-muted)]">
               Nexus Verium
             </span>
-            <span className="text-sm font-semibold text-[var(--nv-primary)]">
+            <span className="text-sm font-semibold text-[var(--nv-primary-strong)]">
               Responsible AI for Restoration
             </span>
           </div>
@@ -77,7 +77,7 @@ export function Header({ searchItems }: HeaderProps) {
           <label className="sr-only" htmlFor="site-search">
             Search Nexus Verium
           </label>
-          <div className="flex items-center gap-2 rounded-full border border-[var(--nv-border)] bg-white px-3 py-2 shadow-sm transition focus-within:border-[var(--nv-primary)] focus-within:shadow">
+          <div className="flex items-center gap-2 rounded-full border border-[var(--nv-border)] bg-[var(--nv-bg)]/60 px-3 py-2 shadow-sm transition focus-within:border-[var(--nv-primary-strong)] focus-within:shadow-[0_0_0_1px_rgba(0,210,255,0.4)]">
             <svg
               aria-hidden
               className="h-4 w-4 text-[var(--nv-muted)]"
@@ -101,7 +101,7 @@ export function Header({ searchItems }: HeaderProps) {
             />
           </div>
           {focused && results.length > 0 ? (
-            <div className="absolute left-0 right-0 z-20 mt-2 rounded-2xl border border-[var(--nv-border)] bg-white shadow-xl">
+            <div className="absolute left-0 right-0 z-20 mt-2 rounded-2xl border border-[var(--nv-border)] bg-[var(--nv-surface)] shadow-[0_20px_60px_rgba(0,11,20,0.65)]">
               <ul className="divide-y divide-[var(--nv-border)]">
                 {results.map((item) => (
                   <li key={`${item.type}-${item.title}`}>
@@ -127,7 +127,7 @@ export function Header({ searchItems }: HeaderProps) {
           ) : null}
         </div>
       </div>
-      <div className="flex items-center gap-3 border-t border-[var(--nv-border)] px-4 py-2 text-xs text-[var(--nv-muted)] md:hidden">
+      <div className="flex items-center gap-3 border-t border-[var(--nv-border)]/70 px-4 py-2 text-xs text-[var(--nv-muted)] md:hidden">
         {navLinks.map((item) => {
           const active = pathname === item.href;
           return (

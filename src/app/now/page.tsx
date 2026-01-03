@@ -15,7 +15,7 @@ export const metadata: Metadata = buildMetadata({
 
 export default function NowPage() {
   const progressSection = (
-    <div className="space-y-3 rounded-[18px] bg-white/90 p-4 shadow-sm">
+    <div className="space-y-3 rounded-[18px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 p-4 shadow-[0_12px_24px_rgba(0,11,20,0.6)]">
       <h2 className="text-lg font-semibold text-[var(--nv-primary-strong)]">
         Brackish water biomimicry progress
       </h2>
@@ -42,7 +42,7 @@ export default function NowPage() {
         description="Live pilots, research artifacts, and collaboration updates."
       />
 
-      <section className="grid gap-6 rounded-[24px] bg-white/90 p-6 shadow-[var(--shadow-card)] lg:grid-cols-2">
+      <section className="nv-reveal nv-reveal--delay-1 grid gap-6 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,rgba(0,42,71,0.92),rgba(0,11,20,0.95))] p-6 shadow-[var(--shadow-card)] lg:grid-cols-2">
         <div className="space-y-3">
           <p className="text-xs uppercase tracking-wide text-[var(--nv-muted)]">
             Gemini generated
@@ -56,7 +56,7 @@ export default function NowPage() {
             into real-world pilots after safety and feasibility checks.
           </p>
           <div className="grid gap-4 sm:grid-cols-2">
-            <figure className="overflow-hidden rounded-[16px] border border-[var(--nv-border)] bg-[var(--nv-bg)]">
+            <figure className="overflow-hidden rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70">
               <Image
                 src="/now/blueprint-1.svg"
                 alt="Gemini-generated blueprint showing modular reef inserts"
@@ -69,7 +69,7 @@ export default function NowPage() {
                 canals and lagoons.
               </figcaption>
             </figure>
-            <figure className="overflow-hidden rounded-[16px] border border-[var(--nv-border)] bg-[var(--nv-bg)]">
+            <figure className="overflow-hidden rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70">
               <Image
                 src="/now/blueprint-2.svg"
                 alt="Gemini-generated blueprint showing layered aeration plan"
@@ -86,7 +86,7 @@ export default function NowPage() {
         {progressSection}
       </section>
 
-      <section className="rounded-[24px] bg-white/90 p-6 shadow-[var(--shadow-card)]">
+      <section className="nv-reveal nv-reveal--delay-2 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,rgba(0,42,71,0.92),rgba(0,11,20,0.95))] p-6 shadow-[var(--shadow-card)]">
         <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
           <SectionHeading
             eyebrow="Field"
@@ -95,13 +95,13 @@ export default function NowPage() {
           />
           <Link
             href="/contact"
-            className="rounded-full bg-[var(--nv-primary)] px-4 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[var(--nv-primary-strong)]"
+            className="rounded-full bg-[var(--nv-primary-strong)] px-4 py-2 text-sm font-semibold text-[var(--nv-bg)] shadow-[0_0_16px_rgba(0,210,255,0.3)] transition hover:-translate-y-0.5 hover:bg-[var(--nv-accent)]"
           >
             Partner with us
           </Link>
         </div>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
-          <figure className="overflow-hidden rounded-[16px] border border-[var(--nv-border)] bg-[var(--nv-bg)]">
+          <figure className="overflow-hidden rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70">
             <Image
               src="/now/usda-team.svg"
               alt="Placeholder image of Nexus Verium team at USDA research event"
@@ -114,7 +114,7 @@ export default function NowPage() {
               plans.
             </figcaption>
           </figure>
-          <div className="rounded-[16px] border border-[var(--nv-border)] bg-[var(--nv-bg)] p-4 text-sm text-[var(--nv-muted)]">
+          <div className="rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 p-4 text-sm text-[var(--nv-muted)]">
             <p>
               Focus areas: aligning data quality expectations, confirming
               calibration schedules, and documenting AI safeguards for field
@@ -129,7 +129,7 @@ export default function NowPage() {
         </div>
       </section>
 
-      <section className="rounded-[24px] bg-white/90 p-6 shadow-[var(--shadow-card)]">
+      <section className="nv-reveal nv-reveal--delay-3 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,rgba(0,42,71,0.92),rgba(0,11,20,0.95))] p-6 shadow-[var(--shadow-card)]">
         <SectionHeading
           eyebrow="In flight"
           title="Projects in motion"
@@ -139,7 +139,7 @@ export default function NowPage() {
           {projects.map((project) => (
             <article
               key={project.slug}
-              className="rounded-[16px] border border-[var(--nv-border)] bg-[var(--nv-bg)] p-4"
+              className="rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 p-4 shadow-[0_10px_22px_rgba(0,11,20,0.5)]"
             >
               <p className="text-xs uppercase tracking-wide text-[var(--nv-muted)]">
                 {project.location}

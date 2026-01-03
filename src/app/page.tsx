@@ -57,7 +57,7 @@ export default function Home() {
         ctaHref="/team"
       />
 
-      <section className="mt-12 grid gap-6 rounded-[24px] bg-white/90 p-6 shadow-[var(--shadow-card)] md:grid-cols-[1.2fr_1fr] md:gap-10">
+      <section className="nv-reveal nv-reveal--delay-2 mt-12 grid gap-6 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,rgba(0,42,71,0.92),rgba(0,11,20,0.95))] p-6 shadow-[var(--shadow-card)] md:grid-cols-[1.2fr_1fr] md:gap-10">
         <SectionHeading
           eyebrow="Why Nexus Verium"
           title="AI that assists, not dominates"
@@ -80,7 +80,7 @@ export default function Home() {
 
       <ServiceList services={services} />
 
-      <section className="mt-12 rounded-[24px] bg-white/90 p-6 shadow-[var(--shadow-card)]">
+      <section className="nv-reveal nv-reveal--delay-2 mt-12 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,rgba(0,42,71,0.92),rgba(0,11,20,0.95))] p-6 shadow-[var(--shadow-card)]">
         <SectionHeading
           eyebrow="Current focus"
           title="Projects moving now"
@@ -89,7 +89,7 @@ export default function Home() {
         <ProjectGrid projects={projects} />
       </section>
 
-      <section className="mt-12 rounded-[24px] bg-white/90 p-6 shadow-[var(--shadow-card)]">
+      <section className="nv-reveal nv-reveal--delay-3 mt-12 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,rgba(0,42,71,0.92),rgba(0,11,20,0.95))] p-6 shadow-[var(--shadow-card)]">
         <SectionHeading
           eyebrow="Programmatic SEO"
           title="Explore our services, industries, and locations"
@@ -100,7 +100,7 @@ export default function Home() {
             <Link
               key={service.slug}
               href={`/services/${service.slug}`}
-              className="rounded-[16px] border border-[var(--nv-border)] bg-[var(--nv-bg)] p-4 transition hover:-translate-y-1 hover:shadow-lg"
+              className="rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 p-4 transition hover:-translate-y-1 hover:shadow-[0_16px_30px_rgba(0,11,20,0.6)]"
             >
               <p className="text-sm uppercase tracking-wide text-[var(--nv-muted)]">
                 Service
@@ -115,7 +115,7 @@ export default function Home() {
             <Link
               key={industry.slug}
               href={`/industries/${industry.slug}`}
-              className="rounded-[16px] border border-[var(--nv-border)] bg-[var(--nv-bg)] p-4 transition hover:-translate-y-1 hover:shadow-lg"
+              className="rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 p-4 transition hover:-translate-y-1 hover:shadow-[0_16px_30px_rgba(0,11,20,0.6)]"
             >
               <p className="text-sm uppercase tracking-wide text-[var(--nv-muted)]">
                 Industry
@@ -130,7 +130,7 @@ export default function Home() {
             <Link
               key={location.slug}
               href={`/locations/${location.slug}`}
-              className="rounded-[16px] border border-[var(--nv-border)] bg-[var(--nv-bg)] p-4 transition hover:-translate-y-1 hover:shadow-lg"
+              className="rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 p-4 transition hover:-translate-y-1 hover:shadow-[0_16px_30px_rgba(0,11,20,0.6)]"
             >
               <p className="text-sm uppercase tracking-wide text-[var(--nv-muted)]">
                 Location

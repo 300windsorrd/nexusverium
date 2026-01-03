@@ -50,7 +50,7 @@ export default function LocationPage({
         related={relatedLinks(page.related)}
       />
       {page.location ? (
-        <div className="mt-4 rounded-[16px] border border-[var(--nv-border)] bg-white/90 p-4 text-sm text-[var(--nv-muted)]">
+        <div className="nv-reveal nv-reveal--delay-1 mt-4 rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 p-4 text-sm text-[var(--nv-muted)]">
           <p className="font-semibold text-[var(--nv-primary-strong)]">
             Serving {page.location.city}, {page.location.region} —{" "}
             {page.location.country}

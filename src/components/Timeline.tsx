@@ -53,8 +53,8 @@ export function Timeline({ items }: TimelineProps) {
   );
 
   return (
-    <section className="relative mt-12 rounded-[24px] bg-white/90 p-6 shadow-[var(--shadow-card)]">
-      <div className="absolute left-6 top-8 bottom-8 hidden w-px bg-gradient-to-b from-[var(--nv-primary)] via-[var(--nv-primary)]/30 to-transparent sm:block" />
+    <section className="nv-reveal nv-reveal--delay-2 relative mt-12 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,rgba(0,42,71,0.92),rgba(0,11,20,0.95))] p-6 shadow-[var(--shadow-card)]">
+      <div className="absolute bottom-8 left-6 top-8 hidden w-px bg-gradient-to-b from-[var(--nv-primary-strong)] via-[var(--nv-primary)]/40 to-transparent sm:block" />
       <div className="flex flex-col gap-8">
         {items.map((item, index) => (
           <article
@@ -62,11 +62,11 @@ export function Timeline({ items }: TimelineProps) {
             className="relative grid gap-4 sm:grid-cols-[auto_1fr] sm:gap-8"
           >
             <div className="relative hidden h-full w-8 sm:flex sm:flex-col sm:items-center">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--nv-primary)] text-white shadow-lg">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--nv-primary-strong)] text-[var(--nv-bg)] shadow-[0_0_18px_rgba(0,210,255,0.35)]">
                 {item.year}
               </div>
             </div>
-            <div className="overflow-hidden rounded-[18px] border border-[var(--nv-border)] bg-[var(--nv-bg)] p-4 shadow-sm">
+            <div className="overflow-hidden rounded-[18px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 p-4 shadow-[0_12px_28px_rgba(0,11,20,0.6)]">
               <div
                 className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between"
                 style={{
@@ -93,7 +93,7 @@ export function Timeline({ items }: TimelineProps) {
                 </div>
                 <a
                   href={item.link || "#"}
-                  className="text-sm font-semibold text-[var(--nv-primary)] hover:text-[var(--nv-primary-strong)]"
+                  className="text-sm font-semibold text-[var(--nv-primary-strong)] hover:text-[var(--nv-accent)]"
                 >
                   View link →
                 </a>

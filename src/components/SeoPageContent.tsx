@@ -9,7 +9,7 @@ interface SeoPageContentProps {
 
 export function SeoPageContent({ section, page, related = [] }: SeoPageContentProps) {
   return (
-    <div className="rounded-[24px] bg-white/90 p-6 shadow-[var(--shadow-card)]">
+    <div className="nv-reveal rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,rgba(0,42,71,0.92),rgba(0,11,20,0.95))] p-6 shadow-[var(--shadow-card)]">
       <p className="text-xs uppercase tracking-[0.3em] text-[var(--nv-muted)]">
         {section}
       </p>
@@ -19,7 +19,7 @@ export function SeoPageContent({ section, page, related = [] }: SeoPageContentPr
       <p className="mt-3 text-sm text-[var(--nv-muted)]">{page.intro}</p>
 
       <section className="mt-6 grid gap-6 md:grid-cols-2">
-        <div className="rounded-[16px] border border-[var(--nv-border)] bg-[var(--nv-bg)] p-4">
+        <div className="rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 p-4">
           <h2 className="text-lg font-semibold text-[var(--nv-primary-strong)]">
             What you get
           </h2>
@@ -29,7 +29,7 @@ export function SeoPageContent({ section, page, related = [] }: SeoPageContentPr
             ))}
           </ul>
         </div>
-        <div className="rounded-[16px] border border-[var(--nv-border)] bg-[var(--nv-bg)] p-4">
+        <div className="rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 p-4">
           <h2 className="text-lg font-semibold text-[var(--nv-primary-strong)]">
             How we work
           </h2>
@@ -41,13 +41,13 @@ export function SeoPageContent({ section, page, related = [] }: SeoPageContentPr
         </div>
       </section>
 
-      <section className="mt-6 rounded-[16px] border border-[var(--nv-border)] bg-[var(--nv-bg)] p-4">
+      <section className="mt-6 rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 p-4">
         <h2 className="text-lg font-semibold text-[var(--nv-primary-strong)]">
           FAQs
         </h2>
         <div className="mt-3 space-y-3">
           {page.faq.map((item) => (
-            <div key={item.question} className="rounded-[12px] bg-white p-3 shadow-sm">
+            <div key={item.question} className="rounded-[12px] bg-[var(--nv-bg)]/70 p-3 shadow-[0_10px_20px_rgba(0,11,20,0.5)]">
               <h3 className="text-sm font-semibold text-[var(--nv-ink)]">
                 {item.question}
               </h3>
@@ -58,7 +58,7 @@ export function SeoPageContent({ section, page, related = [] }: SeoPageContentPr
       </section>
 
       {related.length > 0 ? (
-        <section className="mt-6 rounded-[16px] border border-[var(--nv-border)] bg-[var(--nv-bg)] p-4">
+        <section className="mt-6 rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 p-4">
           <h2 className="text-lg font-semibold text-[var(--nv-primary-strong)]">
             Related
           </h2>
@@ -67,7 +67,7 @@ export function SeoPageContent({ section, page, related = [] }: SeoPageContentPr
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-full bg-white px-3 py-2 text-sm font-semibold text-[var(--nv-primary)] shadow-sm transition hover:-translate-y-0.5 hover:bg-[var(--nv-bg)]"
+                className="rounded-full border border-[var(--nv-border)]/40 bg-[var(--nv-bg)]/70 px-3 py-2 text-sm font-semibold text-[var(--nv-primary-strong)] shadow-[0_0_14px_rgba(0,210,255,0.15)] transition hover:-translate-y-0.5 hover:bg-[var(--nv-bg)]"
               >
                 {item.title}
               </Link>

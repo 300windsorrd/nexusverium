@@ -3,11 +3,11 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="mt-16 bg-[var(--nv-primary-strong)] text-white">
+    <footer className="mt-16 bg-[linear-gradient(180deg,var(--nv-surface),var(--nv-bg))] text-[var(--nv-ink)]">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-10 sm:grid sm:grid-cols-[1.2fr_1fr_1fr] sm:gap-12">
         <div className="space-y-3">
           <div className="flex items-start gap-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 p-2 sm:h-11 sm:w-11 md:h-12 md:w-12">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--nv-primary)]/10 p-2 sm:h-11 sm:w-11 md:h-12 md:w-12">
               <Image
                 src="/image.png"
                 alt="Nexus Verium logo"
@@ -18,7 +18,7 @@ export function Footer() {
               />
             </div>
             <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-white/70">
+              <p className="text-xs uppercase tracking-[0.25em] text-[var(--nv-muted)]">
                 Nexus Verium
               </p>
               <p className="text-sm font-semibold">
@@ -26,16 +26,16 @@ export function Footer() {
               </p>
             </div>
           </div>
-          <p className="text-sm text-white/70 max-w-md">
+          <p className="text-sm text-[var(--nv-muted)] max-w-md">
             Research-driven AI and environmental technology focused on
             restoration, clarity, efficiency, and long-term good.
           </p>
         </div>
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-white">
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-[var(--nv-ink)]">
             Explore
           </h3>
-          <ul className="mt-3 space-y-2 text-sm text-white/70">
+          <ul className="mt-3 space-y-2 text-sm text-[var(--nv-muted)]">
             <li>
               <Link href="/">Home</Link>
             </li>
@@ -54,10 +54,10 @@ export function Footer() {
           </ul>
         </div>
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-white">
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-[var(--nv-ink)]">
             Connect
           </h3>
-          <ul className="mt-3 space-y-2 text-sm text-white/70">
+          <ul className="mt-3 space-y-2 text-sm text-[var(--nv-muted)]">
             <li>
               <Link href="/contact">Contact</Link>
             </li>
@@ -73,7 +73,7 @@ export function Footer() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-white/10 px-4 py-4 text-center text-xs text-white/60">
+      <div className="border-t border-[var(--nv-border)]/40 px-4 py-4 text-center text-xs text-[var(--nv-muted)]">
         © {new Date().getFullYear()} Nexus Verium. All rights reserved.
       </div>
     </footer>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { IBM_Plex_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -7,10 +7,18 @@ import { LogoWatermarkLayout } from "@/components/LogoWatermarkLayout";
 import { NotificationBar } from "@/components/NotificationBar";
 import { buildSearchIndex, siteConfig } from "@/lib/content";
 
-const inter = Inter({
+const bodyFont = IBM_Plex_Sans({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter",
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-body",
+});
+
+const displayFont = Space_Grotesk({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-display",
 });
 
 export const metadata: Metadata = {
@@ -41,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} antialiased bg-[var(--nv-bg)] text-[var(--nv-ink)]`}
+        className={`${bodyFont.variable} ${displayFont.variable} antialiased bg-[var(--nv-bg)] text-[var(--nv-ink)]`}
       >
         <LogoWatermarkLayout>
           <div className="sticky top-0 z-50">

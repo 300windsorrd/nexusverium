@@ -14,12 +14,12 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
   const displayed = projects.slice(0, visible);
 
   return (
-    <section className="mt-12">
+    <section className="nv-reveal nv-reveal--delay-3 mt-12">
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {displayed.map((project) => (
           <article
             key={project.slug}
-            className="flex flex-col overflow-hidden rounded-[18px] border border-[var(--nv-border)] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+            className="flex flex-col overflow-hidden rounded-[18px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/65 shadow-[0_12px_26px_rgba(0,11,20,0.6)] transition hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,11,20,0.65)]"
           >
             <div className="relative h-44 w-full overflow-hidden bg-[var(--nv-bg)]">
               <Image
@@ -33,7 +33,7 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
             <div className="flex flex-1 flex-col gap-2 p-5">
               <Link
                 href="/now"
-                className="text-lg font-semibold text-[var(--nv-primary)] hover:text-[var(--nv-primary-strong)]"
+                className="text-lg font-semibold text-[var(--nv-primary-strong)] hover:text-[var(--nv-accent)]"
               >
                 {project.title}
               </Link>
@@ -45,7 +45,7 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full bg-[var(--nv-bg)] px-3 py-1 text-xs font-semibold text-[var(--nv-muted)]"
+                    className="rounded-full border border-[var(--nv-border)]/40 bg-[var(--nv-bg)]/70 px-3 py-1 text-xs font-semibold text-[var(--nv-muted)]"
                   >
                     {tag}
                   </span>
@@ -60,7 +60,7 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
           <button
             type="button"
             onClick={() => setVisible((prev) => Math.min(prev + 2, projects.length))}
-            className="rounded-full bg-[var(--nv-primary)] px-4 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[var(--nv-primary-strong)]"
+            className="rounded-full bg-[var(--nv-primary-strong)] px-4 py-2 text-sm font-semibold text-[var(--nv-bg)] shadow-[0_0_16px_rgba(0,210,255,0.3)] transition hover:-translate-y-0.5 hover:bg-[var(--nv-accent)]"
           >
             View more
           </button>

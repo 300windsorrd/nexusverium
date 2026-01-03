@@ -39,11 +39,11 @@ export default function TeamPage() {
         title="People keeping Nexus Verium grounded"
         description="Researchers, engineers, and partners focused on responsible AI for environmental restoration."
       />
-      <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="nv-reveal nv-reveal--delay-1 mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {team.map((member) => (
           <article
             key={member.name}
-            className="flex flex-col gap-3 rounded-[18px] border border-[var(--nv-border)] bg-white p-4 shadow-sm"
+            className="flex flex-col gap-3 rounded-[18px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 p-4 shadow-[0_12px_24px_rgba(0,11,20,0.6)]"
           >
             <div className="relative h-40 w-full overflow-hidden rounded-[14px] bg-[var(--nv-bg)]">
               <Image
@@ -57,7 +57,7 @@ export default function TeamPage() {
               <h3 className="text-lg font-semibold text-[var(--nv-ink)]">
                 {member.name}
               </h3>
-              <p className="text-sm font-semibold text-[var(--nv-primary)]">
+              <p className="text-sm font-semibold text-[var(--nv-primary-strong)]">
                 {member.role}
               </p>
               <p className="text-xs uppercase tracking-wide text-[var(--nv-muted)]">
@@ -68,7 +68,7 @@ export default function TeamPage() {
             {member.email ? (
               <a
                 href={`mailto:${member.email}`}
-                className="text-sm font-semibold text-[var(--nv-primary)] hover:text-[var(--nv-primary-strong)]"
+                className="text-sm font-semibold text-[var(--nv-primary-strong)] hover:text-[var(--nv-accent)]"
               >
                 Email {member.name.split(" ")[0]}
               </a>

@@ -58,12 +58,12 @@ export function ContactForm() {
     }
   };
 
-  const requiredMarker = <span className="text-[var(--nv-accent)]">*</span>;
+  const requiredMarker = <span className="text-[var(--nv-primary-strong)]">*</span>;
 
   return (
     <form
       onSubmit={handleSubmit}
-      className="rounded-[24px] bg-[#f0f2f6] p-6 shadow-[var(--shadow-card)]"
+      className="nv-reveal rounded-[24px] border border-[var(--nv-border)]/60 bg-[linear-gradient(160deg,rgba(0,42,71,0.9),rgba(0,11,20,0.96))] p-6 shadow-[var(--shadow-card)]"
     >
       <div className="grid gap-4 md:grid-cols-2">
         <label className="flex flex-col gap-1 text-sm font-semibold text-[var(--nv-ink)]">
@@ -73,7 +73,7 @@ export function ContactForm() {
             name="name"
             value={form.name}
             onChange={(e) => handleChange("name", e.target.value)}
-            className="rounded-[12px] border border-[var(--nv-border)] bg-white px-3 py-2 text-sm text-[var(--nv-ink)] outline-none focus:border-[var(--nv-primary)] focus:ring-2 focus:ring-[var(--nv-primary)]/20"
+            className="rounded-[12px] border border-[var(--nv-border)] bg-[var(--nv-bg)]/65 px-3 py-2 text-sm text-[var(--nv-ink)] outline-none focus:border-[var(--nv-primary-strong)] focus:ring-2 focus:ring-[var(--nv-primary-strong)]/25"
           />
         </label>
         <label className="flex flex-col gap-1 text-sm font-semibold text-[var(--nv-ink)]">
@@ -84,7 +84,7 @@ export function ContactForm() {
             name="email"
             value={form.email}
             onChange={(e) => handleChange("email", e.target.value)}
-            className="rounded-[12px] border border-[var(--nv-border)] bg-white px-3 py-2 text-sm text-[var(--nv-ink)] outline-none focus:border-[var(--nv-primary)] focus:ring-2 focus:ring-[var(--nv-primary)]/20"
+            className="rounded-[12px] border border-[var(--nv-border)] bg-[var(--nv-bg)]/65 px-3 py-2 text-sm text-[var(--nv-ink)] outline-none focus:border-[var(--nv-primary-strong)] focus:ring-2 focus:ring-[var(--nv-primary-strong)]/25"
           />
         </label>
         <label className="flex flex-col gap-1 text-sm font-semibold text-[var(--nv-ink)]">
@@ -94,7 +94,7 @@ export function ContactForm() {
             name="phone"
             value={form.phone}
             onChange={(e) => handleChange("phone", e.target.value)}
-            className="rounded-[12px] border border-[var(--nv-border)] bg-white px-3 py-2 text-sm text-[var(--nv-ink)] outline-none focus:border-[var(--nv-primary)] focus:ring-2 focus:ring-[var(--nv-primary)]/20"
+            className="rounded-[12px] border border-[var(--nv-border)] bg-[var(--nv-bg)]/65 px-3 py-2 text-sm text-[var(--nv-ink)] outline-none focus:border-[var(--nv-primary-strong)] focus:ring-2 focus:ring-[var(--nv-primary-strong)]/25"
           />
         </label>
         <label className="flex flex-col gap-1 text-sm font-semibold text-[var(--nv-ink)]">
@@ -104,7 +104,7 @@ export function ContactForm() {
             name="company"
             value={form.company}
             onChange={(e) => handleChange("company", e.target.value)}
-            className="rounded-[12px] border border-[var(--nv-border)] bg-white px-3 py-2 text-sm text-[var(--nv-ink)] outline-none focus:border-[var(--nv-primary)] focus:ring-2 focus:ring-[var(--nv-primary)]/20"
+            className="rounded-[12px] border border-[var(--nv-border)] bg-[var(--nv-bg)]/65 px-3 py-2 text-sm text-[var(--nv-ink)] outline-none focus:border-[var(--nv-primary-strong)] focus:ring-2 focus:ring-[var(--nv-primary-strong)]/25"
           />
         </label>
       </div>
@@ -116,7 +116,7 @@ export function ContactForm() {
             name="subject"
             value={form.subject}
             onChange={(e) => handleChange("subject", e.target.value)}
-            className="rounded-[12px] border border-[var(--nv-border)] bg-white px-3 py-2 text-sm text-[var(--nv-ink)] outline-none focus:border-[var(--nv-primary)] focus:ring-2 focus:ring-[var(--nv-primary)]/20"
+            className="rounded-[12px] border border-[var(--nv-border)] bg-[var(--nv-bg)]/65 px-3 py-2 text-sm text-[var(--nv-ink)] outline-none focus:border-[var(--nv-primary-strong)] focus:ring-2 focus:ring-[var(--nv-primary-strong)]/25"
           />
         </label>
         <label className="flex flex-col gap-1 text-sm font-semibold text-[var(--nv-ink)]">
@@ -126,12 +126,12 @@ export function ContactForm() {
             name="message"
             value={form.message}
             onChange={(e) => handleChange("message", e.target.value)}
-            className="h-32 rounded-[12px] border border-[var(--nv-border)] bg-white px-3 py-2 text-sm text-[var(--nv-ink)] outline-none focus:border-[var(--nv-primary)] focus:ring-2 focus:ring-[var(--nv-primary)]/20"
+            className="h-32 rounded-[12px] border border-[var(--nv-border)] bg-[var(--nv-bg)]/65 px-3 py-2 text-sm text-[var(--nv-ink)] outline-none focus:border-[var(--nv-primary-strong)] focus:ring-2 focus:ring-[var(--nv-primary-strong)]/25"
           />
         </label>
       </div>
       <div className="mt-4 flex flex-col gap-3">
-        <div className="rounded-[12px] border border-dashed border-[var(--nv-border)] bg-white px-4 py-3 text-sm text-[var(--nv-muted)]">
+        <div className="rounded-[12px] border border-dashed border-[var(--nv-border)]/70 bg-[var(--nv-bg)]/60 px-4 py-3 text-sm text-[var(--nv-muted)]">
           CAPTCHA placeholder — integrate Cloudflare Turnstile or reCAPTCHA and
           set the resulting token to the hidden <code>captchaToken</code> field.
         </div>
@@ -162,7 +162,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={status === "submitting"}
-          className="rounded-full bg-[var(--nv-primary)] px-5 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[var(--nv-primary-strong)] disabled:cursor-not-allowed disabled:opacity-60"
+          className="rounded-full bg-[var(--nv-primary-strong)] px-5 py-2 text-sm font-semibold text-[var(--nv-bg)] shadow-[0_0_16px_rgba(0,210,255,0.3)] transition hover:-translate-y-0.5 hover:bg-[var(--nv-accent)] disabled:cursor-not-allowed disabled:opacity-60"
         >
           {status === "submitting" ? "Sending..." : "Submit"}
         </button>

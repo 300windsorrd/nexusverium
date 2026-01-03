@@ -7,14 +7,14 @@ interface ServiceListProps {
 
 export function ServiceList({ services }: ServiceListProps) {
   return (
-    <section className="relative mt-12 overflow-hidden rounded-[24px] bg-white/90 p-6 shadow-[var(--shadow-card)]">
+    <section className="nv-reveal nv-reveal--delay-2 relative mt-12 overflow-hidden rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(150deg,rgba(0,42,71,0.9),rgba(0,11,20,0.95))] p-6 shadow-[var(--shadow-card)]">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-y-0 right-[-60px] w-64 rounded-full bg-[var(--nv-primary)]/6 blur-3xl"
+        className="pointer-events-none absolute inset-y-0 right-[-60px] w-64 rounded-full bg-[var(--nv-primary-strong)]/10 blur-3xl"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-y-6 left-6 w-24 rotate-3 bg-gradient-to-b from-[var(--nv-primary)]/12 via-transparent to-transparent"
+        className="pointer-events-none absolute inset-y-6 left-6 w-24 rotate-3 bg-gradient-to-b from-[var(--nv-primary-strong)]/20 via-transparent to-transparent"
       />
       <h3 className="text-xl font-semibold text-[var(--nv-ink)]">
         Services focused on water restoration
@@ -28,7 +28,7 @@ export function ServiceList({ services }: ServiceListProps) {
               </p>
               <Link
                 href={`/services/${service.slug}`}
-                className="text-sm font-semibold text-[var(--nv-primary)] hover:text-[var(--nv-primary-strong)]"
+                className="text-sm font-semibold text-[var(--nv-primary-strong)] hover:text-[var(--nv-accent)]"
               >
                 Read more →
               </Link>
@@ -38,7 +38,7 @@ export function ServiceList({ services }: ServiceListProps) {
               {service.primaryKeywords.slice(0, 3).map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-full bg-[var(--nv-bg)] px-3 py-1"
+                  className="rounded-full border border-[var(--nv-border)]/40 bg-[var(--nv-bg)]/70 px-3 py-1"
                 >
                   {tag}
                 </span>

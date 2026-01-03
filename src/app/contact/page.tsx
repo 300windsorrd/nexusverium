@@ -22,22 +22,22 @@ export default function ContactPage() {
       />
       <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
         <ContactForm />
-        <div className="rounded-[20px] bg-white p-5 shadow-[var(--shadow-card)]">
+        <div className="nv-reveal nv-reveal--delay-1 rounded-[20px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 p-5 shadow-[var(--shadow-card)]">
           <h2 className="text-lg font-semibold text-[var(--nv-ink)]">
             How we engage
           </h2>
           <ul className="mt-3 space-y-3 text-sm text-[var(--nv-muted)]">
             <li>
-              <strong className="text-[var(--nv-primary)]">Pillar One:</strong>{" "}
+              <strong className="text-[var(--nv-primary-strong)]">Pillar One:</strong>{" "}
               Wetlands, brackish water, environmental restoration, and QA.
             </li>
             <li>
-              <strong className="text-[var(--nv-primary)]">Pillar Two:</strong>{" "}
+              <strong className="text-[var(--nv-primary-strong)]">Pillar Two:</strong>{" "}
               Human readiness and resilience research (long-term, not clinical
               care).
             </li>
             <li>
-              <strong className="text-[var(--nv-primary)]">Pillar Three:</strong>{" "}
+              <strong className="text-[var(--nv-primary-strong)]">Pillar Three:</strong>{" "}
               Responsible cognitive systems—careful, research-stage, and always
               human-led.
             </li>
