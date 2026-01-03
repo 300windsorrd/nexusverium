@@ -53,6 +53,7 @@ body {
   select:focus-visible {
     outline: 2px solid var(--nv-primary);
     outline-offset: 3px;
+    /*Text color changed from #000 to #fff*/
     background-color: #fff;
   }
 }
