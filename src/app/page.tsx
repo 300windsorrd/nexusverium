@@ -22,7 +22,7 @@ const orgJsonLd = [
     name: siteConfig.name,
     url: siteConfig.url,
     description: siteConfig.description,
-    logo: `${siteConfig.url}/image.png`,
+    logo: `${siteConfig.url}/Logo.png`,
   },
   {
     "@context": "https://schema.org",

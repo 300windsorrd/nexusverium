@@ -39,7 +39,7 @@ export function Header({ searchItems }: HeaderProps) {
       <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3 sm:gap-6">
         <Link href="/" className="flex items-start gap-2">
           <Image
-            src="/image.png"
+            src="/Logo.png"
             alt="Nexus Verium logo"
             width={44}
             height={44}

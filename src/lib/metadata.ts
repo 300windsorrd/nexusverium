@@ -8,7 +8,7 @@ const organizationLd = {
   name: siteConfig.name,
   url: siteConfig.url,
   description: siteConfig.description,
-  logo: `${siteConfig.url}/image.png`,
+  logo: `${siteConfig.url}/Logo.png`,
 };
 
 export function buildMetadata({

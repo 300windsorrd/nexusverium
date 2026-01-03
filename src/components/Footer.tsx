@@ -9,7 +9,7 @@ export function Footer() {
           <div className="flex items-start gap-2">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--nv-primary)]/10 p-2 sm:h-11 sm:w-11 md:h-12 md:w-12">
               <Image
-                src="/image.png"
+                src="/Logo.png"
                 alt="Nexus Verium logo"
                 width={48}
                 height={48}
