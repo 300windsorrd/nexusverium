@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   title: `${siteConfig.name} | Responsible AI for Restoration`,
   description: siteConfig.description,
   metadataBase: new URL(siteConfig.url),
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
     title: `${siteConfig.name} | Responsible AI for Restoration`,
     description: siteConfig.description,
