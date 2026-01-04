@@ -20,16 +20,20 @@ export function Hero({ title, subtitle, ctaLabel, ctaHref }: HeroProps) {
           className="object-cover"
           sizes="100vw"
         />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-l from-[rgba(0,11,20,0.78)] via-[rgba(0,11,20,0.52)] to-[rgba(0,11,20,0.12)]"
+        />
       </div>
       <div className="relative z-10 flex min-h-screen w-full flex-col justify-center px-6 py-10 sm:py-14 md:items-end md:px-10">
-        <div className="w-full max-w-xl text-right md:ml-auto">
+        <div className="hero-copy w-full max-w-xl rounded-[24px] p-6 text-right shadow-[0_25px_60px_rgba(0,11,20,0.35)] backdrop-blur-md md:ml-auto md:p-7">
           <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--nv-accent)] opacity-80">
             Responsible AI for Restoration
           </p>
           <h1 className="mt-3 text-3xl font-semibold leading-tight text-[var(--nv-ink)] sm:text-4xl">
             {title}
           </h1>
-          <p className="hero-subtitle mt-3 text-base sm:text-lg">
+          <p className="hero-subtitle mt-3 text-base font-medium leading-relaxed sm:text-lg">
             {subtitle}
           </p>
           <div className="mt-5 flex justify-end">
