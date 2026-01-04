@@ -4,14 +4,12 @@ import { ProjectGrid } from "@/components/ProjectGrid";
 import { SeoHead } from "@/components/SeoHead";
 import { ServiceList } from "@/components/ServiceList";
 import { SectionHeading } from "@/components/SectionHeading";
-import { Timeline } from "@/components/Timeline";
 import { TwoColumnIntro } from "@/components/TwoColumnIntro";
 import {
   industries,
   locations,
   projects,
   services,
-  timeline,
 } from "@/lib/content";
 import { siteConfig } from "@/lib/content";
 
@@ -144,15 +142,6 @@ export default function Home() {
             </Link>
           ))}
         </div>
-      </section>
-
-      <section className="mt-12">
-        <SectionHeading
-          eyebrow="Future plans"
-          title="Roadmap and partners"
-          description="Interactive parallax timeline with accessibility-friendly fallback."
-        />
-        <Timeline items={timeline} />
       </section>
     </>
   );
