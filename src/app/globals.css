@@ -202,12 +202,13 @@ body {
 }
 
 .hero-copy {
-  background: var(--nv-overlay);
+  /* 99% transparent hero card background to show the image behind it */
+  background: rgba(0, 10, 20, 0.01);
   border: 1px solid var(--nv-border);
 }
 
 :root[data-theme="light"] .hero-copy {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.01);
   border-color: rgba(12, 74, 110, 0.22);
 }
 
