@@ -9,6 +9,7 @@ interface TimelineProps {
 
 interface TimelineEntryProps {
   item: TimelineItem;
+  isLast: boolean;
 }
 
 function TimelineYearBadge({ year }: { year: string }) {
@@ -19,15 +20,18 @@ function TimelineYearBadge({ year }: { year: string }) {
   );
 }
 
-function TimelineEntry({ item }: TimelineEntryProps) {
+function TimelineEntry({ item, isLast }: TimelineEntryProps) {
   return (
-    <article className="relative grid gap-4 sm:grid-cols-[auto_1fr] sm:gap-8">
-      <div className="flex items-center gap-3 sm:hidden">
+    <article className="relative grid gap-4 sm:grid-cols-[72px_1fr] sm:gap-8">
+      <div className="relative flex items-center gap-3 sm:flex-col sm:items-center sm:gap-1">
         <TimelineYearBadge year={item.year} />
-        <span className="h-px flex-1 bg-gradient-to-r from-[var(--nv-primary)]/70 via-[var(--nv-primary)]/30 to-transparent" />
-      </div>
-      <div className="relative hidden h-full w-8 sm:flex sm:flex-col sm:items-center">
-        <TimelineYearBadge year={item.year} />
+        <span className="h-px flex-1 bg-gradient-to-r from-[var(--nv-primary)]/70 via-[var(--nv-primary)]/30 to-transparent sm:hidden" />
+        {!isLast ? (
+          <span
+            aria-hidden
+            className="pointer-events-none absolute left-1/2 top-12 -bottom-8 hidden w-px -translate-x-1/2 bg-gradient-to-b from-[var(--nv-primary-strong)] via-[var(--nv-primary)]/40 to-transparent sm:block"
+          />
+        ) : null}
       </div>
       <div className="overflow-hidden rounded-[18px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 p-4 shadow-[0_12px_28px_rgba(0,11,20,0.6)]">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
@@ -67,11 +71,10 @@ function TimelineEntry({ item }: TimelineEntryProps) {
 
 export function Timeline({ items }: TimelineProps) {
   return (
-    <section className="nv-reveal nv-reveal--delay-2 relative mt-12 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)]">
-      <div className="absolute bottom-8 left-6 top-8 hidden w-px bg-gradient-to-b from-[var(--nv-primary-strong)] via-[var(--nv-primary)]/40 to-transparent sm:block" />
+    <section className="nv-reveal nv-reveal--delay-2 relative mt-12 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,var(--nv-surface),var(--nv-bg))] p-6 sm:p-8 sm:pb-10 shadow-[var(--shadow-card)]">
       <div className="flex flex-col gap-8">
         {items.map((item, index) => (
-          <TimelineEntry key={item.id} item={item} />
+          <TimelineEntry key={item.id} item={item} isLast={index === items.length - 1} />
         ))}
       </div>
     </section>

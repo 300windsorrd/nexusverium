@@ -37,7 +37,7 @@ export function Header({ searchItems }: HeaderProps) {
 
   return (
     <header className="glass-surface border-b border-[var(--nv-border)]/60 bg-[var(--nv-surface)]/80 backdrop-blur-md shadow-[var(--nv-card-shadow)]">
-      <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3 sm:gap-6">
+      <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:gap-6">
         <Link href="/" className="flex items-start gap-2">
           <Image
             src="/Logo.png"
@@ -56,26 +56,8 @@ export function Header({ searchItems }: HeaderProps) {
             </span>
           </div>
         </Link>
-        <div className="ml-auto flex flex-1 items-center gap-3 sm:gap-4">
-          <nav className="hidden shrink-0 items-center gap-4 md:flex">
-            {navLinks.map((item) => {
-              const active = pathname === item.href;
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`nv-nav-link nv-nav-link--desktop ${
-                    active
-                      ? "nv-nav-link--active nv-nav-link--elevated"
-                      : "nv-nav-link--inactive"
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
-          </nav>
-          <div className="relative ml-auto w-full max-w-[280px] flex-1 sm:max-w-[360px]">
+        <div className="flex w-full flex-col gap-3 sm:ml-auto sm:flex-row sm:items-center sm:gap-4">
+          <div className="relative w-full flex-1 max-w-full sm:max-w-[460px]">
             <label className="sr-only" htmlFor="site-search">
               Search Nexus Verium
             </label>
@@ -128,7 +110,27 @@ export function Header({ searchItems }: HeaderProps) {
               </div>
             ) : null}
           </div>
-          <ThemeToggle />
+          <div className="hidden items-center gap-3 md:ml-auto md:flex">
+            <nav className="flex items-center gap-4">
+              {navLinks.map((item) => {
+                const active = pathname === item.href;
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`nv-nav-link nv-nav-link--desktop ${
+                      active
+                        ? "nv-nav-link--active nv-nav-link--elevated"
+                        : "nv-nav-link--inactive"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
+            </nav>
+            <ThemeToggle />
+          </div>
         </div>
       </div>
       <div className="flex items-center gap-3 border-t border-[var(--nv-border)]/70 px-4 py-2 text-xs text-[var(--nv-muted)] md:hidden">
@@ -148,6 +150,9 @@ export function Header({ searchItems }: HeaderProps) {
             </Link>
           );
         })}
+        <div className="ml-auto">
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );
