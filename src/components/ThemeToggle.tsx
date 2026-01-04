@@ -39,11 +39,13 @@ export function ThemeToggle() {
       type="button"
       onClick={toggleTheme}
       aria-label="Toggle color theme"
-      className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full border border-[var(--nv-border)] bg-[var(--nv-surface)]/90 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-[var(--nv-ink)] shadow-[var(--nv-card-shadow)] backdrop-blur hover:border-[var(--nv-primary)]/70 hover:text-[var(--nv-primary-strong)] transition"
+      className="group inline-flex shrink-0 items-center gap-2 rounded-full border border-[var(--nv-border)] bg-[var(--nv-bg)]/70 px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-[var(--nv-ink)] shadow-[0_10px_30px_rgba(0,11,20,0.35)] transition hover:border-[var(--nv-primary)]/70 hover:text-[var(--nv-primary-strong)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--nv-primary-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--nv-bg)]"
     >
       <span className="hidden sm:inline">{hydrated ? nextLabel : "Theme"}</span>
-      <span className="inline sm:hidden">{hydrated ? (theme === "dark" ? "Light" : "Dark") : "Theme"}</span>
-      <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--nv-primary)] text-[var(--nv-bg)]">
+      <span className="inline sm:hidden">
+        {hydrated ? (theme === "dark" ? "Light" : "Dark") : "Theme"}
+      </span>
+      <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--nv-primary)] text-[var(--nv-bg)] shadow-[0_8px_20px_rgba(0,210,255,0.28)] transition group-hover:bg-[var(--nv-primary-strong)]">
         {theme === "dark" ? (
           <svg
             aria-hidden
