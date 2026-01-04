@@ -4,7 +4,6 @@ import "./globals.css";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { LogoWatermarkLayout } from "@/components/LogoWatermarkLayout";
-import { NotificationBar } from "@/components/NotificationBar";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { buildSearchIndex, siteConfig } from "@/lib/content";
 
@@ -54,10 +53,6 @@ export default function RootLayout({
       >
         <LogoWatermarkLayout>
           <div className="sticky top-0 z-50">
-            <NotificationBar
-              message="Brackish water efficacy review: new dissolved oxygen gains published."
-              href="/now"
-            />
             <Header searchItems={searchItems} />
           </div>
           <main className="mx-auto max-w-6xl px-4 pb-16 pt-0 sm:px-6">
