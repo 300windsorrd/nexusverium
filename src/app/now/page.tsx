@@ -42,7 +42,7 @@ export default function NowPage() {
         description="Live pilots, research artifacts, and collaboration updates."
       />
 
-      <section className="nv-reveal nv-reveal--delay-1 grid gap-6 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,rgba(0,42,71,0.92),rgba(0,11,20,0.95))] p-6 shadow-[var(--shadow-card)] lg:grid-cols-2">
+      <section className="nv-reveal nv-reveal--delay-1 grid gap-6 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)] lg:grid-cols-2">
         <div className="space-y-3">
           <p className="text-xs uppercase tracking-wide text-[var(--nv-muted)]">
             Gemini generated
@@ -86,7 +86,7 @@ export default function NowPage() {
         {progressSection}
       </section>
 
-      <section className="nv-reveal nv-reveal--delay-2 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,rgba(0,42,71,0.92),rgba(0,11,20,0.95))] p-6 shadow-[var(--shadow-card)]">
+      <section className="nv-reveal nv-reveal--delay-2 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)]">
         <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
           <SectionHeading
             eyebrow="Field"
@@ -129,7 +129,7 @@ export default function NowPage() {
         </div>
       </section>
 
-      <section className="nv-reveal nv-reveal--delay-3 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,rgba(0,42,71,0.92),rgba(0,11,20,0.95))] p-6 shadow-[var(--shadow-card)]">
+      <section className="nv-reveal nv-reveal--delay-3 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)]">
         <SectionHeading
           eyebrow="In flight"
           title="Projects in motion"

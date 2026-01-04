@@ -10,14 +10,14 @@ interface HeroProps {
 
 export function Hero({ title, subtitle, ctaLabel, ctaHref }: HeroProps) {
   return (
-    <section className="nv-reveal relative left-1/2 right-1/2 min-h-screen w-screen -ml-[50vw] -mr-[50vw] overflow-hidden rounded-none border border-[var(--nv-border)] bg-[radial-gradient(120%_120%_at_20%_0%,rgba(0,120,179,0.45)_0%,rgba(0,11,20,0.96)_60%)] shadow-[var(--shadow-card)]">
+    <section className="nv-reveal relative left-1/2 right-1/2 min-h-screen w-screen -ml-[50vw] -mr-[50vw] overflow-hidden rounded-none border border-[var(--nv-border)] bg-[radial-gradient(120%_120%_at_20%_0%,var(--nv-bg-glow-2)_0%,var(--nv-bg)_60%)] shadow-[var(--shadow-card)]">
       <div className="absolute inset-0">
         <Image
           src="/images/IMG-20260103-WA0003.jpg"
           alt="Wetlands restoration scene"
           fill
           priority
-          className="object-cover opacity-70"
+          className="object-cover"
           sizes="100vw"
         />
       </div>
@@ -29,7 +29,7 @@ export function Hero({ title, subtitle, ctaLabel, ctaHref }: HeroProps) {
           <h1 className="mt-3 text-3xl font-semibold leading-tight text-[var(--nv-ink)] sm:text-4xl">
             {title}
           </h1>
-          <p className="mt-3 text-base text-[var(--nv-muted)] sm:text-lg">
+          <p className="hero-subtitle mt-3 text-base sm:text-lg">
             {subtitle}
           </p>
           <div className="mt-5 flex justify-end">

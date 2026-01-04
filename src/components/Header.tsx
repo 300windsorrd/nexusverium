@@ -35,7 +35,7 @@ export function Header({ searchItems }: HeaderProps) {
   }, [query, searchItems]);
 
   return (
-    <header className="glass-surface border-b border-[var(--nv-border)]/60 bg-[var(--nv-surface)]/80 backdrop-blur-md shadow-[0_12px_30px_rgba(0,11,20,0.55)]">
+    <header className="glass-surface border-b border-[var(--nv-border)]/60 bg-[var(--nv-surface)]/80 backdrop-blur-md shadow-[var(--nv-card-shadow)]">
       <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3 sm:gap-6">
         <Link href="/" className="flex items-start gap-2">
           <Image

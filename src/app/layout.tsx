@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { LogoWatermarkLayout } from "@/components/LogoWatermarkLayout";
 import { NotificationBar } from "@/components/NotificationBar";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { buildSearchIndex, siteConfig } from "@/lib/content";
 
 const bodyFont = IBM_Plex_Sans({
@@ -64,6 +65,7 @@ export default function RootLayout({
           </main>
           <Footer />
         </LogoWatermarkLayout>
+        <ThemeToggle />
       </body>
     </html>
   );

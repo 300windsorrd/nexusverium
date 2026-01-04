@@ -9,7 +9,7 @@ interface SeoPageContentProps {
 
 export function SeoPageContent({ section, page, related = [] }: SeoPageContentProps) {
   return (
-    <div className="nv-reveal rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,rgba(0,42,71,0.92),rgba(0,11,20,0.95))] p-6 shadow-[var(--shadow-card)]">
+    <div className="nv-reveal rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)]">
       <p className="text-xs uppercase tracking-[0.3em] text-[var(--nv-muted)]">
         {section}
       </p>

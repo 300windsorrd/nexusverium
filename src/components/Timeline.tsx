@@ -67,7 +67,7 @@ function TimelineEntry({ item }: TimelineEntryProps) {
 
 export function Timeline({ items }: TimelineProps) {
   return (
-    <section className="nv-reveal nv-reveal--delay-2 relative mt-12 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,rgba(0,42,71,0.92),rgba(0,11,20,0.95))] p-6 shadow-[var(--shadow-card)]">
+    <section className="nv-reveal nv-reveal--delay-2 relative mt-12 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)]">
       <div className="absolute bottom-8 left-6 top-8 hidden w-px bg-gradient-to-b from-[var(--nv-primary-strong)] via-[var(--nv-primary)]/40 to-transparent sm:block" />
       <div className="flex flex-col gap-8">
         {items.map((item, index) => (

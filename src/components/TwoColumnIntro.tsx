@@ -19,7 +19,7 @@ export function TwoColumnIntro({
   ctaHref,
 }: TwoColumnIntroProps) {
   return (
-    <section className="nv-reveal nv-reveal--delay-1 mt-12 grid gap-6 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(140deg,rgba(0,42,71,0.9),rgba(0,11,20,0.95))] p-6 shadow-[var(--shadow-card)] md:grid-cols-[1fr_1.6fr] md:items-center md:gap-10">
+    <section className="nv-reveal nv-reveal--delay-1 mt-12 grid gap-6 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(140deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)] md:grid-cols-[1fr_1.6fr] md:items-center md:gap-10">
       <div className="flex flex-col items-center justify-center gap-4 text-center md:items-start md:text-left">
         <div className="relative h-36 w-36 overflow-hidden rounded-full border-4 border-[var(--nv-primary)]/60 shadow-[0_0_20px_rgba(0,210,255,0.2)]">
           <Image src={image} alt={name} fill className="object-cover" />

@@ -57,7 +57,7 @@ export default function Home() {
         ctaHref="/team"
       />
 
-      <section className="nv-reveal nv-reveal--delay-2 mt-12 grid gap-6 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,rgba(0,42,71,0.92),rgba(0,11,20,0.95))] p-6 shadow-[var(--shadow-card)] md:grid-cols-[1.2fr_1fr] md:gap-10">
+      <section className="nv-reveal nv-reveal--delay-2 mt-12 grid gap-6 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)] md:grid-cols-[1.2fr_1fr] md:gap-10">
         <SectionHeading
           eyebrow="Why Nexus Verium"
           title="AI that assists, not dominates"
@@ -80,7 +80,7 @@ export default function Home() {
 
       <ServiceList services={services} />
 
-      <section className="nv-reveal nv-reveal--delay-2 mt-12 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,rgba(0,42,71,0.92),rgba(0,11,20,0.95))] p-6 shadow-[var(--shadow-card)]">
+      <section className="nv-reveal nv-reveal--delay-2 mt-12 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)]">
         <SectionHeading
           eyebrow="Current focus"
           title="Possible future projects"
@@ -89,7 +89,7 @@ export default function Home() {
         <ProjectGrid projects={projects} />
       </section>
 
-      <section className="nv-reveal nv-reveal--delay-3 mt-12 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,rgba(0,42,71,0.92),rgba(0,11,20,0.95))] p-6 shadow-[var(--shadow-card)]">
+      <section className="nv-reveal nv-reveal--delay-3 mt-12 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)]">
         <SectionHeading
           eyebrow="Programmatic SEO"
           title="Explore our services, industries, and locations"

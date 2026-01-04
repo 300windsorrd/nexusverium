@@ -63,7 +63,7 @@ export function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="nv-reveal rounded-[24px] border border-[var(--nv-border)]/60 bg-[linear-gradient(160deg,rgba(0,42,71,0.9),rgba(0,11,20,0.96))] p-6 shadow-[var(--shadow-card)]"
+      className="nv-reveal rounded-[24px] border border-[var(--nv-border)]/60 bg-[linear-gradient(160deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)]"
     >
       <div className="grid gap-4 md:grid-cols-2">
         <label className="flex flex-col gap-1 text-sm font-semibold text-[var(--nv-ink)]">

@@ -7,7 +7,7 @@ interface ServiceListProps {
 
 export function ServiceList({ services }: ServiceListProps) {
   return (
-    <section className="nv-reveal nv-reveal--delay-2 relative mt-12 overflow-hidden rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(150deg,rgba(0,42,71,0.9),rgba(0,11,20,0.95))] p-6 shadow-[var(--shadow-card)]">
+    <section className="nv-reveal nv-reveal--delay-2 relative mt-12 overflow-hidden rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(150deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)]">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-y-0 right-[-60px] w-64 rounded-full bg-[var(--nv-primary-strong)]/10 blur-3xl"
