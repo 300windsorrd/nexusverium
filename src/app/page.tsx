@@ -83,7 +83,7 @@ export default function Home() {
       <section className="nv-reveal nv-reveal--delay-2 mt-12 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,rgba(0,42,71,0.92),rgba(0,11,20,0.95))] p-6 shadow-[var(--shadow-card)]">
         <SectionHeading
           eyebrow="Current focus"
-          title="Projects moving now"
+          title="Possible future projects"
           description="Field pilots, research prototypes, and monitoring systems designed with partners."
         />
         <ProjectGrid projects={projects} />
