@@ -43,7 +43,7 @@ export function Footer() {
               <Link href="/team">Team</Link>
             </li>
             <li>
-              <Link href="/now">What we&apos;re working on</Link>
+              <Link href="/now">Timeline</Link>
             </li>
             <li>
               <Link href="/services/watershed-digital-twins">Services</Link>

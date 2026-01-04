@@ -7,13 +7,13 @@ import { buildMetadata } from "@/lib/metadata";
 import { projects, timeline } from "@/lib/content";
 
 export const metadata: Metadata = buildMetadata({
-  title: "What we’re working on | Nexus Verium",
+  title: "Timeline | Nexus Verium",
   description:
     "See the latest Nexus Verium pilots: Gemini-generated blueprints, brackish water research, and USDA collaboration highlights.",
   pathname: "/now",
 });
 
-export default function NowPage() {
+export default function TimelinePage() {
   const progressSection = (
     <div className="space-y-3 rounded-[18px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 p-4 shadow-[0_12px_24px_rgba(0,11,20,0.6)]">
       <h2 className="text-lg font-semibold text-[var(--nv-primary-strong)]">
@@ -22,7 +22,7 @@ export default function NowPage() {
       <p className="text-sm text-[var(--nv-muted)]">
         We are evaluating a biomimicry-inspired reef system that increases
         dissolved oxygen in brackish canals. Early pilots show steady DO lifts
-        of 0.3–0.5 mg/L over 14 days with passive flow and zero additional power
+        of 0.3-0.5 mg/L over 14 days with passive flow and zero additional power
         draw. We are validating durability and ecological impact before scaling.
       </p>
       <ul className="prose-list text-sm text-[var(--nv-muted)]">
@@ -35,10 +35,10 @@ export default function NowPage() {
 
   return (
     <div className="space-y-10">
-      <h1 className="sr-only">What we are working on</h1>
+      <h1 className="sr-only">Timeline</h1>
       <SectionHeading
-        eyebrow="Now"
-        title="What we’re working on"
+        eyebrow="Timeline"
+        title="Our timeline"
         description="Live pilots, research artifacts, and collaboration updates."
       />
 
