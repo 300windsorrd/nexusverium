@@ -12,7 +12,7 @@ export function Hero({ title, subtitle, ctaLabel, ctaHref }: HeroProps) {
     <section className="nv-reveal relative left-1/2 right-1/2 min-h-screen w-screen -ml-[50vw] -mr-[50vw] overflow-hidden rounded-none border border-[var(--nv-border)] bg-[radial-gradient(120%_120%_at_20%_0%,var(--nv-bg-glow-2)_0%,var(--nv-bg)_60%)] shadow-[var(--shadow-card)]">
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-[url('/images/Mobile-Background.png')] bg-cover bg-center sm:bg-[url('/images/Gemini_Generated_Image_6f0te46f0te46f0t.png')]"
+        className="absolute inset-0 bg-[url('/images/BackGround-Mobile.png')] bg-cover bg-center sm:bg-[url('/images/BackGraound-PC.png')]"
       />
       <div
         aria-hidden="true"
