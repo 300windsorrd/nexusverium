@@ -4,6 +4,7 @@ import Link from "next/link";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Timeline } from "@/components/Timeline";
 import { buildMetadata } from "@/lib/metadata";
+import { withBasePath } from "@/lib/paths";
 import { projects, timeline } from "@/lib/content";
 
 export const metadata: Metadata = buildMetadata({
@@ -58,7 +59,7 @@ export default function TimelinePage() {
           <div className="grid gap-4 sm:grid-cols-2">
             <figure className="overflow-hidden rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70">
               <Image
-                src="/now/blueprint-1.svg"
+                src={withBasePath("/now/blueprint-1.svg")}
                 alt="Gemini-generated blueprint showing modular reef inserts"
                 width={600}
                 height={360}
@@ -71,7 +72,7 @@ export default function TimelinePage() {
             </figure>
             <figure className="overflow-hidden rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70">
               <Image
-                src="/now/blueprint-2.svg"
+                src={withBasePath("/now/blueprint-2.svg")}
                 alt="Gemini-generated blueprint showing layered aeration plan"
                 width={600}
                 height={360}
@@ -103,7 +104,7 @@ export default function TimelinePage() {
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           <figure className="overflow-hidden rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70">
             <Image
-              src="/now/usda-team.svg"
+              src={withBasePath("/now/usda-team.svg")}
               alt="Placeholder image of Nexus Verium team at USDA research event"
               width={600}
               height={360}

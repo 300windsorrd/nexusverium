@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import type { Project } from "@/types";
+import { withBasePath } from "@/lib/paths";
 
 interface ProjectGridProps {
   projects: Project[];
@@ -23,7 +24,7 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
           >
             <div className="relative h-44 w-full overflow-hidden bg-[var(--nv-bg)]">
               <Image
-                src={project.image}
+                src={withBasePath(project.image)}
                 alt={`${project.title} illustration`}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

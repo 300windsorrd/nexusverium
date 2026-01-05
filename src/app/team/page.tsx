@@ -3,6 +3,7 @@ import Image from "next/image";
 import { SectionHeading } from "@/components/SectionHeading";
 import { SeoHead } from "@/components/SeoHead";
 import { buildMetadata } from "@/lib/metadata";
+import { withBasePath } from "@/lib/paths";
 import { siteConfig, team } from "@/lib/content";
 
 export const metadata: Metadata = buildMetadata({
@@ -47,7 +48,7 @@ export default function TeamPage() {
           >
             <div className="relative h-40 w-full overflow-hidden rounded-[14px] bg-[var(--nv-bg)]">
               <Image
-                src={member.image}
+                src={withBasePath(member.image)}
                 alt={`${member.name} portrait`}
                 fill
                 className="object-cover"

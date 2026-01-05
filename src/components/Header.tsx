@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useMemo, useState } from "react";
 import type { SearchItem } from "@/types";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { withBasePath } from "@/lib/paths";
 
 interface HeaderProps {
   searchItems: SearchItem[];
@@ -40,7 +41,7 @@ export function Header({ searchItems }: HeaderProps) {
       <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:gap-6">
         <Link href="/" className="flex items-start gap-2">
           <Image
-            src="/Logo.png"
+            src={withBasePath("/Logo.png")}
             alt="Nexus Verium logo"
             width={44}
             height={44}

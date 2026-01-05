@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import type { TimelineItem } from "@/types";
+import { withBasePath } from "@/lib/paths";
 
 interface TimelineProps {
   items: TimelineItem[];
@@ -37,7 +38,7 @@ function TimelineEntry({ item, isLast }: TimelineEntryProps) {
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-3">
             <Image
-              src={item.image}
+              src={withBasePath(item.image)}
               alt={item.title}
               width={96}
               height={64}

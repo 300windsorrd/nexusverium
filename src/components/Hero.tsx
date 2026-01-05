@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { withBasePath } from "@/lib/paths";
 
 interface HeroProps {
   title: string;
@@ -13,7 +14,7 @@ export function Hero({ title, subtitle, ctaLabel, ctaHref }: HeroProps) {
     <section className="nv-reveal relative left-1/2 right-1/2 min-h-screen w-screen -ml-[50vw] -mr-[50vw] overflow-hidden rounded-none border border-[var(--nv-border)] bg-[radial-gradient(120%_120%_at_20%_0%,var(--nv-bg-glow-2)_0%,var(--nv-bg)_60%)] shadow-[var(--shadow-card)]">
       <div aria-hidden="true" className="absolute inset-0">
         <Image
-          src="/images/BackGround-Mobile.png"
+          src={withBasePath("/images/BackGround-Mobile.png")}
           alt=""
           fill
           priority
@@ -22,7 +23,7 @@ export function Hero({ title, subtitle, ctaLabel, ctaHref }: HeroProps) {
           className="object-cover object-center sm:hidden"
         />
         <Image
-          src="/images/BackGround4k.png"
+          src={withBasePath("/images/BackGround4k.png")}
           alt=""
           fill
           priority

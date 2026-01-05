@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { LogoWatermarkLayout } from "@/components/LogoWatermarkLayout";
 import { buildSearchIndex, siteConfig } from "@/lib/content";
+import { withBasePath } from "@/lib/paths";
 
 const bodyFont = IBM_Plex_Sans({
   subsets: ["latin"],
@@ -20,15 +21,9 @@ const displayFont = Space_Grotesk({
   variable: "--font-display",
 });
 
-const rawBasePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-const basePath =
-  rawBasePath && rawBasePath !== "/"
-    ? `/${rawBasePath.replace(/^\/+|\/+$/g, "")}`
-    : "";
-const assetPath = (path: string) => `${basePath}${path}`;
 const logoVars = {
-  "--nv-logo-watermark-image-dark": `url("${assetPath("/images/logo%20white.png")}")`,
-  "--nv-logo-watermark-image-light": `url("${assetPath("/images/logo%20black.png")}")`,
+  "--nv-logo-watermark-image-dark": `url("${withBasePath("/images/logo%20white.png")}")`,
+  "--nv-logo-watermark-image-light": `url("${withBasePath("/images/logo%20black.png")}")`,
 } as React.CSSProperties;
 
 export const metadata: Metadata = {
