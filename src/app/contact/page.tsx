@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
 import { SectionHeading } from "@/components/SectionHeading";
 import { buildMetadata } from "@/lib/metadata";
-import { siteConfig } from "@/lib/content";
 
 export const metadata: Metadata = buildMetadata({
   title: "Contact | Nexus Verium",
@@ -20,34 +19,8 @@ export default function ContactPage() {
         title="Reach the Nexus Verium team"
         description="We respond within 2 business days. Please share site context and desired outcomes so we can connect you with the right lead."
       />
-      <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+      <div className="mx-auto lg:max-w-3xl">
         <ContactForm />
-        <div className="nv-reveal nv-reveal--delay-1 rounded-[20px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 p-5 shadow-[var(--shadow-card)]">
-          <h2 className="text-lg font-semibold text-[var(--nv-ink)]">
-            How we engage
-          </h2>
-          <ul className="mt-3 space-y-3 text-sm text-[var(--nv-muted)]">
-            <li>
-              <strong className="text-[var(--nv-primary-strong)]">Pillar One:</strong>{" "}
-              Wetlands, brackish water, environmental restoration, and QA.
-            </li>
-            <li>
-              <strong className="text-[var(--nv-primary-strong)]">Pillar Two:</strong>{" "}
-              Human readiness and resilience research (long-term, not clinical
-              care).
-            </li>
-            <li>
-              <strong className="text-[var(--nv-primary-strong)]">Pillar Three:</strong>{" "}
-              Responsible cognitive systems—careful, research-stage, and always
-              human-led.
-            </li>
-            <li>Preferred contact: email {siteConfig.name} at contact@nexusverium.com.</li>
-            <li>
-              Please include data availability, partners involved, and timelines
-              if reaching out about a project.
-            </li>
-          </ul>
-        </div>
       </div>
     </div>
   );
