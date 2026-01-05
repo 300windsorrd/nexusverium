@@ -1,6 +1,9 @@
 import { MetadataRoute } from "next";
 import { allProgrammatic, siteConfig } from "@/lib/content";
 
+export const dynamic = "force-static";
+export const revalidate = 0;
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const withTrailingSlash = (path: string) => (path === "/" ? "/" : `${path}/`);
 
