@@ -21,7 +21,9 @@ function rateLimited(key: string) {
 export async function POST(req: NextRequest) {
   const ip =
     req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-    req.ip ||
+    req.headers.get("x-real-ip") ||
+    req.headers.get("cf-connecting-ip") ||
+    req.headers.get("true-client-ip") ||
     "unknown";
 
   if (rateLimited(ip)) {
