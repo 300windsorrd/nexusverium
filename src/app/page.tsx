@@ -40,38 +40,40 @@ export default function Home() {
     <>
       <SeoHead jsonLd={orgJsonLd} />
       <Hero
-        title="Responsible AI and environmental engineering for water systems."
-        subtitle="Nexus Verium builds research-driven tools that help agencies, utilities, and partners restore wetlands and brackish water—without hype, and with humans in control."
-        ctaLabel="View our current work"
-        ctaHref="/now"
+        title="NEXUS VERIUM - Environmental Engineering & Restoration Organization"
+        subtitle="Human Well-Being & Responsible Innovation. Nexus Verium is a research-driven AI and environmental technology company focused on integrating artificial intelligence into real-world systems that improve environmental sustainability, human well-being, and how people interact with the technology helping the environment. Mission: to use AI responsibly - for restoration, clarity, efficiency, and long-term good."
+        ctaLabel="Let's Build Responsibly"
+        ctaHref="/contact"
       />
 
       <TwoColumnIntro
         name="Jonathan Eleonidas Arroyo Yunda"
-        role="Founder, Nexus Verium"
+        role="Founder & CEO of Nexus Verium"
         image="/team/jonathan.svg"
-        text="Nexus Verium exists to bring clarity, efficiency, and long-term good to environmental restoration using responsible AI. We start with Pillar One—environmental restoration and sustainability—especially water systems. Pillar Two explores human performance and wellbeing; Pillar Three looks at long-horizon cognitive augmentation for teams. We are research-driven, institutional-friendly, and careful about how AI is used in the field."
-        ctaLabel="Meet the team"
+        text="“If our rivers are polluted, then so are we.”"
+        ctaLabel="AI for restoration. AI for people. AI for the future."
         ctaHref="/team"
       />
 
       <section className="nv-reveal nv-reveal--delay-2 mt-12 grid gap-6 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)] md:grid-cols-[1.2fr_1fr] md:gap-10">
         <SectionHeading
-          eyebrow="Why Nexus Verium"
-          title="AI that assists, not dominates"
-          description="We design AI systems that make environmental engineers, researchers, and community partners more effective—while keeping human judgment and safety at the center."
+          eyebrow="We believe"
+          title="AI should assist, not dominate."
+          description="Technology should reduce stress, not increase it. Innovation should be responsible, ethical, and grounded. Environmental and human health are deeply connected. We work collaboratively with engineers, educators, institutions, businesses, and communities - adding intelligence, not ego."
         />
         <div className="space-y-3 text-sm text-[var(--nv-muted)]">
           <p>
-            We focus on wetlands and brackish water first, collaborating with
-            agencies and research groups to ship measurable restoration wins. We
-            keep models transparent, auditable, and paired with human-in-the-loop
-            controls.
+            Why Nexus Verium: Research-driven, not hype-driven. Environmental
+            ethics as a technical foundation. Human-centered AI philosophy.
+            Scalable from small projects to institutional partnerships. Built to
+            grow alongside education, research, and real-world results.
           </p>
           <p>
-            Our pillars: Restoration and Sustainability (today), Human Readiness
-            (next), and Responsible Cognitive Systems (research). Each pillar
-            builds on the last to keep progress ethical and useful.
+            Nexus Verium operates as a research and systems intelligence
+            partner, supporting projects and organizations through applied AI,
+            environmental science, and workflow design. Our approach prioritizes
+            people first, technology second. We do not replace existing
+            expertise - we support and enhance it.
           </p>
         </div>
       </section>
@@ -80,18 +82,18 @@ export default function Home() {
 
       <section className="nv-reveal nv-reveal--delay-2 mt-12 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)]">
         <SectionHeading
-          eyebrow="Current focus"
-          title="Possible future projects"
-          description="Field pilots, research prototypes, and monitoring systems designed with partners."
+          eyebrow="Our Current Focus"
+          title="NEXUS VERIUM - Environmental Engineering & Restoration Organization"
+          description="At this stage, Nexus Verium primarily operates within Pillar One: Environmental Restoration, while selectively supporting AI workflow integration for organizations aligned with our values. As the company grows, so will its scope - deliberately and responsibly."
         />
         <ProjectGrid projects={projects} />
       </section>
 
       <section className="nv-reveal nv-reveal--delay-3 mt-12 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)]">
         <SectionHeading
-          eyebrow="Programmatic SEO"
-          title="Explore our services, industries, and locations"
-          description="Structured content keeps pages consistent, discoverable, and easy to expand."
+          eyebrow="Who we work with"
+          title="Industries we support include"
+          description="Construction & trades; Restaurants & hospitality; Healthcare & wellness; Small businesses & service providers."
         />
         <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {services.slice(0, 2).map((service) => (
@@ -101,7 +103,7 @@ export default function Home() {
               className="rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 p-4 transition hover:-translate-y-1 hover:shadow-[0_16px_30px_rgba(0,11,20,0.6)]"
             >
               <p className="text-sm uppercase tracking-wide text-[var(--nv-muted)]">
-                Service
+                Pillar
               </p>
               <h3 className="text-lg font-semibold text-[var(--nv-primary-strong)]">
                 {service.title}

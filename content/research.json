@@ -1,86 +1,146 @@
 [
   {
-    "slug": "biomimicry-brackish-reef",
-    "title": "Biomimicry Reef for Brackish Water",
-    "metaTitle": "Biomimicry Reef Research | Nexus Verium",
-    "metaDescription": "Evaluating modular reef structures that oxygenate brackish water while sheltering juvenile species.",
-    "h1": "Biomimicry reef for oxygenation",
-    "intro": "We are testing modular reef geometries that mimic mangrove root flow to lift dissolved oxygen without heavy energy use.",
+    "slug": "the-philosophy",
+    "title": "Page 3 - The Philosophy",
+    "metaTitle": "Page 3 - The Philosophy",
+    "metaDescription": "Earth's rivers resemble human veins. They function as the planet's circulatory system, moving nutrients and life.",
+    "h1": "The Philosophy",
+    "intro": "Earth's rivers resemble human veins. They function as the planet's circulatory system, moving nutrients and life.",
     "bullets": [
-      "3D-printed clay and recycled aggregate variants",
-      "Flow bench tests paired with digital twin simulations",
-      "Monitoring for turbidity, DO, and habitat benefits"
+      "Humans and nature are one interconnected organism.",
+      "Microplastics in the water become microplastics in our bodies.",
+      "Repair this connection using AI, Robotics, and Sensing Networks.",
+      "\"If our rivers are polluted, then so are we.\"",
+      "Jonathan Arroyo, Founder and CEO of Nexus Verium."
     ],
     "processSteps": [
-      "Bench testing in controlled flumes",
-      "Gemini-assisted CFD concepting",
-      "Field micro-pilots with redundant sensing",
-      "Model calibration with real-world drift",
-      "Publish safety and efficacy notes"
+      "The Biological Truth: Earth's rivers resemble human veins.",
+      "The Connection: Humans and nature are one interconnected organism.",
+      "The Mission: Repair this connection using AI, Robotics, and Sensing Networks.",
+      "AI should assist, not dominate.",
+      "Technology should reduce stress, not increase it."
     ],
     "faq": [
-      {"question": "Is this ready for production?", "answer": "Not yet. We are in limited field pilots to validate durability and ecological impact."},
-      {"question": "What are the energy requirements?", "answer": "The designs are passive; energy is only needed for sensing, which can run on solar."}
+      {
+        "question": "What is the biological truth?",
+        "answer": "Earth's rivers resemble human veins. They function as the planet's circulatory system, moving nutrients and life."
+      },
+      {
+        "question": "What is the mission?",
+        "answer": "Repair this connection using AI, Robotics, and Sensing Networks."
+      }
     ],
-    "primaryKeywords": ["biomimicry reef", "brackish water research", "oxygenation"],
-    "secondaryKeywords": ["dissolved oxygen", "environmental engineering", "AI simulation"],
+    "primaryKeywords": [
+      "rivers",
+      "circulatory system",
+      "AI for restoration"
+    ],
+    "secondaryKeywords": [
+      "Biological Truth",
+      "The Connection",
+      "The Mission"
+    ],
     "schemaType": "ResearchProject",
-    "related": ["brackish-remediation-blueprints"]
+    "related": [
+      "the-gap-monitoring-vs-healing"
+    ]
   },
   {
-    "slug": "responsible-ai-evaluation",
-    "title": "Responsible AI Evaluation for Field Systems",
-    "metaTitle": "Responsible AI for Environmental Systems | Nexus Verium",
-    "metaDescription": "Evaluation protocols to keep AI assistants safe, transparent, and aligned with environmental and community goals.",
-    "h1": "Responsible AI for environmental work",
-    "intro": "We are building evaluation harnesses so AI copilots used in environmental engineering stay transparent, accountable, and useful to field teams.",
+    "slug": "the-gap-monitoring-vs-healing",
+    "title": "Page 4 - The Gap: Monitoring vs. Healing",
+    "metaTitle": "Page 4 - The Gap: Monitoring vs. Healing",
+    "metaDescription": "Them: NJDEP, MRRI, Riverkeeper, and local communities. Us: Nexus Verium.",
+    "h1": "The Gap: Monitoring vs. Healing",
+    "intro": "Them: NJDEP, MRRI, Riverkeeper, and local communities. Us: Nexus Verium.",
     "bullets": [
-      "Risk reviews for dual-use and data sensitivity",
-      "Red-team prompts against ecological and equity harms",
-      "Human-in-the-loop safeguards and escalation paths"
+      "Current Approaches: Water testing.",
+      "Current Approaches: Passive restoration of wetlands.",
+      "Current Approaches: Stormwater management.",
+      "Nexus Verium Approach: Real data-driven solutions.",
+      "Nexus Verium Approach: Utilizing AI for environmental restoration."
     ],
     "processSteps": [
-      "Map AI roles and decision points",
-      "Define misuse scenarios and guardrails",
-      "Test models against safety suites",
-      "Document mitigations and monitoring",
-      "Publish patterns for partners"
+      "Nexus Verium Approach: Innovation pipeline for Meadowlands-specific prototypes.",
+      "Nexus Verium Approach: Technology bridge between existing efforts and new innovations.",
+      "We work collaboratively with engineers, educators, institutions, businesses, and communities - adding intelligence, not ego.",
+      "AI should assist, not dominate.",
+      "Environmental and human health are deeply connected."
     ],
     "faq": [
-      {"question": "Do you support on-prem models?", "answer": "Yes. We evaluate open and closed models and can lock deployments to on-prem or VPC environments."},
-      {"question": "Who signs off on safety?", "answer": "Decisions stay with accountable humans. We provide evidence and tracking, not automation of authority."}
+      {
+        "question": "What is the gap?",
+        "answer": "Current organizations are using monitoring and detection AI in the Meadowlands. These systems are effective at gathering information, predicting issues, and tracking environmental changes. However, no AI system is designed to actively address: Pollution removal; Treatment for contaminated sediment; Stormwater contamination prevention; Purification of the river; Restoration of the ecosystem. This is the gap Nexus Verium's research is preparing to fill."
+      },
+      {
+        "question": "Who is involved in the Meadowlands?",
+        "answer": "Them: NJDEP, MRRI, Riverkeeper, and local communities. Us: Nexus Verium."
+      }
     ],
-    "primaryKeywords": ["responsible AI", "AI safety", "environmental AI"],
-    "secondaryKeywords": ["evaluation", "alignment", "field safety"],
+    "primaryKeywords": [
+      "monitoring",
+      "healing",
+      "innovation pipeline"
+    ],
+    "secondaryKeywords": [
+      "Meadowlands",
+      "data-driven solutions",
+      "environmental restoration"
+    ],
     "schemaType": "ResearchProject",
-    "related": ["watershed-digital-twins"]
+    "related": [
+      "the-philosophy",
+      "full-spectrum-robotic-framework"
+    ]
   },
   {
-    "slug": "water-clarity-ml",
-    "title": "Water Clarity Machine Learning",
-    "metaTitle": "Water Clarity ML | Nexus Verium",
-    "metaDescription": "Models that predict turbidity and clarity shifts using satellite, sensor, and weather signals for wetlands and estuaries.",
-    "h1": "Predicting clarity to prioritize action",
-    "intro": "We are testing models that forecast turbidity swings 48-96 hours ahead to pre-stage crews and equipment.",
+    "slug": "full-spectrum-robotic-framework",
+    "title": "A Full-Spectrum Robotic Framework",
+    "metaTitle": "A Full-Spectrum Robotic Framework",
+    "metaDescription": "Mission: Restoring the environmental health of waterways using intelligent, automated, regenerative systems.",
+    "h1": "A Full-Spectrum Robotic Framework",
+    "intro": "Mission: Restoring the environmental health of waterways using intelligent, automated, regenerative systems.",
     "bullets": [
-      "Satellite reflectance plus in-situ QA",
-      "Bias checks to avoid overfitting storm cycles",
-      "Action-oriented alerts for field teams"
+      "Layer 1: The Eyes of the River - Aerial and sub-surface intelligence.",
+      "Multispectral, RGB, thermal sensors, and sonar.",
+      "Jetson Nano edge computing.",
+      "YOLO-based hazard detection.",
+      "Autonomous drone flight systems."
     ],
     "processSteps": [
-      "Data fusion and labeling",
-      "Model training with physical constraints",
-      "Backtesting against historical events",
-      "Pilot deployments with clear escalation rules",
-      "Continuous error analysis with partners"
+      "Layer 2: The Organs of the River - Biological filtration and regeneration.",
+      "Native plants (cattails, rushes) + biochar.",
+      "Solar-powered micro-pumps and aerators.",
+      "ESP32 microcontrollers.",
+      "AI-controlled flow optimization.",
+      "Layer 3: The Hands of the River - Autonomous debris removal.",
+      "Brushless motors and debris hoppers.",
+      "LiDAR-Lite and optical flow navigation.",
+      "Swarm-based coordination.",
+      "Autonomous docking and unloading."
     ],
     "faq": [
-      {"question": "How accurate are the forecasts?", "answer": "Early pilots show useful directional signals; we publish confidence bounds and avoid overclaiming."},
-      {"question": "Can this reduce costs?", "answer": "It helps crews focus on hotspots and avoid unnecessary deployments, saving fuel and time."}
+      {
+        "question": "What is the mission of the framework?",
+        "answer": "Restoring the environmental health of waterways using intelligent, automated, regenerative systems."
+      },
+      {
+        "question": "How does Nexus Verium combine AI, Robotics, and Ecology?",
+        "answer": "Combining AI, Robotics, and Ecology Together."
+      }
     ],
-    "primaryKeywords": ["water clarity", "turbidity forecast", "environmental ML"],
-    "secondaryKeywords": ["remote sensing", "wetland monitoring", "AI predictions"],
+    "primaryKeywords": [
+      "robotic framework",
+      "waterways",
+      "regenerative systems"
+    ],
+    "secondaryKeywords": [
+      "eyes of the river",
+      "organs of the river",
+      "hands of the river"
+    ],
     "schemaType": "ResearchProject",
-    "related": ["sensor-fusion-monitoring", "watershed-digital-twins"]
+    "related": [
+      "the-gap-monitoring-vs-healing"
+    ]
   }
 ]

@@ -1,39 +1,37 @@
 [
   {
     "name": "Jonathan Eleonidas Arroyo Yunda",
-    "role": "Founder",
-    "bio": "Engineer and researcher focused on responsible AI for environmental restoration. Leads Nexus Verium's strategy and partner collaborations to bring ethical AI into wetlands and water recovery work.",
+    "role": "Founder & Systems Architect",
+    "bio": "Nexus Verium was founded by Jonathan Eleonidas Arroyo Yunda, an environmental science student and systems thinker focused on the responsible integration of AI into environmental and human systems. With a background in environmental science, engineering concepts, and AI systems design, Nexus Verium serves as the formal entity through which applied research, prototyping, and real-world implementation are developed and scaled.",
     "image": "/team/jonathan.svg",
-    "focus": "Strategy, restoration partnerships, responsible AI",
-    "email": "contact@nexusverium.com"
+    "focus": "Environmental science, engineering concepts, AI systems design"
   },
   {
     "name": "Jensy Jimenez",
-    "role": "AI Systems Engineer",
-    "bio": "Designs reliable AI systems for environmental sensing and digital twins. Builds human-in-the-loop workflows that keep field teams in control.",
+    "role": "Lead Environmental AI Systems Engineer",
+    "bio": "AI Systems Engineer: Jensy Jimenez {BIO}",
     "image": "/team/jensy.svg",
-    "focus": "AI systems, platform reliability, search",
-    "email": "engineering@nexusverium.com"
+    "focus": "AI Systems Engineer"
   },
   {
-    "name": "Dr. A. Rahman",
-    "role": "Research Lead",
-    "bio": "Placeholder: Research lead overseeing biomimicry studies and validation protocols with partner universities.",
+    "name": "John Villa",
+    "role": "Lead Communications Strategist & Systems Analyst",
+    "bio": "John Villa - Lead Communications Strategist & Systems Analyst.",
     "image": "/team/research-lead.svg",
-    "focus": "Research design, biomimicry validation"
+    "focus": "Lead Communications Strategist & Systems Analyst"
   },
   {
-    "name": "Casey Mendez",
-    "role": "Field Operations",
-    "bio": "Placeholder: Coordinates field deployments, safety checks, and community engagement for restoration pilots.",
+    "name": "Dewansh Gupta",
+    "role": "AI Systems Engineer & Robotics Research",
+    "bio": "Dewansh Gupta - AI Systems Engineer & Robotics Research.",
     "image": "/team/field-ops.svg",
-    "focus": "Field operations, safety, community liaisons"
+    "focus": "AI Systems Engineer & Robotics Research"
   },
   {
-    "name": "Riley Chen",
-    "role": "Partnerships & Impact",
-    "bio": "Placeholder: Builds collaborations with agencies, NGOs, and research partners to align incentives and impact metrics.",
+    "name": "Fasih Ur Rehman Abbasi",
+    "role": "Chief Research Coordinator & Operations Lead",
+    "bio": "Fasih Ur Rehman Abbasi - Chief Research Coordinator & Operations Lead.",
     "image": "/team/partnerships.svg",
-    "focus": "Partnerships, grants, reporting"
+    "focus": "Chief Research Coordinator & Operations Lead"
   }
 ]

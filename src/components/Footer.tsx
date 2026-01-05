@@ -23,13 +23,12 @@ export function Footer() {
                 Nexus Verium
               </p>
               <p className="text-sm font-semibold">
-                Responsible AI for Restoration
+                Environmental Engineering & Restoration Organization
               </p>
             </div>
           </div>
           <p className="text-sm text-[var(--nv-muted)] max-w-md">
-            Research-driven AI and environmental technology focused on
-            restoration, clarity, efficiency, and long-term good.
+            Nexus Verium is a research-driven AI and environmental technology company focused on integrating artificial intelligence into real-world systems that improve environmental sustainability, human well-being, and how people interact with the technology helping the environment.
           </p>
         </div>
         <div>
@@ -47,10 +46,10 @@ export function Footer() {
               <Link href="/now">Timeline</Link>
             </li>
             <li>
-              <Link href="/services/watershed-digital-twins">Services</Link>
+              <Link href="/services/environmental-restoration-and-sustainability">Pillars</Link>
             </li>
             <li>
-              <Link href="/research/biomimicry-brackish-reef">Research</Link>
+              <Link href="/research/the-philosophy">Research</Link>
             </li>
           </ul>
         </div>
@@ -63,19 +62,16 @@ export function Footer() {
               <Link href="/contact">Contact</Link>
             </li>
             <li>
-              <a href="mailto:contact@nexusverium.com">contact@nexusverium.com</a>
+              <Link href="/locations/meadowlands-nj">Meadowlands</Link>
             </li>
             <li>
-              <Link href="/locations/gulf-coast">Locations</Link>
-            </li>
-            <li>
-              <Link href="/industries/coastal-restoration">Industries</Link>
+              <Link href="/industries/construction-and-trades">Industries</Link>
             </li>
           </ul>
         </div>
       </div>
       <div className="border-t border-[var(--nv-border)]/40 px-4 py-4 text-center text-xs text-[var(--nv-muted)]">
-        © {new Date().getFullYear()} Nexus Verium. All rights reserved.
+        (c) {new Date().getFullYear()} Nexus Verium. AI for restoration. AI for people. AI for the future.
       </div>
     </footer>
   );

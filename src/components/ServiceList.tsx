@@ -17,7 +17,7 @@ export function ServiceList({ services }: ServiceListProps) {
         className="pointer-events-none absolute inset-y-6 left-6 w-24 rotate-3 bg-gradient-to-b from-[var(--nv-primary-strong)]/20 via-transparent to-transparent"
       />
       <h3 className="text-xl font-semibold text-[var(--nv-ink)]">
-        Services focused on water restoration
+        The pillars of our vision
       </h3>
       <ul className="mt-4 divide-y divide-[var(--nv-border)]">
         {services.map((service) => (
@@ -30,7 +30,7 @@ export function ServiceList({ services }: ServiceListProps) {
                 href={`/services/${service.slug}`}
                 className="text-sm font-semibold text-[var(--nv-primary-strong)] hover:text-[var(--nv-accent)]"
               >
-                Read more →
+                Read more
               </Link>
             </div>
             <p className="text-sm text-[var(--nv-muted)]">{service.intro}</p>

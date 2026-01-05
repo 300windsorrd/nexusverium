@@ -1,34 +1,50 @@
 [
   {
-    "slug": "biloxi-brackish-pilot",
-    "title": "Biloxi Brackish Water Pilot",
-    "location": "Biloxi, Mississippi",
-    "summary": "Deploying biomimicry reef inserts and low-energy aeration to lift dissolved oxygen in a storm-stressed canal system.",
+    "slug": "digital-twin-meadowlands",
+    "title": "Digital Twin: Meadowlands, NJ",
+    "location": "Meadowlands, New Jersey",
+    "summary": "Real-time digital Meadowlands that predicts threats and tests solutions, leading to fixing the environment cheaper, faster, and smarter.",
     "image": "/images/IMG-20260103-WA0004.jpg",
-    "tags": ["brackish", "aeration", "pilot"]
+    "tags": [
+      "Digital Twin",
+      "Meadowlands",
+      "predict threats"
+    ]
   },
   {
-    "slug": "chesapeake-monitoring",
-    "title": "Chesapeake QA Dashboards",
-    "location": "Annapolis, Maryland",
-    "summary": "Sensor fusion and QA to keep citizen science data usable for regulatory decision-making.",
+    "slug": "monitoring-vs-healing",
+    "title": "The Gap: Monitoring vs. Healing",
+    "location": "Meadowlands, New Jersey",
+    "summary": "Them: NJDEP, MRRI, Riverkeeper, and local communities. Us: Nexus Verium. Nexus Verium Approach: Real data-driven solutions; Utilizing AI for environmental restoration; Innovation pipeline for Meadowlands-specific prototypes; Technology bridge between existing efforts and new innovations.",
     "image": "/images/IMG-20260103-WA0000.jpg",
-    "tags": ["monitoring", "citizen science", "QA"]
+    "tags": [
+      "monitoring",
+      "healing",
+      "Meadowlands"
+    ]
   },
   {
-    "slug": "andes-low-power",
-    "title": "Andes Low-Power Monitoring",
-    "location": "Quito, Ecuador",
-    "summary": "Offline-first telemetry kits for high-altitude wetlands with community stewards.",
+    "slug": "integrated-mission-waterway-restoration",
+    "title": "Integrated Mission for Waterway Restoration",
+    "location": "Waterways",
+    "summary": "Combining AI, Robotics, and Ecology Together. Mission: Restoring the environmental health of waterways using intelligent, automated, regenerative systems.",
     "image": "/images/IMG-20260103-WA0002.jpg",
-    "tags": ["low-power", "telemetry", "community"]
+    "tags": [
+      "AI",
+      "Robotics",
+      "Ecology"
+    ]
   },
   {
-    "slug": "ai-safety-harness",
-    "title": "AI Safety Harness",
-    "location": "Remote",
-    "summary": "Evaluation harness for AI copilots used in environmental engineering workflows to avoid unsafe recommendations.",
+    "slug": "kpi-summary",
+    "title": "KPI Summary",
+    "location": "Overpeck + Moonachie (Year 1)",
+    "summary": "In the first phase of Nexus Verium, KPIs focus on foundation strength rather than prototype results. AI Twin accuracy: 50-70%; Data integration: 4 major agencies (NJDEP, MRRI, NOAA, USGS); Field data: 10-20 samples/month; Partnerships: 2-3 active collaborators; Awareness reach: 1,000-5,000 people; Baseline mapping: Overpeck + Moonachie (Year 1); Prototype readiness: Validated digital models.",
     "image": "/images/IMG-20260103-WA0001.jpg",
-    "tags": ["responsible AI", "evaluation"]
+    "tags": [
+      "foundation strength",
+      "AI Twin accuracy",
+      "baseline mapping"
+    ]
   }
 ]

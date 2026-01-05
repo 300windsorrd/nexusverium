@@ -27,14 +27,14 @@ const logoVars = {
 } as React.CSSProperties;
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name} | Responsible AI for Restoration`,
+  title: `${siteConfig.name} | Environmental Engineering & Restoration Organization`,
   description: siteConfig.description,
   metadataBase: new URL(siteConfig.url),
   icons: {
     icon: "favicon.ico",
   },
   openGraph: {
-    title: `${siteConfig.name} | Responsible AI for Restoration`,
+    title: `${siteConfig.name} | Environmental Engineering & Restoration Organization`,
     description: siteConfig.description,
     url: `${siteConfig.url}/`,
     siteName: siteConfig.name,

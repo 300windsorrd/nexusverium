@@ -21,7 +21,7 @@ export function SeoPageContent({ section, page, related = [] }: SeoPageContentPr
       <section className="mt-6 grid gap-6 md:grid-cols-2">
         <div className="rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 p-4">
           <h2 className="text-lg font-semibold text-[var(--nv-primary-strong)]">
-            What you get
+            Capabilities include
           </h2>
           <ul className="prose-list mt-2 text-sm text-[var(--nv-muted)]">
             {page.bullets.map((bullet) => (
@@ -31,7 +31,7 @@ export function SeoPageContent({ section, page, related = [] }: SeoPageContentPr
         </div>
         <div className="rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 p-4">
           <h2 className="text-lg font-semibold text-[var(--nv-primary-strong)]">
-            How we work
+            Our approach
           </h2>
           <ol className="list-decimal space-y-2 pl-5 text-sm text-[var(--nv-muted)]">
             {page.processSteps.map((step) => (

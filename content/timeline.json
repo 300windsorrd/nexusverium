@@ -1,28 +1,28 @@
 [
   {
-    "id": "2025-h1",
-    "year": "2025",
-    "partner": "Coastal Innovation Lab",
-    "title": "Gemini-assisted reef blueprints",
-    "description": "Generating and validating modular reef layouts with Gemini for brackish aeration while keeping human review in the loop.",
+    "id": "pillar-one-now",
+    "year": "Now",
+    "partner": "Pillar One",
+    "title": "Environmental Restoration & Sustainability",
+    "description": "At this stage, Nexus Verium primarily operates within Pillar One: Environmental Restoration, while selectively supporting AI workflow integration for organizations aligned with our values.",
     "image": "/timeline/reef.svg",
     "link": "#"
   },
   {
-    "id": "2025-h2",
-    "year": "2025",
-    "partner": "USDA Research Event",
-    "title": "Field trial dashboards",
-    "description": "Building dashboards that blend USDA field data with Nexus Verium QA layers to keep pilots auditable.",
+    "id": "pillars-vision",
+    "year": "Long-Term",
+    "partner": "The Pillars of Our Vision",
+    "title": "Graphic timeline introducing three long-term pillars",
+    "description": "Pillar One: Environmental Restoration & Sustainability (Primary Focus). Pillar Two: Mental Health, Emotional Support, and Human-AI Harmony. Pillar Three: Integrated Intelligence (Long-Term Research Vision).",
     "image": "/timeline/usda.svg",
     "link": "#"
   },
   {
-    "id": "2026-h1",
-    "year": "2026",
-    "partner": "Water Utility Coalition",
-    "title": "Predictive clarity alerts",
-    "description": "Rolling out turbidity forecast signals with clear escalation paths for utility crews.",
+    "id": "foundation-kpis",
+    "year": "Year 1",
+    "partner": "Baseline mapping: Overpeck + Moonachie",
+    "title": "KPIs focus on foundation strength",
+    "description": "AI Twin accuracy: 50-70%; Data integration: 4 major agencies (NJDEP, MRRI, NOAA, USGS); Field data: 10-20 samples/month; Partnerships: 2-3 active collaborators; Awareness reach: 1,000-5,000 people; Prototype readiness: Validated digital models.",
     "image": "/timeline/clarity.svg",
     "link": "#"
   }

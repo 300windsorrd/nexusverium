@@ -69,7 +69,7 @@ export function Header({ searchItems }: HeaderProps) {
               Nexus Verium
             </span>
             <span className="text-sm font-semibold text-[var(--nv-primary-strong)]">
-              Responsible AI for Restoration
+              Environmental Engineering & Restoration Organization
             </span>
           </div>
         </Link>
@@ -97,7 +97,7 @@ export function Header({ searchItems }: HeaderProps) {
                 onChange={(e) => setQuery(e.target.value)}
                 onFocus={() => setFocused(true)}
                 onBlur={() => setTimeout(() => setFocused(false), 150)}
-                placeholder="Search services, research, team"
+                placeholder="Search pillars, research, team"
                 className="w-full border-0 bg-transparent text-sm text-[var(--nv-ink)] outline-none placeholder:text-[var(--nv-muted)]"
               />
             </div>

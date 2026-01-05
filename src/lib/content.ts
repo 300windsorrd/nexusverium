@@ -21,7 +21,7 @@ export const siteConfig = {
   name: "Nexus Verium",
   url: siteUrl,
   description:
-    "Nexus Verium builds responsible AI and environmental engineering systems focused on water restoration and sustainability.",
+    "Nexus Verium is a research-driven AI and environmental technology company focused on integrating artificial intelligence into real-world systems that improve environmental sustainability, human well-being, and how people interact with the technology helping the environment.",
 };
 
 export const services = servicesData as SeoPage[];
@@ -71,14 +71,14 @@ export function buildSearchIndex(): SearchItem[] {
     title: member.name,
     href: "/team",
     type: "team",
-    description: `${member.role} — ${member.focus}`,
+    description: `${member.role} - ${member.focus}`,
   }));
 
   const projectItems = projects.map((project) => ({
     title: project.title,
     href: "/now",
     type: "project",
-    description: `${project.location} — ${project.summary}`,
+    description: `${project.location} - ${project.summary}`,
   }));
 
   return [...programmatic, ...teamItems, ...projectItems];
