@@ -7,7 +7,6 @@ interface ContactFormState {
   email: string;
   phone: string;
   company: string;
-  subject: string;
   message: string;
   captchaToken: string;
   honeypot: string;
@@ -18,7 +17,6 @@ const initialState: ContactFormState = {
   email: "",
   phone: "",
   company: "",
-  subject: "",
   message: "",
   captchaToken: "",
   honeypot: "",
@@ -124,16 +122,6 @@ export function ContactForm() {
         </label>
       </div>
       <div className="mt-4 grid gap-4">
-        <label className="flex flex-col gap-1 text-sm font-semibold text-[var(--nv-ink)]">
-          Subject {requiredMarker}
-          <input
-            required
-            name="subject"
-            value={form.subject}
-            onChange={(e) => handleChange("subject", e.target.value)}
-            className="rounded-[12px] border border-[var(--nv-border)] bg-[var(--nv-bg)]/65 px-3 py-2 text-sm text-[var(--nv-ink)] outline-none focus:border-[var(--nv-primary-strong)] focus:ring-2 focus:ring-[var(--nv-primary-strong)]/25"
-          />
-        </label>
         <label className="flex flex-col gap-1 text-sm font-semibold text-[var(--nv-ink)]">
           Message {requiredMarker}
           <textarea
