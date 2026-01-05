@@ -46,7 +46,7 @@ export function Footer() {
               <Link href="/now">Timeline</Link>
             </li>
             <li>
-              <Link href="/services/environmental-restoration-and-sustainability">Pillars</Link>
+              <Link href="/services/environmental-restoration-systems">Services</Link>
             </li>
             <li>
               <Link href="/research/the-philosophy">Research</Link>
@@ -65,7 +65,9 @@ export function Footer() {
               <Link href="/locations/meadowlands-nj">Meadowlands</Link>
             </li>
             <li>
-              <Link href="/industries/construction-and-trades">Industries</Link>
+              <Link href="/industries/environmental-agencies-and-organizations">
+                Industries
+              </Link>
             </li>
           </ul>
         </div>

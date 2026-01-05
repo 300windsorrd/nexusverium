@@ -1,10 +1,5 @@
 import type { NextConfig } from "next";
-
-const rawBasePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-const basePath =
-  rawBasePath && rawBasePath !== "/"
-    ? `/${rawBasePath.replace(/^\/+|\/+$/g, "")}`
-    : "";
+import { basePath } from "./src/lib/paths";
 
 const nextConfig: NextConfig = {
   output: "export",

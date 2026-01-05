@@ -1,190 +1,140 @@
 [
   {
-    "slug": "construction-and-trades",
-    "title": "Construction & trades",
-    "metaTitle": "Construction & trades",
-    "metaDescription": "Industries we support include: Construction & trades.",
-    "h1": "Construction & trades",
-    "intro": "Industries we support include: Construction & trades.",
+    "slug": "environmental-agencies-and-organizations",
+    "title": "Environmental agencies & organizations",
+    "metaTitle": "Environmental agencies & organizations",
+    "metaDescription": "Who we work with right now: environmental agencies and organizations focused on waterway restoration.",
+    "h1": "Environmental agencies & organizations",
+    "intro": "We partner with public and nonprofit environmental agencies and organizations focused on waterway health, restoration, and measurable ecosystem outcomes.",
     "bullets": [
-      "Use cases include: AI workflow automation.",
-      "Use cases include: Internal systems optimization.",
-      "Use cases include: Decision support and data organization.",
-      "Use cases include: Human-centered AI adoption.",
-      "Our approach prioritizes people first, technology second."
+      "Restoration planning supported by data and field research",
+      "Monitoring systems that clarify water quality and ecosystem health",
+      "Prototype development that can be tested and scaled responsibly",
+      "Community-facing projects that improve access to waterways",
+      "Applied AI support for environmental analysis and reporting"
     ],
     "processSteps": [
-      "Nexus Verium operates as a research and systems intelligence partner, supporting projects and organizations through applied AI, environmental science, and workflow design.",
-      "We do not replace existing expertise - we support and enhance it.",
-      "We work collaboratively with engineers, educators, institutions, businesses, and communities - adding intelligence, not ego.",
-      "Environmental and human health are deeply connected.",
-      "AI should assist, not dominate."
+      "Align on restoration goals and measurable outcomes.",
+      "Assess current conditions through field and historical data.",
+      "Design systems that can be tested, monitored, and improved.",
+      "Deploy carefully and iterate based on environmental feedback."
     ],
     "faq": [
       {
-        "question": "Who we work with",
-        "answer": "Environmental organizations and agencies; Research institutions and schools; Engineering and infrastructure projects; Small businesses seeking responsible AI integration; Community-focused initiatives."
+        "question": "What type of agencies do we work with?",
+        "answer": "Public and nonprofit environmental agencies and organizations focused on water quality, wetlands, and ecological restoration."
       },
       {
-        "question": "Why Nexus Verium",
-        "answer": "Research-driven, not hype-driven; Environmental ethics as a technical foundation; Human-centered AI philosophy; Scalable from small projects to institutional partnerships; Built to grow alongside education, research, and real-world results."
+        "question": "How does Nexus Verium support these partners?",
+        "answer": "We provide applied AI, monitoring systems, and restoration planning support to turn data into visible environmental outcomes."
       }
     ],
     "primaryKeywords": [
-      "Construction & trades",
-      "AI workflow automation",
-      "human-centered AI adoption"
+      "environmental agencies",
+      "restoration planning",
+      "water quality"
     ],
     "secondaryKeywords": [
-      "people first technology second",
-      "research-driven",
-      "responsible integration"
+      "monitoring systems",
+      "ecological restoration",
+      "applied AI"
     ],
     "schemaType": "Service",
     "related": [
-      "restaurants-and-hospitality",
-      "healthcare-and-wellness"
+      "research-institutions-and-universities",
+      "local-communities-and-conservation-groups"
     ]
   },
   {
-    "slug": "restaurants-and-hospitality",
-    "title": "Restaurants & hospitality",
-    "metaTitle": "Restaurants & hospitality",
-    "metaDescription": "Industries we support include: Restaurants & hospitality.",
-    "h1": "Restaurants & hospitality",
-    "intro": "Industries we support include: Restaurants & hospitality.",
+    "slug": "research-institutions-and-universities",
+    "title": "Research institutions & universities",
+    "metaTitle": "Research institutions & universities",
+    "metaDescription": "Who we work with right now: research institutions and universities advancing ecological restoration.",
+    "h1": "Research institutions & universities",
+    "intro": "We collaborate with research institutions and universities developing environmental science, restoration technology, and ecosystem intelligence.",
     "bullets": [
-      "Use cases include: AI workflow automation.",
-      "Use cases include: Internal systems optimization.",
-      "Use cases include: Decision support and data organization.",
-      "Use cases include: Human-centered AI adoption.",
-      "Our approach prioritizes people first, technology second."
+      "Field research support for wetlands and waterways",
+      "Data modeling and digital twin development",
+      "Prototype validation for restoration technologies",
+      "Joint studies that connect AI with ecology",
+      "Knowledge sharing that improves public outcomes"
     ],
     "processSteps": [
-      "Nexus Verium operates as a research and systems intelligence partner, supporting projects and organizations through applied AI, environmental science, and workflow design.",
-      "We do not replace existing expertise - we support and enhance it.",
-      "We work collaboratively with engineers, educators, institutions, businesses, and communities - adding intelligence, not ego.",
-      "Environmental and human health are deeply connected.",
-      "AI should assist, not dominate."
+      "Define research questions and data needs.",
+      "Build models and systems that can be validated in the field.",
+      "Use AI to analyze patterns and test restoration strategies.",
+      "Share insights that support long-term ecosystem health."
     ],
     "faq": [
       {
-        "question": "Who we work with",
-        "answer": "Environmental organizations and agencies; Research institutions and schools; Engineering and infrastructure projects; Small businesses seeking responsible AI integration; Community-focused initiatives."
+        "question": "What kinds of research partners fit?",
+        "answer": "Universities, labs, and institutes focused on environmental science, hydrology, ecological engineering, or restoration technology."
       },
       {
-        "question": "Why Nexus Verium",
-        "answer": "Research-driven, not hype-driven; Environmental ethics as a technical foundation; Human-centered AI philosophy; Scalable from small projects to institutional partnerships; Built to grow alongside education, research, and real-world results."
+        "question": "How does Nexus Verium contribute?",
+        "answer": "We provide applied AI, modeling support, and prototype development that turn research into visible restoration outcomes."
       }
     ],
     "primaryKeywords": [
-      "Restaurants & hospitality",
-      "AI workflow automation",
-      "human-centered AI adoption"
+      "research institutions",
+      "universities",
+      "digital twins"
     ],
     "secondaryKeywords": [
-      "people first technology second",
-      "research-driven",
-      "responsible integration"
+      "environmental science",
+      "restoration technology",
+      "data modeling"
     ],
     "schemaType": "Service",
     "related": [
-      "construction-and-trades",
-      "healthcare-and-wellness"
+      "environmental-agencies-and-organizations",
+      "local-communities-and-conservation-groups"
     ]
   },
   {
-    "slug": "healthcare-and-wellness",
-    "title": "Healthcare & wellness",
-    "metaTitle": "Healthcare & wellness",
-    "metaDescription": "Industries we support include: Healthcare & wellness.",
-    "h1": "Healthcare & wellness",
-    "intro": "Industries we support include: Healthcare & wellness.",
+    "slug": "local-communities-and-conservation-groups",
+    "title": "Local communities & conservation groups",
+    "metaTitle": "Local communities & conservation groups",
+    "metaDescription": "Who we work with right now: local communities and conservation groups aligned with restoration work.",
+    "h1": "Local communities & conservation groups",
+    "intro": "We work with local communities and conservation groups to make restoration visible, accessible, and supported by people who live near the waterways.",
     "bullets": [
-      "Use cases include: AI workflow automation.",
-      "Use cases include: Internal systems optimization.",
-      "Use cases include: Decision support and data organization.",
-      "Use cases include: Human-centered AI adoption.",
-      "Our approach prioritizes people first, technology second."
+      "Community-facing restoration projects with clear outcomes",
+      "Education and visibility around local waterway health",
+      "Support for local stewardship and conservation initiatives",
+      "Tools that help communities track change over time",
+      "Partnerships that keep restoration grounded in real needs"
     ],
     "processSteps": [
-      "Nexus Verium operates as a research and systems intelligence partner, supporting projects and organizations through applied AI, environmental science, and workflow design.",
-      "We do not replace existing expertise - we support and enhance it.",
-      "We work collaboratively with engineers, educators, institutions, businesses, and communities - adding intelligence, not ego.",
-      "Environmental and human health are deeply connected.",
-      "AI should assist, not dominate."
+      "Listen to community priorities and local context.",
+      "Design restoration projects people can see and support.",
+      "Share data in ways that are clear and accessible.",
+      "Build long-term stewardship through collaboration."
     ],
     "faq": [
       {
-        "question": "Who we work with",
-        "answer": "Environmental organizations and agencies; Research institutions and schools; Engineering and infrastructure projects; Small businesses seeking responsible AI integration; Community-focused initiatives."
+        "question": "Why focus on local communities?",
+        "answer": "Restoration succeeds when communities can see it, trust it, and participate in it."
       },
       {
-        "question": "Why Nexus Verium",
-        "answer": "Research-driven, not hype-driven; Environmental ethics as a technical foundation; Human-centered AI philosophy; Scalable from small projects to institutional partnerships; Built to grow alongside education, research, and real-world results."
+        "question": "What does partnership look like?",
+        "answer": "We co-design restoration efforts, share data transparently, and build systems that make progress visible over time."
       }
     ],
     "primaryKeywords": [
-      "Healthcare & wellness",
-      "AI workflow automation",
-      "human-centered AI adoption"
+      "local communities",
+      "conservation groups",
+      "restoration visibility"
     ],
     "secondaryKeywords": [
-      "people first technology second",
-      "research-driven",
-      "responsible integration"
+      "community stewardship",
+      "education",
+      "public engagement"
     ],
     "schemaType": "Service",
     "related": [
-      "construction-and-trades",
-      "small-businesses-and-service-providers"
-    ]
-  },
-  {
-    "slug": "small-businesses-and-service-providers",
-    "title": "Small businesses & service providers",
-    "metaTitle": "Small businesses & service providers",
-    "metaDescription": "Industries we support include: Small businesses & service providers.",
-    "h1": "Small businesses & service providers",
-    "intro": "Industries we support include: Small businesses & service providers.",
-    "bullets": [
-      "Use cases include: AI workflow automation.",
-      "Use cases include: Internal systems optimization.",
-      "Use cases include: Decision support and data organization.",
-      "Use cases include: Human-centered AI adoption.",
-      "Our approach prioritizes people first, technology second."
-    ],
-    "processSteps": [
-      "Nexus Verium operates as a research and systems intelligence partner, supporting projects and organizations through applied AI, environmental science, and workflow design.",
-      "We do not replace existing expertise - we support and enhance it.",
-      "We work collaboratively with engineers, educators, institutions, businesses, and communities - adding intelligence, not ego.",
-      "Environmental and human health are deeply connected.",
-      "AI should assist, not dominate."
-    ],
-    "faq": [
-      {
-        "question": "Who we work with",
-        "answer": "Environmental organizations and agencies; Research institutions and schools; Engineering and infrastructure projects; Small businesses seeking responsible AI integration; Community-focused initiatives."
-      },
-      {
-        "question": "Why Nexus Verium",
-        "answer": "Research-driven, not hype-driven; Environmental ethics as a technical foundation; Human-centered AI philosophy; Scalable from small projects to institutional partnerships; Built to grow alongside education, research, and real-world results."
-      }
-    ],
-    "primaryKeywords": [
-      "Small businesses & service providers",
-      "AI workflow automation",
-      "human-centered AI adoption"
-    ],
-    "secondaryKeywords": [
-      "people first technology second",
-      "research-driven",
-      "responsible integration"
-    ],
-    "schemaType": "Service",
-    "related": [
-      "restaurants-and-hospitality",
-      "healthcare-and-wellness"
+      "environmental-agencies-and-organizations",
+      "research-institutions-and-universities"
     ]
   }
 ]

@@ -6,6 +6,7 @@
     "metaDescription": "Earth's rivers resemble human veins. They function as the planet's circulatory system, moving nutrients and life.",
     "h1": "The Philosophy",
     "intro": "Earth's rivers resemble human veins. They function as the planet's circulatory system, moving nutrients and life.",
+    "author": "Nexus Verium Research Team",
     "bullets": [
       "Humans and nature are one interconnected organism.",
       "Microplastics in the water become microplastics in our bodies.",
@@ -52,6 +53,7 @@
     "metaDescription": "Them: NJDEP, MRRI, Riverkeeper, and local communities. Us: Nexus Verium.",
     "h1": "The Gap: Monitoring vs. Healing",
     "intro": "Them: NJDEP, MRRI, Riverkeeper, and local communities. Us: Nexus Verium.",
+    "author": "Nexus Verium Research Team",
     "bullets": [
       "Current Approaches: Water testing.",
       "Current Approaches: Passive restoration of wetlands.",
@@ -99,6 +101,7 @@
     "metaDescription": "Mission: Restoring the environmental health of waterways using intelligent, automated, regenerative systems.",
     "h1": "A Full-Spectrum Robotic Framework",
     "intro": "Mission: Restoring the environmental health of waterways using intelligent, automated, regenerative systems.",
+    "author": "Nexus Verium Research Team",
     "bullets": [
       "Layer 1: The Eyes of the River - Aerial and sub-surface intelligence.",
       "Multispectral, RGB, thermal sensors, and sonar.",
@@ -141,6 +144,244 @@
     "schemaType": "ResearchProject",
     "related": [
       "the-gap-monitoring-vs-healing"
+    ]
+  },
+  {
+    "slug": "ai-meadowlands-digital-twin",
+    "title": "AI Meadowlands Digital Twin",
+    "metaTitle": "AI Meadowlands Digital Twin",
+    "metaDescription": "A living digital twin of the Meadowlands that fuses sensors, drones, and field data to test restoration strategies before deployment.",
+    "h1": "AI Meadowlands Digital Twin",
+    "intro": "A living digital twin of the Meadowlands that fuses sensors, drones, and field data to test restoration strategies before deployment.",
+    "author": "Nexus Verium Research Team",
+    "bullets": [
+      "High-fidelity hydrology and habitat model tied to River Veins sites",
+      "Data fusion from sensor nodes, drones, and lab baselines",
+      "Scenario testing for restoration strategies and climate stressors",
+      "Visualization layer for partners, agencies, and communities",
+      "Field feedback loops that update floating wetlands and robots"
+    ],
+    "processSteps": [
+      "Aggregate watershed, agency, and historical baselines.",
+      "Build a living 3D model with hydrology, habitat, and infrastructure overlays.",
+      "Ingest live streams from sensors, drones, and field sampling; validate against baselines.",
+      "Run AI-assisted simulations for restoration options, resilience, and risk.",
+      "Publish phased pilot roadmaps and iterate with real-world results."
+    ],
+    "faq": [
+      {
+        "question": "What makes it different from static models?",
+        "answer": "It updates continuously with sensor streams, drone surveys, and field results, then directs where to deploy or improve prototypes."
+      },
+      {
+        "question": "How will it be used?",
+        "answer": "To prioritize restoration sites, de-risk spending, coordinate partners, and measure outcomes before and after physical deployment."
+      }
+    ],
+    "primaryKeywords": [
+      "digital twin",
+      "Meadowlands",
+      "ecosystem modeling"
+    ],
+    "secondaryKeywords": [
+      "restoration scenarios",
+      "impact forecasting",
+      "3D visualization"
+    ],
+    "schemaType": "ResearchProject",
+    "related": [
+      "full-spectrum-robotic-framework",
+      "advanced-sensor-networks"
+    ]
+  },
+  {
+    "slug": "floating-wetland-expansion",
+    "title": "Floating Wetland Expansion",
+    "metaTitle": "Floating Wetland Expansion",
+    "metaDescription": "Scaling modular floating wetlands that adapt to tides, protect habitat, and report water quality as part of River Veins.",
+    "h1": "Floating Wetland Expansion",
+    "intro": "Scaling modular floating wetlands that adapt to tides, protect habitat, and report water quality as part of River Veins.",
+    "author": "Nexus Verium Research Team",
+    "bullets": [
+      "Adaptive buoyancy and anchoring for variable tides and storms",
+      "Modular raft geometries with native planting palettes and refuge pockets",
+      "Biochar and substrate combinations tuned for filtration and root health",
+      "Embedded sensors for dissolved oxygen, turbidity, and maintenance cues",
+      "Service plan for harvesting, cleaning, and community stewardship"
+    ],
+    "processSteps": [
+      "Evaluate prototype performance data on filtration, stability, and habitat use.",
+      "Match module designs to site conditions, permits, and anchoring needs.",
+      "Select native plant palettes and substrate/biochar mixes for each site.",
+      "Integrate sensor harnesses and set maintenance/harvest protocols.",
+      "Phase deployments with monitoring, then adapt layouts based on results."
+    ],
+    "faq": [
+      {
+        "question": "Why expand floating wetlands now?",
+        "answer": "Prototype results show strong filtration and habitat gains, and partners are ready to scale with designs proven for local tides and storms."
+      },
+      {
+        "question": "How will ecosystems be protected during scaling?",
+        "answer": "Deployments are phased, monitored with sensors and drones, use low-noise anchoring, and adjust quickly with exclusion zones if issues appear."
+      }
+    ],
+    "primaryKeywords": [
+      "floating wetlands",
+      "habitat restoration",
+      "water filtration"
+    ],
+    "secondaryKeywords": [
+      "adaptive systems",
+      "native plants",
+      "modular rafts"
+    ],
+    "schemaType": "ResearchProject",
+    "related": [
+      "ai-meadowlands-digital-twin"
+    ]
+  },
+  {
+    "slug": "autonomous-cleaning-robots",
+    "title": "Autonomous Cleaning Robots",
+    "metaTitle": "Autonomous Cleaning Robots",
+    "metaDescription": "Low-impact robots that remove debris around restoration zones with vision, safety controls, and coordination across River Veins sites.",
+    "h1": "Autonomous Cleaning Robots",
+    "intro": "Low-impact robots that remove debris around restoration zones with vision, safety controls, and coordination across River Veins sites.",
+    "author": "Nexus Verium Research Team",
+    "bullets": [
+      "Vision models that classify debris vs. wildlife before intake",
+      "Shallow-draft hulls with guarded intakes and low-noise propulsion",
+      "Modular collection bins, docking, and safe charging stations",
+      "Geofenced routes coordinated with drones and sensor alerts",
+      "Remote override, kill-switch, and manual tow mode for safety"
+    ],
+    "processSteps": [
+      "Map debris hotspots using monitoring data and community reports.",
+      "Prototype hulls and propulsion with safety and noise constraints.",
+      "Train and test detection models on field recordings and edge hardware.",
+      "Pilot in controlled zones near wetlands with geofences and observers.",
+      "Integrate telemetry into the digital twin; refine routes, speeds, and schedules."
+    ],
+    "faq": [
+      {
+        "question": "What debris will robots target?",
+        "answer": "Floating trash, plastics, and surface pollution around restoration and wetland zones."
+      },
+      {
+        "question": "How do they avoid harming wildlife?",
+        "answer": "Exclusion zones, vision filters for wildlife, low-noise propulsion, and remote override keep distance from sensitive areas."
+      }
+    ],
+    "primaryKeywords": [
+      "cleanup robots",
+      "autonomous debris removal",
+      "waterway restoration"
+    ],
+    "secondaryKeywords": [
+      "surface pollution",
+      "navigation safety",
+      "dock stations"
+    ],
+    "schemaType": "ResearchProject",
+    "related": [
+      "full-spectrum-robotic-framework"
+    ]
+  },
+  {
+    "slug": "environmental-monitoring-drones",
+    "title": "Environmental Monitoring Drones",
+    "metaTitle": "Environmental Monitoring Drones",
+    "metaDescription": "Aerial and surface drones surveying waterways to spot pollution, verify anomalies, and feed the Meadowlands digital twin.",
+    "h1": "Environmental Monitoring Drones",
+    "intro": "Aerial and surface drones surveying waterways to spot pollution, verify anomalies, and feed the Meadowlands digital twin.",
+    "author": "Nexus Verium Research Team",
+    "bullets": [
+      "Multispectral and thermal imaging for turbidity and vegetation health",
+      "Surface skimming payloads for localized water sampling",
+      "Rapid-response flight plans for spills, storms, or alerts from sensors",
+      "Swappable payloads (cameras, sensors) aligned to River Veins sites",
+      "Data flowing into dashboards and the Meadowlands digital twin"
+    ],
+    "processSteps": [
+      "Define flight corridors and sampling grids around wetlands and sensor nodes.",
+      "Deploy multispectral and thermal payloads; capture imagery and video.",
+      "Run detection and anomaly models to flag debris, turbidity, or bloom signals.",
+      "Ground-truth alerts with field teams, robots, or manual sampling.",
+      "Sync results to dashboards and the digital twin to adjust routes and maintenance."
+    ],
+    "faq": [
+      {
+        "question": "Why use drones instead of only sensors?",
+        "answer": "They cover large areas quickly, verify anomalies, and inspect places fixed sensors can’t reach."
+      },
+      {
+        "question": "Are flights continuous?",
+        "answer": "They are scheduled and event-driven with low-noise protocols, no-fly buffers, and weather-aware flight rules."
+      }
+    ],
+    "primaryKeywords": [
+      "monitoring drones",
+      "waterway surveillance",
+      "environmental sensing"
+    ],
+    "secondaryKeywords": [
+      "multispectral imaging",
+      "pollution detection",
+      "rapid response"
+    ],
+    "schemaType": "ResearchProject",
+    "related": [
+      "advanced-sensor-networks",
+      "ai-meadowlands-digital-twin"
+    ]
+  },
+  {
+    "slug": "advanced-sensor-networks",
+    "title": "Advanced Sensor Networks",
+    "metaTitle": "Advanced Sensor Networks",
+    "metaDescription": "Solar-powered sensor nodes streaming water quality, flow, and environmental data to guide River Veins restoration.",
+    "h1": "Advanced Sensor Networks",
+    "intro": "Solar-powered sensor nodes streaming water quality, flow, and environmental data to guide River Veins restoration.",
+    "author": "Nexus Verium Research Team",
+    "bullets": [
+      "Continuous water quality metrics (nutrients, turbidity, temperature, dissolved oxygen)",
+      "Flow and sediment tracking to capture tidal and storm dynamics",
+      "Edge processing for anomaly alerts and uptime checks",
+      "Energy-efficient solar nodes with redundant logging",
+      "Secure data streaming into dashboards and the digital twin"
+    ],
+    "processSteps": [
+      "Identify priority corridors, permitting needs, and mounting locations (piers, buoys, bridges).",
+      "Deploy modular sensor nodes; secure power, communications, and enclosures.",
+      "Calibrate with lab samples and cross-check with drone and field readings.",
+      "Stream data to analytics and alert pipelines; tune thresholds with field feedback.",
+      "Maintain nodes, update firmware, and redeploy to close data gaps as sites evolve."
+    ],
+    "faq": [
+      {
+        "question": "What metrics are measured?",
+        "answer": "Nutrients, turbidity, dissolved oxygen, temperature, flow, and sediment dynamics depending on the site."
+      },
+      {
+        "question": "How is data used?",
+        "answer": "To flag issues early, guide deployments, validate restoration outcomes, and keep the digital twin accurate."
+      }
+    ],
+    "primaryKeywords": [
+      "sensor networks",
+      "water quality",
+      "environmental monitoring"
+    ],
+    "secondaryKeywords": [
+      "edge analytics",
+      "real-time data",
+      "restoration feedback"
+    ],
+    "schemaType": "ResearchProject",
+    "related": [
+      "environmental-monitoring-drones",
+      "ai-meadowlands-digital-twin"
     ]
   }
 ]

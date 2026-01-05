@@ -104,7 +104,7 @@ export default function TimelinePage() {
             href="/contact"
             className="rounded-full bg-[var(--nv-primary-strong)] px-4 py-2 text-sm font-semibold text-[var(--nv-bg)] shadow-[0_0_16px_rgba(0,210,255,0.3)] transition hover:-translate-y-0.5 hover:bg-[var(--nv-accent)]"
           >
-            Let's Build Responsibly
+            Let&apos;s Build Responsibly
           </Link>
         </div>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
@@ -138,7 +138,7 @@ export default function TimelinePage() {
               AI system is designed to actively address pollution removal,
               treatment for contaminated sediment, stormwater contamination
               prevention, purification of the river, and restoration of the
-              ecosystem. This is the gap Nexus Verium's research is preparing to
+              ecosystem. This is the gap Nexus Verium&apos;s research is preparing to
               fill.
             </p>
           </div>

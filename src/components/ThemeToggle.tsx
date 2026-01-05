@@ -20,6 +20,7 @@ export function ThemeToggle() {
           ? "light"
           : "dark";
 
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setTheme(initial);
     document.documentElement.dataset.theme = initial;
     setHydrated(true);

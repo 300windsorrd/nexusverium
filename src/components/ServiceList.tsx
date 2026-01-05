@@ -17,7 +17,7 @@ export function ServiceList({ services }: ServiceListProps) {
         className="pointer-events-none absolute inset-y-6 left-6 w-24 rotate-3 bg-gradient-to-b from-[var(--nv-primary-strong)]/20 via-transparent to-transparent"
       />
       <h3 className="text-xl font-semibold text-[var(--nv-ink)]">
-        The pillars of our vision
+        What we do, clearly
       </h3>
       <ul className="mt-4 divide-y divide-[var(--nv-border)]">
         {services.map((service) => (
