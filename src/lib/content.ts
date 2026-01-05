@@ -13,9 +13,13 @@ import type {
   TimelineItem,
 } from "@/types";
 
+const rawSiteUrl =
+  process.env.SITE_URL || "https://www.nexusverium.com";
+const siteUrl = rawSiteUrl.replace(/\/+$/, "");
+
 export const siteConfig = {
   name: "Nexus Verium",
-  url: process.env.SITE_URL || "https://www.nexusverium.com",
+  url: siteUrl,
   description:
     "Nexus Verium builds responsible AI and environmental engineering systems focused on water restoration and sustainability.",
 };

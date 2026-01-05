@@ -7,7 +7,7 @@ Next.js (App Router) + TypeScript + Tailwind CSS site for Nexus Verium. Mobile-f
 1) Install dependencies: `npm install`
 2) Run locally: `npm run dev`
 3) Lint: `npm run lint`
-4) Production build: `npm run build` then `npm start`
+4) Production build: `npm run build` (outputs static `out/`), preview with `npx serve out`
 
 Set `SITE_URL` in `.env.local` to your deployment hostname (used for canonical tags, sitemap, and JSON-LD):
 ```
@@ -40,9 +40,9 @@ Each programmatic entry includes `slug`, `metaTitle`, `metaDescription`, `h1`, `
 
 ### Contact form
 
-- UI lives at `src/components/ContactForm.tsx`; server handler is `src/app/api/contact/route.ts`.
-- Server-side validation: required fields, honeypot spam trap, and simple rate limiting (per IP, 5 requests/minute).
-- CAPTCHA placeholder: integrates Cloudflare Turnstile or reCAPTCHA by sending a `captchaToken` to the API; add your verifier in the route.
+- UI lives at `src/components/ContactForm.tsx`; submissions post to `NEXT_PUBLIC_CONTACT_FORM_ENDPOINT`.
+- Client-side validation: required fields and a honeypot spam trap.
+- CAPTCHA placeholder: integrates Cloudflare Turnstile or reCAPTCHA by sending a `captchaToken` field to your form backend.
 
 ### Architecture notes
 

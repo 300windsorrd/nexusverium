@@ -11,6 +11,10 @@ const organizationLd = {
   logo: `${siteConfig.url}/Logo.png`,
 };
 
+const withTrailingSlash = (path: string) =>
+  path === "/" ? "/" : `${path.replace(/\/$/, "")}/`;
+const joinUrl = (path: string) => `${siteConfig.url}${withTrailingSlash(path)}`;
+
 export function buildMetadata({
   title,
   description,
@@ -22,7 +26,7 @@ export function buildMetadata({
   pathname: string;
   keywords?: string[];
 }): Metadata {
-  const canonical = new URL(pathname, siteConfig.url).toString();
+  const canonical = joinUrl(pathname);
   return {
     title,
     description,
@@ -51,7 +55,7 @@ export function buildJsonLdForSeoPage(
   section: string,
   page: SeoPage,
 ): Record<string, unknown>[] {
-  const url = `${siteConfig.url}/${section}/${page.slug}`;
+  const url = joinUrl(`/${section}/${page.slug}`);
 
   const breadcrumb = {
     "@context": "https://schema.org",
@@ -61,13 +65,13 @@ export function buildJsonLdForSeoPage(
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: siteConfig.url,
+        item: joinUrl("/"),
       },
       {
         "@type": "ListItem",
         position: 2,
         name: section.charAt(0).toUpperCase() + section.slice(1),
-        item: `${siteConfig.url}/${section}`,
+        item: joinUrl(`/${section}`),
       },
       {
         "@type": "ListItem",

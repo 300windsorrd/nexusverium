@@ -28,6 +28,8 @@ export function ContactForm() {
   const [form, setForm] = useState<ContactFormState>(initialState);
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [error, setError] = useState<string | null>(null);
+  const formEndpoint = process.env.NEXT_PUBLIC_CONTACT_FORM_ENDPOINT || "";
+  const isConfigured = Boolean(formEndpoint);
 
   const handleChange = (field: keyof ContactFormState, value: string) => {
     setForm((prev) => ({ ...prev, [field]: value }));
@@ -35,16 +37,29 @@ export function ContactForm() {
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
+    if (!isConfigured) {
+      setStatus("error");
+      setError("Contact form backend is not configured.");
+      return;
+    }
+    if (form.honeypot) {
+      setStatus("error");
+      setError("Blocked by spam protection.");
+      return;
+    }
     setStatus("submitting");
     setError(null);
     try {
-      const res = await fetch("/api/contact", {
+      const payload = new FormData();
+      Object.entries({
+        ...form,
+        captchaToken: form.captchaToken || "captcha-placeholder",
+      }).forEach(([key, value]) => payload.set(key, value));
+
+      const res = await fetch(formEndpoint, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...form,
-          captchaToken: form.captchaToken || "captcha-placeholder",
-        }),
+        headers: { Accept: "application/json" },
+        body: payload,
       });
       if (!res.ok) {
         const body = await res.json().catch(() => ({}));
@@ -153,6 +168,11 @@ export function ContactForm() {
         </div>
       </div>
       <div className="mt-4 flex items-center justify-end gap-4">
+        {!isConfigured ? (
+          <p className="text-xs text-[var(--nv-muted)]">
+            Set NEXT_PUBLIC_CONTACT_FORM_ENDPOINT to enable submissions.
+          </p>
+        ) : null}
         {status === "error" && error ? (
           <p className="text-sm text-red-600">{error}</p>
         ) : null}
@@ -161,7 +181,7 @@ export function ContactForm() {
         ) : null}
         <button
           type="submit"
-          disabled={status === "submitting"}
+          disabled={status === "submitting" || !isConfigured}
           className="rounded-full bg-[var(--nv-primary-strong)] px-5 py-2 text-sm font-semibold text-[var(--nv-bg)] shadow-[0_0_16px_rgba(0,210,255,0.3)] transition hover:-translate-y-0.5 hover:bg-[var(--nv-accent)] disabled:cursor-not-allowed disabled:opacity-60"
         >
           {status === "submitting" ? "Sending..." : "Submit"}
