@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useMemo, useState } from "react";
 import type { SearchItem } from "@/types";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { withBasePath } from "@/lib/paths";
+import { basePath, withBasePath } from "@/lib/paths";
 
 interface HeaderProps {
   searchItems: SearchItem[];
@@ -19,10 +19,26 @@ const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
+function normalizePath(path: string) {
+  if (!path) return "/";
+  if (path === "/") return "/";
+  return path.replace(/\/+$/, "");
+}
+
+function stripBasePath(path: string) {
+  if (!basePath) return path;
+  if (path === basePath) return "/";
+  if (path.startsWith(`${basePath}/`)) {
+    return path.slice(basePath.length);
+  }
+  return path;
+}
+
 export function Header({ searchItems }: HeaderProps) {
   const pathname = usePathname();
   const [query, setQuery] = useState("");
   const [focused, setFocused] = useState(false);
+  const currentPath = normalizePath(stripBasePath(pathname || "/"));
 
   const results = useMemo(() => {
     const clean = query.trim().toLowerCase();
@@ -37,7 +53,7 @@ export function Header({ searchItems }: HeaderProps) {
   }, [query, searchItems]);
 
   return (
-    <header className="glass-surface border-b border-[var(--nv-border)]/60 bg-[var(--nv-surface)]/80 backdrop-blur-md shadow-[var(--nv-card-shadow)]">
+    <header className="glass-surface sticky top-0 z-50 border-b border-[var(--nv-border)]/60 bg-[var(--nv-surface)]/80 backdrop-blur-md shadow-[var(--nv-card-shadow)]">
       <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:gap-6">
         <Link href="/" className="flex items-start gap-2">
           <Image
@@ -114,7 +130,7 @@ export function Header({ searchItems }: HeaderProps) {
           <div className="hidden items-center gap-3 md:ml-auto md:flex">
             <nav className="flex items-center gap-4">
               {navLinks.map((item) => {
-                const active = pathname === item.href;
+                const active = currentPath === normalizePath(item.href);
                 return (
                   <Link
                     key={item.href}
@@ -136,7 +152,7 @@ export function Header({ searchItems }: HeaderProps) {
       </div>
       <div className="flex items-center gap-3 border-t border-[var(--nv-border)]/70 px-4 py-2 text-xs text-[var(--nv-muted)] md:hidden">
         {navLinks.map((item) => {
-          const active = pathname === item.href;
+          const active = currentPath === normalizePath(item.href);
           return (
             <Link
               key={item.href}
