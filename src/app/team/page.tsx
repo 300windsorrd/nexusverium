@@ -37,8 +37,8 @@ export default function TeamPage() {
       <h1 className="sr-only">Team | Nexus Verium</h1>
       <SectionHeading
         eyebrow="Founding Research Team"
-        title="Please add the rest of the team"
-        description="Founder: Jonathan Eleonidas Arroyo Yunda. AI Systems Engineer: Jensy Jimenez {BIO}. Founding Research Team: John Villa - Lead Communications Strategist & Systems Analyst; Dewansh Gupta - AI Systems Engineer & Robotics Research; Jensy Jimenez - Lead Environmental AI Systems Engineer; Fasih Ur Rehman Abbasi - Chief Research Coordinator & Operations Lead; Jonathan Eleonidas Arroyo - Founder & Systems Architect."
+        title="Nexus Verium Team"
+        description="Engineering the future of decentralized AI systems."
       />
       <div className="nv-reveal nv-reveal--delay-1 mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {team.map((member) => (
@@ -62,7 +62,7 @@ export default function TeamPage() {
                 {member.role}
               </p>
               <p className="text-xs uppercase tracking-wide text-[var(--nv-muted)]">
-                Focus: {member.focus}
+               
               </p>
             </div>
             <p className="text-sm text-[var(--nv-muted)]">{member.bio}</p>
