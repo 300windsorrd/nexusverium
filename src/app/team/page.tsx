@@ -9,7 +9,7 @@ import { siteConfig, team } from "@/lib/content";
 export const metadata: Metadata = buildMetadata({
   title: "Team | Nexus Verium",
   description:
-    "Founding Research Team: Founder: Jonathan Eleonidas Arroyo Yunda. AI Systems Engineer: Jensy Jimenez {BIO}. Please add the rest of the team.",
+    "Founding research team: Jonathan Eleonidas Arroyo Yunda (Founder & Systems Architect), Jensy Jimenez (Lead Environmental AI Systems Engineer), John Villa, Dewansh Gupta, and Fasih Ur Rehman Abbasi.",
   pathname: "/team",
 });
 
@@ -38,7 +38,7 @@ export default function TeamPage() {
       <SectionHeading
         eyebrow="Founding Research Team"
         title="Nexus Verium Team"
-        description="Engineering the future of decentralized AI systems."
+        description="Founder: Jonathan Eleonidas Arroyo Yunda. AI Systems Engineer: Jensy Jimenez. Founding Research Team: John Villa - Lead Communications Strategist & Systems Analyst; Dewansh Gupta - AI Systems Engineer & Robotics Research; Jensy Jimenez - Lead Environmental AI Systems Engineer; Fasih Ur Rehman Abbasi - Chief Research Coordinator & Operations Lead; Jonathan Eleonidas Arroyo - Founder & Systems Architect."
       />
       <div className="nv-reveal nv-reveal--delay-1 mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {team.map((member) => (
@@ -62,7 +62,7 @@ export default function TeamPage() {
                 {member.role}
               </p>
               <p className="text-xs uppercase tracking-wide text-[var(--nv-muted)]">
-               
+                {member.focus}
               </p>
             </div>
             <p className="text-sm text-[var(--nv-muted)]">{member.bio}</p>

@@ -60,7 +60,7 @@ export default function RootLayout({
           <div className="sticky top-0 z-50">
             <Header searchItems={searchItems} />
           </div>
-          <main className="mx-auto max-w-6xl px-4 pb-16 pt-0 sm:px-6">
+          <main className="mx-auto max-w-6xl px-4 pb-16 pt-8 sm:px-6 sm:pt-12">
             {children}
           </main>
           <Footer />
