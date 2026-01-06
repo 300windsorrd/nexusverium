@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Alert } from "antd";
 import { Hero } from "@/components/Hero";
 import { ProjectGrid } from "@/components/ProjectGrid";
 import { SeoHead } from "@/components/SeoHead";

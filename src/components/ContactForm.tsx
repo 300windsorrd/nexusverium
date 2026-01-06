@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { withBasePath } from "@/lib/paths";
+import { Alert } from "antd";
 
 interface ContactFormState {
   name: string;
@@ -24,10 +26,34 @@ const initialState: ContactFormState = {
 
 export function ContactForm() {
   const [form, setForm] = useState<ContactFormState>(initialState);
-  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "submitting" | "success" | "error"
+  >("idle");
   const [error, setError] = useState<string | null>(null);
-  const formEndpoint = process.env.NEXT_PUBLIC_CONTACT_FORM_ENDPOINT || "";
-  const isConfigured = Boolean(formEndpoint);
+  const envEndpoint = process.env.NEXT_PUBLIC_CONTACT_FORM_ENDPOINT?.trim();
+  const hasExternalEndpoint = Boolean(envEndpoint);
+  const formEndpoint = hasExternalEndpoint
+    ? envEndpoint
+    : withBasePath("/api/contact");
+  const isConfigured =
+    hasExternalEndpoint || process.env.NODE_ENV === "development";
+
+  const [alerts, setAlerts] = useState({
+    cmpInc: false,
+    send: false,
+    error: false,
+  });
+
+  function timer() {
+    setTimeout(() => {
+      setAlerts((alerts) => ({
+        ...alerts,
+        cmpInc: false,
+        send: false,
+        error: false,
+      }));
+    }, 5000);
+  }
 
   const handleChange = (field: keyof ContactFormState, value: string) => {
     setForm((prev) => ({ ...prev, [field]: value }));
@@ -71,7 +97,9 @@ export function ContactForm() {
     }
   };
 
-  const requiredMarker = <span className="text-[var(--nv-primary-strong)]">*</span>;
+  const requiredMarker = (
+    <span className="text-[var(--nv-primary-strong)]">*</span>
+  );
 
   return (
     <form
@@ -135,8 +163,8 @@ export function ContactForm() {
       </div>
       <div className="mt-4 flex flex-col gap-3">
         <div className="rounded-[12px] border border-dashed border-[var(--nv-border)]/70 bg-[var(--nv-bg)]/60 px-4 py-3 text-sm text-[var(--nv-muted)]">
-          CAPTCHA placeholder — integrate Cloudflare Turnstile or reCAPTCHA and
-          set the resulting token to the hidden <code>captchaToken</code> field.
+          CAPTCHA placeholder - integrate Cloudflare Turnstile or reCAPTCHA and
+          set the resulting token to the hidden captchaToken field.
         </div>
         <input
           type="hidden"
@@ -156,11 +184,16 @@ export function ContactForm() {
         </div>
       </div>
       <div className="mt-4 flex items-center justify-end gap-4">
-        {!isConfigured ? (
+        {hasExternalEndpoint ? null : process.env.NODE_ENV === "development" ? (
+          <p className="text-xs text-[var(--nv-muted)]">
+            Using local contact endpoint. Set NEXT_PUBLIC_CONTACT_FORM_ENDPOINT
+            to send submissions from the static export.
+          </p>
+        ) : (
           <p className="text-xs text-[var(--nv-muted)]">
             Set NEXT_PUBLIC_CONTACT_FORM_ENDPOINT to enable submissions.
           </p>
-        ) : null}
+        )}
         {status === "error" && error ? (
           <p className="text-sm text-red-600">{error}</p>
         ) : null}
