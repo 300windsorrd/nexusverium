@@ -31,12 +31,17 @@ export function ContactForm() {
   >("idle");
   const [error, setError] = useState<string | null>(null);
   const envEndpoint = process.env.NEXT_PUBLIC_CONTACT_FORM_ENDPOINT?.trim();
+  const fallbackEmail =
+    process.env.NEXT_PUBLIC_CONTACT_FALLBACK_EMAIL?.trim();
   const hasExternalEndpoint = Boolean(envEndpoint);
+  const canFallbackToEmail = Boolean(fallbackEmail);
   const formEndpoint = hasExternalEndpoint
     ? envEndpoint
     : withBasePath("/api/contact");
   const isConfigured =
-    hasExternalEndpoint || process.env.NODE_ENV === "development";
+    hasExternalEndpoint ||
+    canFallbackToEmail ||
+    process.env.NODE_ENV === "development";
 
   const [alerts, setAlerts] = useState({
     cmpInc: false,
@@ -69,6 +74,25 @@ export function ContactForm() {
     if (form.honeypot) {
       setStatus("error");
       setError("Blocked by spam protection.");
+      return;
+    }
+    if (!hasExternalEndpoint && canFallbackToEmail) {
+      const subject = `New contact from ${form.name || "website form"}`;
+      const body = [
+        `Name: ${form.name}`,
+        `Email: ${form.email}`,
+        `Phone: ${form.phone}`,
+        `Company: ${form.company}`,
+        "",
+        form.message,
+      ].join("\n");
+      const mailto = `mailto:${fallbackEmail}?${new URLSearchParams({
+        subject,
+        body,
+      }).toString()}`;
+      window.location.href = mailto;
+      setStatus("success");
+      setForm(initialState);
       return;
     }
     setStatus("submitting");
@@ -191,7 +215,8 @@ export function ContactForm() {
           </p>
         ) : (
           <p className="text-xs text-[var(--nv-muted)]">
-            Set NEXT_PUBLIC_CONTACT_FORM_ENDPOINT to enable submissions.
+            Set NEXT_PUBLIC_CONTACT_FORM_ENDPOINT or
+            NEXT_PUBLIC_CONTACT_FALLBACK_EMAIL to enable submissions.
           </p>
         )}
         {status === "error" && error ? (
@@ -202,7 +227,7 @@ export function ContactForm() {
         ) : null}
         <button
           type="submit"
-          disabled={status === "submitting" || !isConfigured}
+          disabled={status === "submitting"}
           className="rounded-full bg-[var(--nv-primary-strong)] px-5 py-2 text-sm font-semibold text-[var(--nv-bg)] shadow-[0_0_16px_rgba(0,210,255,0.3)] transition hover:-translate-y-0.5 hover:bg-[var(--nv-accent)] disabled:cursor-not-allowed disabled:opacity-60"
         >
           {status === "submitting" ? "Sending..." : "Submit"}
