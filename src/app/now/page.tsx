@@ -40,7 +40,7 @@ export default function TimelinePage() {
     <div className="space-y-10">
       <h1 className="sr-only">Timeline</h1>
       <SectionHeading
-        eyebrow="Page 7"
+        eyebrow=""
         title="The Pillars of Our Vision"
         description="Graphic timeline introducing three long-term pillars."
       />
@@ -48,7 +48,7 @@ export default function TimelinePage() {
       <section className="nv-reveal nv-reveal--delay-1 grid gap-6 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)] lg:grid-cols-2">
         <div className="space-y-3">
           <p className="text-xs uppercase tracking-wide text-[var(--nv-muted)]">
-            Page 8
+            Prototype
           </p>
           <h2 className="text-xl font-semibold text-[var(--nv-ink)]">
             Digital Twin: Meadowlands, NJ
@@ -110,7 +110,7 @@ export default function TimelinePage() {
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           <figure className="overflow-hidden rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70">
             <Image
-              src={withBasePath("/now/usda-team.svg")}
+              src={withBasePath("/now/usda-team.JPG")}
               alt="Current approaches in the Meadowlands"
               width={600}
               height={360}

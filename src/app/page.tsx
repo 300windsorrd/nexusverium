@@ -347,7 +347,7 @@ export default function Home() {
       <TwoColumnIntro
         name="Nexus Verium Field + Research Team"
         role="River Veins Initiative"
-        image="/now/usda-team.svg"
+        image="/now/usda-team.JPG"
         text="Our team is building River Veins as a living system, developing the floating wetland prototype, modeling the Meadowlands, and aligning monitoring, drones, and cleanup systems into one coherent restoration network."
         ctaLabel="Meet the team"
         ctaHref="/team"
