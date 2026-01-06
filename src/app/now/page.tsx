@@ -64,9 +64,9 @@ export default function TimelinePage() {
           <div className="grid gap-4 sm:grid-cols-2">
             <figure className="overflow-hidden rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70">
               <Image
-                src={withBasePath("/now/blueprint-1.svg")}
+                src={withBasePath("/now/Digital-Twin.jpg")}
                 alt="Real-time digital model of the Meadowlands ecosystem"
-                width={600}
+                width={800}
                 height={360}
                 className="h-full w-full object-cover"
               />
