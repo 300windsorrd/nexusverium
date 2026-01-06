@@ -20,26 +20,30 @@ export function TwoColumnIntro({
   ctaHref,
 }: TwoColumnIntroProps) {
   return (
-    <section className="nv-reveal nv-reveal--delay-1 mt-12 grid gap-6 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(140deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)] md:grid-cols-[1fr_1.6fr] md:items-center md:gap-10">
-      <div className="flex flex-col items-center justify-center gap-4 text-center md:items-start md:text-left">
-        <div className="relative h-36 w-36 overflow-hidden rounded-full border-4 border-[var(--nv-primary)]/60 shadow-[0_0_20px_rgba(0,210,255,0.2)]">
-          <Image src={withBasePath(image)} alt={name} fill className="object-cover" />
-        </div>
-        <div>
-          <p className="text-sm font-semibold text-[var(--nv-primary-strong)]">
+    <section className="nv-reveal nv-reveal--delay-1 mt-12 grid gap-6 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(140deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)] md:grid-cols-[1.25fr_1fr] md:items-stretch md:gap-10">
+      <div className="relative min-h-[260px] overflow-hidden rounded-[20px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/80 shadow-[0_12px_24px_rgba(0,11,20,0.55)] md:min-h-[360px]">
+        <Image
+          src={withBasePath(image)}
+          alt={name}
+          fill
+          sizes="(max-width: 768px) 100vw, 55vw"
+          className="object-cover"
+        />
+      </div>
+      <div className="flex flex-col justify-center gap-4 rounded-[20px] border border-[var(--nv-border)]/40 bg-[var(--nv-bg)]/75 p-5 md:p-7">
+        <div className="space-y-1">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--nv-muted)]">
             {role}
           </p>
-          <p className="text-lg font-semibold text-[var(--nv-ink)]">{name}</p>
+          <p className="text-xl font-semibold text-[var(--nv-ink)]">{name}</p>
         </div>
+        <p className="text-sm leading-relaxed text-[var(--nv-muted)]">{text}</p>
         <Link
           href={ctaHref}
-          className="rounded-full bg-[var(--nv-primary-strong)] px-4 py-2 text-sm font-semibold text-[var(--nv-bg)] shadow-[0_0_18px_rgba(0,210,255,0.35)] transition hover:-translate-y-0.5 hover:bg-[var(--nv-accent)]"
+          className="w-fit rounded-full bg-[var(--nv-primary-strong)] px-4 py-2 text-sm font-semibold text-[var(--nv-bg)] shadow-[0_0_18px_rgba(0,210,255,0.35)] transition hover:-translate-y-0.5 hover:bg-[var(--nv-accent)]"
         >
           {ctaLabel}
         </Link>
-      </div>
-      <div className="rounded-[20px] border border-[var(--nv-border)]/40 bg-[var(--nv-bg)]/75 p-5 text-[var(--nv-muted)] md:p-7">
-        {text}
       </div>
     </section>
   );
