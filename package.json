@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "postbuild": "node scripts/fix-export-data-aliases.mjs"
   },
   "dependencies": {
     "antd": "^6.1.3",

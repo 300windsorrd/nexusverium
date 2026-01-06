@@ -52,13 +52,10 @@ export default function LocationPage({
       {page.location ? (
         <div className="nv-reveal nv-reveal--delay-1 mt-4 rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 p-4 text-sm text-[var(--nv-muted)]">
           <p className="font-semibold text-[var(--nv-primary-strong)]">
-            Serving {page.location.city}, {page.location.region} —{" "}
-            {page.location.country}
+            Serving {page.location.city}, {page.location.region} - {page.location.country}
           </p>
           <p>
-            We prioritize local crews and transparent reporting for this
-            geography, coordinating with public agencies, universities, and
-            community groups.
+            We do not replace existing expertise - we support and enhance it.
           </p>
         </div>
       ) : null}

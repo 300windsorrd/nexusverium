@@ -164,7 +164,7 @@ export function ContactForm() {
       <div className="mt-4 flex flex-col gap-3">
         <div className="rounded-[12px] border border-dashed border-[var(--nv-border)]/70 bg-[var(--nv-bg)]/60 px-4 py-3 text-sm text-[var(--nv-muted)]">
           CAPTCHA placeholder - integrate Cloudflare Turnstile or reCAPTCHA and
-          set the resulting token to the hidden captchaToken field.
+          set the resulting token to the hidden <code>captchaToken</code> field.
         </div>
         <input
           type="hidden"

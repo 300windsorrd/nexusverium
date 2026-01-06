@@ -7,7 +7,7 @@ export const revalidate = 0;
 export default function sitemap(): MetadataRoute.Sitemap {
   const withTrailingSlash = (path: string) => (path === "/" ? "/" : `${path}/`);
 
-  const staticRoutes = ["/", "/team", "/contact", "/now"].map((path) => ({
+  const staticRoutes = ["/", "/team", "/contact", "/now", "/research"].map((path) => ({
     url: `${siteConfig.url}${withTrailingSlash(path)}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,

@@ -24,6 +24,7 @@ export interface SeoPage {
   schemaType: string;
   location?: LocationMeta;
   related?: string[];
+  author?: string;
 }
 
 export interface TeamMember {

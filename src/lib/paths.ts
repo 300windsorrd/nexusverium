@@ -1,8 +1,26 @@
-const rawBasePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-const normalizedBasePath =
-  rawBasePath && rawBasePath !== "/"
-    ? `/${rawBasePath.replace(/^\/+|\/+$/g, "")}`
-    : "";
+function normalizeBasePath(raw?: string | null) {
+  if (!raw) return "";
+  const trimmed = raw.trim();
+  if (!trimmed || trimmed === "/") return "";
+  return `/${trimmed.replace(/^\/+|\/+$/g, "")}`;
+}
+
+function deriveBasePath() {
+  const fromEnv = normalizeBasePath(process.env.NEXT_PUBLIC_BASE_PATH);
+  if (fromEnv) return fromEnv;
+
+  const siteUrl = process.env.SITE_URL;
+  if (!siteUrl) return "";
+
+  try {
+    const parsed = new URL(siteUrl);
+    return normalizeBasePath(parsed.pathname);
+  } catch {
+    return "";
+  }
+}
+
+const normalizedBasePath = deriveBasePath();
 
 export const basePath = normalizedBasePath;
 

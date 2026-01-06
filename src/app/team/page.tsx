@@ -9,7 +9,7 @@ import { siteConfig, team } from "@/lib/content";
 export const metadata: Metadata = buildMetadata({
   title: "Team | Nexus Verium",
   description:
-    "Meet the Nexus Verium team building responsible AI and environmental engineering systems for restoration.",
+    "Founding Research Team: Founder: Jonathan Eleonidas Arroyo Yunda. AI Systems Engineer: Jensy Jimenez {BIO}. Please add the rest of the team.",
   pathname: "/team",
 });
 
@@ -36,9 +36,9 @@ export default function TeamPage() {
       <SeoHead jsonLd={teamJsonLd} />
       <h1 className="sr-only">Team | Nexus Verium</h1>
       <SectionHeading
-        eyebrow="Team"
-        title="People keeping Nexus Verium grounded"
-        description="Researchers, engineers, and partners focused on responsible AI for environmental restoration."
+        eyebrow="Founding Research Team"
+        title="Please add the rest of the team"
+        description="Founder: Jonathan Eleonidas Arroyo Yunda. AI Systems Engineer: Jensy Jimenez {BIO}. Founding Research Team: John Villa - Lead Communications Strategist & Systems Analyst; Dewansh Gupta - AI Systems Engineer & Robotics Research; Jensy Jimenez - Lead Environmental AI Systems Engineer; Fasih Ur Rehman Abbasi - Chief Research Coordinator & Operations Lead; Jonathan Eleonidas Arroyo - Founder & Systems Architect."
       />
       <div className="nv-reveal nv-reveal--delay-1 mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {team.map((member) => (

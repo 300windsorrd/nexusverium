@@ -5,9 +5,20 @@ interface SeoPageContentProps {
   section: string;
   page: SeoPage;
   related?: { title: string; href: string }[];
+  meta?: {
+    author?: string;
+    readingTimeMinutes?: number;
+  };
 }
 
-export function SeoPageContent({ section, page, related = [] }: SeoPageContentProps) {
+export function SeoPageContent({
+  section,
+  page,
+  related = [],
+  meta,
+}: SeoPageContentProps) {
+  const hasMeta = Boolean(meta?.author || meta?.readingTimeMinutes);
+
   return (
     <div className="nv-reveal rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)]">
       <p className="text-xs uppercase tracking-[0.3em] text-[var(--nv-muted)]">
@@ -16,12 +27,23 @@ export function SeoPageContent({ section, page, related = [] }: SeoPageContentPr
       <h1 className="mt-2 text-3xl font-semibold text-[var(--nv-ink)]">
         {page.h1}
       </h1>
+      {hasMeta ? (
+        <div className="mt-2 flex flex-wrap items-center gap-2 text-xs text-[var(--nv-muted)]">
+          {meta?.author ? <span>By {meta.author}</span> : null}
+          {meta?.author && meta?.readingTimeMinutes ? (
+            <span className="text-[var(--nv-border)]">•</span>
+          ) : null}
+          {meta?.readingTimeMinutes ? (
+            <span>{meta.readingTimeMinutes} min read</span>
+          ) : null}
+        </div>
+      ) : null}
       <p className="mt-3 text-sm text-[var(--nv-muted)]">{page.intro}</p>
 
       <section className="mt-6 grid gap-6 md:grid-cols-2">
         <div className="rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 p-4">
           <h2 className="text-lg font-semibold text-[var(--nv-primary-strong)]">
-            What you get
+            Capabilities include
           </h2>
           <ul className="prose-list mt-2 text-sm text-[var(--nv-muted)]">
             {page.bullets.map((bullet) => (
@@ -31,7 +53,7 @@ export function SeoPageContent({ section, page, related = [] }: SeoPageContentPr
         </div>
         <div className="rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 p-4">
           <h2 className="text-lg font-semibold text-[var(--nv-primary-strong)]">
-            How we work
+            Our approach
           </h2>
           <ol className="list-decimal space-y-2 pl-5 text-sm text-[var(--nv-muted)]">
             {page.processSteps.map((step) => (

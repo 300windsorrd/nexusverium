@@ -10,7 +10,7 @@ import { projects, timeline } from "@/lib/content";
 export const metadata: Metadata = buildMetadata({
   title: "Timeline | Nexus Verium",
   description:
-    "See the latest Nexus Verium pilots: Gemini-generated blueprints, brackish water research, and USDA collaboration highlights.",
+    "Page 7 - The Pillars of Our Vision, Digital Twin: Meadowlands, NJ, and KPI Summary focused on foundation strength.",
   pathname: "/now",
 });
 
@@ -18,18 +18,20 @@ export default function TimelinePage() {
   const progressSection = (
     <div className="space-y-3 rounded-[18px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 p-4 shadow-[0_12px_24px_rgba(0,11,20,0.6)]">
       <h2 className="text-lg font-semibold text-[var(--nv-primary-strong)]">
-        Brackish water biomimicry progress
+        KPI Summary
       </h2>
       <p className="text-sm text-[var(--nv-muted)]">
-        We are evaluating a biomimicry-inspired reef system that increases
-        dissolved oxygen in brackish canals. Early pilots show steady DO lifts
-        of 0.3-0.5 mg/L over 14 days with passive flow and zero additional power
-        draw. We are validating durability and ecological impact before scaling.
+        In the first phase of Nexus Verium, KPIs focus on foundation strength
+        rather than prototype results.
       </p>
       <ul className="prose-list text-sm text-[var(--nv-muted)]">
-        <li>Field QA: duplicate sensors, manual sampling twice weekly.</li>
-        <li>Safety: turbidity monitored to avoid habitat disruption.</li>
-        <li>Next: extend trials through storm season and publish methods.</li>
+        <li>AI Twin accuracy: 50-70%.</li>
+        <li>Data integration: 4 major agencies (NJDEP, MRRI, NOAA, USGS).</li>
+        <li>Field data: 10-20 samples/month.</li>
+        <li>Partnerships: 2-3 active collaborators.</li>
+        <li>Awareness reach: 1,000-5,000 people.</li>
+        <li>Prototype readiness: Validated digital models.</li>
+        <li>Baseline mapping: Overpeck + Moonachie (Year 1).</li>
       </ul>
     </div>
   );
@@ -38,48 +40,52 @@ export default function TimelinePage() {
     <div className="space-y-10">
       <h1 className="sr-only">Timeline</h1>
       <SectionHeading
-        eyebrow="Timeline"
-        title="Our timeline"
-        description="Live pilots, research artifacts, and collaboration updates."
+        eyebrow="Page 7"
+        title="The Pillars of Our Vision"
+        description="Graphic timeline introducing three long-term pillars."
       />
 
       <section className="nv-reveal nv-reveal--delay-1 grid gap-6 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)] lg:grid-cols-2">
         <div className="space-y-3">
           <p className="text-xs uppercase tracking-wide text-[var(--nv-muted)]">
-            Gemini generated
+            Page 8
           </p>
           <h2 className="text-xl font-semibold text-[var(--nv-ink)]">
-            Blueprint concepts for brackish remediation
+            Digital Twin: Meadowlands, NJ
           </h2>
           <p className="text-sm text-[var(--nv-muted)]">
-            Gemini helps us iterate on reef geometries and aeration layouts
-            quickly while keeping human reviewers in control. These concepts feed
-            into real-world pilots after safety and feasibility checks.
+            Real-time digital Meadowlands that predicts threats and tests
+            solutions, leading to fixing the environment cheaper, faster, and
+            smarter. We plan to use this software to create a real-time digital
+            model of the Meadowlands ecosystem, examine and monitor water, soil,
+            wildlife, and air, predict future environmental problems, and
+            digitally test solutions before physical investment.
           </p>
           <div className="grid gap-4 sm:grid-cols-2">
             <figure className="overflow-hidden rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70">
               <Image
                 src={withBasePath("/now/blueprint-1.svg")}
-                alt="Gemini-generated blueprint showing modular reef inserts"
+                alt="Real-time digital model of the Meadowlands ecosystem"
                 width={600}
                 height={360}
                 className="h-full w-full object-cover"
               />
               <figcaption className="px-3 py-2 text-xs text-[var(--nv-muted)]">
-                Passive reef inserts with flow-guiding fins; module kit for
-                canals and lagoons.
+                Simulations will show: Cost, effectiveness, environmental
+                impact, and long-term outcomes.
               </figcaption>
             </figure>
             <figure className="overflow-hidden rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70">
               <Image
                 src={withBasePath("/now/blueprint-2.svg")}
-                alt="Gemini-generated blueprint showing layered aeration plan"
+                alt="Digital Twin - Meadowlands, NJ (Prototype)"
                 width={600}
                 height={360}
                 className="h-full w-full object-cover"
               />
               <figcaption className="px-3 py-2 text-xs text-[var(--nv-muted)]">
-                Layered aeration and planting zones with instrumentation pads.
+                Digital Twin - Meadowlands, NJ (Prototype). 3D model of the
+                Meadowlands area for initial planning.
               </figcaption>
             </figure>
           </div>
@@ -90,51 +96,60 @@ export default function TimelinePage() {
       <section className="nv-reveal nv-reveal--delay-2 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)]">
         <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
           <SectionHeading
-            eyebrow="Field"
-            title="USDA research event"
-            description="Sharing QA dashboards and responsible AI checks with USDA partners."
+            eyebrow="The Gap"
+            title="Monitoring vs. Healing"
+            description="Them: NJDEP, MRRI, Riverkeeper, and local communities. Us: Nexus Verium."
           />
           <Link
             href="/contact"
             className="rounded-full bg-[var(--nv-primary-strong)] px-4 py-2 text-sm font-semibold text-[var(--nv-bg)] shadow-[0_0_16px_rgba(0,210,255,0.3)] transition hover:-translate-y-0.5 hover:bg-[var(--nv-accent)]"
           >
-            Partner with us
+            Let&apos;s Build Responsibly
           </Link>
         </div>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           <figure className="overflow-hidden rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70">
             <Image
               src={withBasePath("/now/usda-team.svg")}
-              alt="Placeholder image of Nexus Verium team at USDA research event"
+              alt="Current approaches in the Meadowlands"
               width={600}
               height={360}
               className="h-full w-full object-cover"
             />
             <figcaption className="px-3 py-2 text-xs text-[var(--nv-muted)]">
-              Team briefing with USDA partners on QA dashboards and telemetry
-              plans.
+              Current Approaches: Water testing. Passive restoration of wetlands.
+              Stormwater management.
             </figcaption>
           </figure>
           <div className="rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 p-4 text-sm text-[var(--nv-muted)]">
-            <p>
-              Focus areas: aligning data quality expectations, confirming
-              calibration schedules, and documenting AI safeguards for field
-              recommendations.
+            <p className="font-semibold text-[var(--nv-primary-strong)]">
+              Nexus Verium Approach
             </p>
             <ul className="prose-list mt-3">
-              <li>Telemetry kits hardened for humidity and saline exposure.</li>
-              <li>Responsible AI checklist used before each model release.</li>
-              <li>Shared audit logs for transparent decision-making.</li>
+              <li>Real data-driven solutions.</li>
+              <li>Utilizing AI for environmental restoration.</li>
+              <li>Innovation pipeline for Meadowlands-specific prototypes.</li>
+              <li>Technology bridge between existing efforts and new innovations.</li>
             </ul>
+            <p className="mt-3">
+              Current organizations are using monitoring and detection AI in the
+              Meadowlands. These systems are effective at gathering information,
+              predicting issues, and tracking environmental changes. However, no
+              AI system is designed to actively address pollution removal,
+              treatment for contaminated sediment, stormwater contamination
+              prevention, purification of the river, and restoration of the
+              ecosystem. This is the gap Nexus Verium&apos;s research is preparing to
+              fill.
+            </p>
           </div>
         </div>
       </section>
 
       <section className="nv-reveal nv-reveal--delay-3 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)]">
         <SectionHeading
-          eyebrow="In flight"
-          title="Projects in motion"
-          description="Live snapshots from our project roster."
+          eyebrow="Integrated mission"
+          title="Combining AI, Robotics, and Ecology Together"
+          description="Mission: Restoring the environmental health of waterways using intelligent, automated, regenerative systems."
         />
         <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
@@ -156,9 +171,9 @@ export default function TimelinePage() {
 
       <section>
         <SectionHeading
-          eyebrow="Future plans"
-          title="Timeline"
-          description="Accessible parallax timeline; motion reduces automatically if your system requests it."
+          eyebrow="Timeline"
+          title="Graphic timeline introducing three long-term pillars"
+          description="Pillar One: Environmental Restoration & Sustainability (Primary Focus). Pillar Two: Mental Health, Emotional Support, and Human-AI Harmony. Pillar Three: Integrated Intelligence (Long-Term Research Vision)."
         />
         <Timeline items={timeline} />
       </section>
