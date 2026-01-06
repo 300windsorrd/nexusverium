@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Alert } from "antd";
 import { Hero } from "@/components/Hero";
 import { SeoHead } from "@/components/SeoHead";
 import { ServiceList } from "@/components/ServiceList";

@@ -40,8 +40,9 @@ Each programmatic entry includes `slug`, `metaTitle`, `metaDescription`, `h1`, `
 
 ### Contact form
 
-- UI lives at `src/components/ContactForm.tsx`; submissions post to `NEXT_PUBLIC_CONTACT_FORM_ENDPOINT`.
+- UI lives at `src/components/ContactForm.tsx`; submissions post to `NEXT_PUBLIC_CONTACT_FORM_ENDPOINT` when provided or the built-in `/api/contact` handler otherwise.
 - Client-side validation: required fields and a honeypot spam trap.
+- API handler in `src/app/api/contact/route.ts` persists submissions to Postgres when `CONTACT_FORM_DATABASE_URL` or `DATABASE_URL` is set (table name defaults to `contact_submissions`, override with `CONTACT_TABLE_NAME`); when no database URL is available it appends the payload to `data/contact-submissions.json` for local review.
 - CAPTCHA placeholder: integrates Cloudflare Turnstile or reCAPTCHA by sending a `captchaToken` field to your form backend.
 
 ### Architecture notes

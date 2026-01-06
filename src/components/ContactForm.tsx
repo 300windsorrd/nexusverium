@@ -2,17 +2,7 @@
 
 import { useState } from "react";
 import { withBasePath } from "@/lib/paths";
-import { Alert } from "antd";
-
-interface ContactFormState {
-  name: string;
-  email: string;
-  phone: string;
-  company: string;
-  message: string;
-  captchaToken: string;
-  honeypot: string;
-}
+import type { ContactFormState } from "@/types/contact";
 
 const initialState: ContactFormState = {
   name: "",
@@ -38,27 +28,10 @@ export function ContactForm() {
   const formEndpoint = hasExternalEndpoint
     ? envEndpoint
     : withBasePath("/api/contact");
+  const isStaticExport = process.env.NEXT_STATIC_EXPORT === "true";
+  const hasLocalEndpoint = !isStaticExport;
   const isConfigured =
-    hasExternalEndpoint ||
-    canFallbackToEmail ||
-    process.env.NODE_ENV === "development";
-
-  const [alerts, setAlerts] = useState({
-    cmpInc: false,
-    send: false,
-    error: false,
-  });
-
-  function timer() {
-    setTimeout(() => {
-      setAlerts((alerts) => ({
-        ...alerts,
-        cmpInc: false,
-        send: false,
-        error: false,
-      }));
-    }, 5000);
-  }
+    hasExternalEndpoint || canFallbackToEmail || hasLocalEndpoint;
 
   const handleChange = (field: keyof ContactFormState, value: string) => {
     setForm((prev) => ({ ...prev, [field]: value }));
@@ -208,17 +181,26 @@ export function ContactForm() {
         </div>
       </div>
       <div className="mt-4 flex items-center justify-end gap-4">
-        {hasExternalEndpoint ? null : process.env.NODE_ENV === "development" ? (
-          <p className="text-xs text-[var(--nv-muted)]">
-            Using local contact endpoint. Set NEXT_PUBLIC_CONTACT_FORM_ENDPOINT
-            to send submissions from the static export.
-          </p>
-        ) : (
-          <p className="text-xs text-[var(--nv-muted)]">
-            Set NEXT_PUBLIC_CONTACT_FORM_ENDPOINT or
-            NEXT_PUBLIC_CONTACT_FALLBACK_EMAIL to enable submissions.
-          </p>
-        )}
+        {!hasExternalEndpoint ? (
+          process.env.NODE_ENV === "development" ? (
+            <p className="text-xs text-[var(--nv-muted)]">
+              Using the built-in contact endpoint. Set
+              NEXT_PUBLIC_CONTACT_FORM_ENDPOINT to send submissions from a
+              static export or another service.
+            </p>
+          ) : hasLocalEndpoint ? (
+            <p className="text-xs text-[var(--nv-muted)]">
+              Submissions are routed through /api/contact on the running server.
+              Provide NEXT_PUBLIC_CONTACT_FORM_ENDPOINT if you need a custom
+              backend or a static export.
+            </p>
+          ) : (
+            <p className="text-xs text-[var(--nv-muted)]">
+              Set NEXT_PUBLIC_CONTACT_FORM_ENDPOINT or
+              NEXT_PUBLIC_CONTACT_FALLBACK_EMAIL to enable submissions.
+            </p>
+          )
+        ) : null}
         {status === "error" && error ? (
           <p className="text-sm text-red-600">{error}</p>
         ) : null}
