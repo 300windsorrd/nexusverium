@@ -23,9 +23,9 @@ export function ContactForm() {
   const envEndpoint = process.env.NEXT_PUBLIC_CONTACT_FORM_ENDPOINT?.trim();
   const fallbackEmail =
     process.env.NEXT_PUBLIC_CONTACT_FALLBACK_EMAIL?.trim();
-  const hasExternalEndpoint = Boolean(envEndpoint);
+  const hasExternalEndpoint = Boolean(envEndpoint?.length);
   const canFallbackToEmail = Boolean(fallbackEmail);
-  const formEndpoint = hasExternalEndpoint
+  const formEndpoint = envEndpoint?.length
     ? envEndpoint
     : withBasePath("/api/contact");
   const isStaticExport = process.env.NEXT_STATIC_EXPORT === "true";
