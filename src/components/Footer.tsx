@@ -59,12 +59,7 @@ export function Footer() {
               <Link href="/contact">Contact</Link>
             </li>
             <li>
-              <Link href="/locations/meadowlands-nj">Meadowlands</Link>
-            </li>
-            <li>
-              <Link href="/industries/environmental-agencies-and-organizations">
-                Industries
-              </Link>
+              <Link href="mailto:contact@nexusverium.com">Gmail</Link>
             </li>
           </ul>
         </div>
