@@ -270,11 +270,11 @@ export default function Home() {
                 </h3>
                 <ul className="space-y-3">
                   {riverVeinsHow.map((item) => (
-                    <li key={item.title} className="flex gap-2">
-                      <span className="font-semibold text-[var(--nv-ink)]">
+                    <li key={item.title} className="flex gap-3 items-start">
+                      <span className="w-28 sm:w-36 flex-shrink-0 font-semibold text-[var(--nv-ink)]">
                         {item.title}:
                       </span>
-                      <span>{item.description}</span>
+                      <span className="flex-1">{item.description}</span>
                     </li>
                   ))}
                 </ul>
