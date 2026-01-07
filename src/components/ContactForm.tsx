@@ -1,6 +1,45 @@
-import React from "react"
+"use client";
+
+import { ChangeEvent, useState } from "react";
 
 export function ContactForm() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [company, setCompany] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleNameChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setName(event.target.value);
+  };
+
+  const handleEmailChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setEmail(event.target.value);
+  };
+
+  const handlePhoneChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setPhone(event.target.value);
+  };
+
+  const handleCompanyChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setCompany(event.target.value);
+  };
+
+  const handleMessageChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
+    setMessage(event.target.value);
+  };
+
+  async function fetchForm() {
+    const data = { name, email, phone, company, message };
+    try {
+      const res = await fetch("http://localhost:3000/api/contacted", {
+        method: "post",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+    } catch (error) {}
+  }
+
   return (
     <section className="contact-panel mx-auto w-full max-w-3xl rounded-[20px] border border-[var(--nv-border)] bg-[var(--nv-surface)]/70 p-6 shadow-[var(--shadow-card)] transition hover:border-[var(--nv-primary)]">
       <form className="panel-body space-y-6">
@@ -16,6 +55,8 @@ export function ContactForm() {
             <input
               type="text"
               name="name"
+              value={name}
+              onChange={handleNameChange}
               className="input-control rounded-[12px] border border-[var(--nv-border)] bg-transparent px-3 py-2 text-base text-[var(--nv-ink)] transition focus:border-[var(--nv-primary-strong)]"
             />
           </label>
@@ -24,6 +65,8 @@ export function ContactForm() {
             <input
               type="email"
               name="email"
+              value={email}
+              onChange={handleEmailChange}
               className="input-control rounded-[12px] border border-[var(--nv-border)] bg-transparent px-3 py-2 text-base text-[var(--nv-ink)] transition focus:border-[var(--nv-primary-strong)]"
             />
           </label>
@@ -32,6 +75,8 @@ export function ContactForm() {
             <input
               type="tel"
               name="phone"
+              value={phone}
+              onChange={handlePhoneChange}
               className="input-control rounded-[12px] border border-[var(--nv-border)] bg-transparent px-3 py-2 text-base text-[var(--nv-ink)] transition focus:border-[var(--nv-primary-strong)]"
             />
           </label>
@@ -40,6 +85,8 @@ export function ContactForm() {
             <input
               type="text"
               name="company"
+              value={company}
+              onChange={handleCompanyChange}
               className="input-control rounded-[12px] border border-[var(--nv-border)] bg-transparent px-3 py-2 text-base text-[var(--nv-ink)] transition focus:border-[var(--nv-primary-strong)]"
             />
           </label>
@@ -49,6 +96,8 @@ export function ContactForm() {
           <textarea
             name="message"
             rows={4}
+            value={message}
+            onChange={handleMessageChange}
             className="input-control rounded-[12px] border border-[var(--nv-border)] bg-transparent px-3 py-2 text-base text-[var(--nv-ink)] transition focus:border-[var(--nv-primary-strong)]"
           />
         </label>
@@ -62,5 +111,5 @@ export function ContactForm() {
         </div>
       </form>
     </section>
-  )
+  );
 }
