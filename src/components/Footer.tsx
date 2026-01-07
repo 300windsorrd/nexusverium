@@ -46,10 +46,7 @@ export function Footer() {
               <Link href="/now">Timeline</Link>
             </li>
             <li>
-              <Link href="/services/environmental-restoration-systems">Services</Link>
-            </li>
-            <li>
-              <Link href="/research/the-philosophy">Research</Link>
+              <Link href="/contact">Contact</Link>
             </li>
           </ul>
         </div>
