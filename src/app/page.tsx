@@ -162,6 +162,40 @@ export default function Home() {
         ctaHref="/contact"
       />
 
+      <section className="nv-reveal nv-reveal--delay-2 mt-12 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)]">
+        <SectionHeading
+          eyebrow="Active prototypes"
+          title="Living Systems We&apos;re Building"
+          description="River Veins prototypes aligned with the restoration network in active development."
+        />
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {prototypeGallery.map((item) => (
+            <article
+              key={item.title}
+              className="overflow-hidden rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 shadow-[0_12px_28px_rgba(0,11,20,0.55)]"
+            >
+              <div className="relative h-36 w-full">
+                <Image
+                  src={withBasePath(item.image)}
+                  alt={item.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="space-y-2 p-4">
+                <h3 className="text-base font-semibold text-[var(--nv-primary-strong)]">
+                  {item.title}
+                </h3>
+                <p className="text-xs text-[var(--nv-muted)]">
+                  {item.description}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="nv-reveal nv-reveal--delay-1 mt-12 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(150deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)]">
         <SectionHeading
           eyebrow="What we are building"
@@ -353,40 +387,6 @@ export default function Home() {
         ctaLabel="Meet the team"
         ctaHref="/team"
       />
-
-      <section className="nv-reveal nv-reveal--delay-2 mt-12 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)]">
-        <SectionHeading
-          eyebrow="Active prototypes"
-          title="Living Systems We&apos;re Building"
-          description="River Veins prototypes aligned with the restoration network in active development."
-        />
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {prototypeGallery.map((item) => (
-            <article
-              key={item.title}
-              className="overflow-hidden rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 shadow-[0_12px_28px_rgba(0,11,20,0.55)]"
-            >
-              <div className="relative h-36 w-full">
-                <Image
-                  src={withBasePath(item.image)}
-                  alt={item.title}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover"
-                />
-              </div>
-              <div className="space-y-2 p-4">
-                <h3 className="text-base font-semibold text-[var(--nv-primary-strong)]">
-                  {item.title}
-                </h3>
-                <p className="text-xs text-[var(--nv-muted)]">
-                  {item.description}
-                </p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
 
       <ServiceList services={services} />
 
