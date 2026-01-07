@@ -303,7 +303,7 @@ export default function Home() {
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--nv-muted)]">
                     What&apos;s Coming
                   </p>
-                  <div className="grid gap-3">
+                  <div className="grid gap-3 sm:grid-cols-2">
                     {comingItems.map((item) => (
                       <Link
                         key={item.title}
