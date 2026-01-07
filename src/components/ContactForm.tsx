@@ -7,6 +7,40 @@ type ResponseState = {
   message: string;
 };
 
+type FieldKey = "name" | "email" | "phone" | "company" | "message";
+
+type FieldErrors = Partial<Record<FieldKey, string>>;
+
+const validators: Record<FieldKey, (value: string) => string> = {
+  name: (value) => (value.trim() ? "" : "¿Cómo te llamas?"),
+  email: (value) => {
+    const trimmed = value.trim();
+    if (!trimmed) {
+      return "Necesitamos tu correo electrónico.";
+    }
+    const emailPattern =
+      /^[\w.%+!#'-]+@[\w.-]+\.[a-zA-Z]{2,}$/;
+    return emailPattern.test(trimmed)
+      ? ""
+      : "Ingresa un correo válido.";
+  },
+  phone: (value) => {
+    const trimmed = value.trim();
+    if (!trimmed) {
+      return "Dinos cómo contactarte vía teléfono.";
+    }
+    const digitsOnly = trimmed.replace(/\D/g, "");
+    if (digitsOnly.length < 7) {
+      return "Usa al menos 7 dígitos.";
+    }
+    return "";
+  },
+  company: (value) =>
+    value.trim() ? "" : "Cuéntanos en qué empresa trabajas.",
+  message: (value) =>
+    value.trim() ? "" : "¿Qué te gustaría compartir con nosotros?",
+};
+
 export function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -15,33 +49,86 @@ export function ContactForm() {
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [responseState, setResponseState] = useState<ResponseState | null>(null);
+  const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
 
   const endpoint =
     process.env.NEXT_PUBLIC_CONTACT_FORM_ENDPOINT ?? "/api/contact";
 
+  const getInputClasses = (error?: string) =>
+    `input-control rounded-[12px] border border-[var(--nv-border)] bg-transparent px-3 py-2 text-base text-[var(--nv-ink)] transition focus:border-[var(--nv-primary-strong)] focus:outline-none ${
+      error
+        ? "border-[var(--nv-accent)] bg-[var(--nv-surface)]/80 shadow-[0_0_0_10px_rgba(234,76,137,0.2)]"
+        : "hover:border-[var(--nv-primary-strong)]"
+    }`;
+
+  const gatherFieldErrors = (): FieldErrors => ({
+    name: validators.name(name),
+    email: validators.email(email),
+    phone: validators.phone(phone),
+    company: validators.company(company),
+    message: validators.message(message),
+  });
+
   const handleNameChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setName(event.target.value);
+    const value = event.target.value;
+    setName(value);
+    setFieldErrors((prev) => ({
+      ...prev,
+      name: validators.name(value),
+    }));
   };
 
   const handleEmailChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setEmail(event.target.value);
+    const value = event.target.value;
+    setEmail(value);
+    setFieldErrors((prev) => ({
+      ...prev,
+      email: validators.email(value),
+    }));
   };
 
   const handlePhoneChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setPhone(event.target.value);
+    const value = event.target.value;
+    setPhone(value);
+    setFieldErrors((prev) => ({
+      ...prev,
+      phone: validators.phone(value),
+    }));
   };
 
   const handleCompanyChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setCompany(event.target.value);
+    const value = event.target.value;
+    setCompany(value);
+    setFieldErrors((prev) => ({
+      ...prev,
+      company: validators.company(value),
+    }));
   };
 
   const handleMessageChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
-    setMessage(event.target.value);
+    const value = event.target.value;
+    setMessage(value);
+    setFieldErrors((prev) => ({
+      ...prev,
+      message: validators.message(value),
+    }));
   };
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (isSubmitting) {
+      return;
+    }
+
+    const errors = gatherFieldErrors();
+    const hasErrors = Object.values(errors).some((value) => Boolean(value));
+
+    if (hasErrors) {
+      setFieldErrors(errors);
+      setResponseState({
+        type: "error",
+        message: "Por favor corrige los campos marcados.",
+      });
       return;
     }
 
@@ -83,6 +170,7 @@ export function ContactForm() {
       setPhone("");
       setCompany("");
       setMessage("");
+      setFieldErrors({});
     } catch (error) {
       const errorMessage =
         error instanceof Error
@@ -112,8 +200,14 @@ export function ContactForm() {
               value={name}
               onChange={handleNameChange}
               required
-              className="input-control rounded-[12px] border border-[var(--nv-border)] bg-transparent px-3 py-2 text-base text-[var(--nv-ink)] transition focus:border-[var(--nv-primary-strong)]"
+              className={getInputClasses(fieldErrors.name)}
+              aria-invalid={Boolean(fieldErrors.name)}
             />
+            {fieldErrors.name && (
+              <span className="text-[var(--nv-accent)] text-xs leading-tight">
+                {fieldErrors.name}
+              </span>
+            )}
           </label>
           <label className="input-row flex flex-col gap-2 text-sm text-[var(--nv-muted)]">
             Email
@@ -123,8 +217,14 @@ export function ContactForm() {
               value={email}
               onChange={handleEmailChange}
               required
-              className="input-control rounded-[12px] border border-[var(--nv-border)] bg-transparent px-3 py-2 text-base text-[var(--nv-ink)] transition focus:border-[var(--nv-primary-strong)]"
+              className={getInputClasses(fieldErrors.email)}
+              aria-invalid={Boolean(fieldErrors.email)}
             />
+            {fieldErrors.email && (
+              <span className="text-[var(--nv-accent)] text-xs leading-tight">
+                {fieldErrors.email}
+              </span>
+            )}
           </label>
           <label className="input-row flex flex-col gap-2 text-sm text-[var(--nv-muted)]">
             Phone
@@ -134,8 +234,14 @@ export function ContactForm() {
               value={phone}
               onChange={handlePhoneChange}
               required
-              className="input-control rounded-[12px] border border-[var(--nv-border)] bg-transparent px-3 py-2 text-base text-[var(--nv-ink)] transition focus:border-[var(--nv-primary-strong)]"
+              className={getInputClasses(fieldErrors.phone)}
+              aria-invalid={Boolean(fieldErrors.phone)}
             />
+            {fieldErrors.phone && (
+              <span className="text-[var(--nv-accent)] text-xs leading-tight">
+                {fieldErrors.phone}
+              </span>
+            )}
           </label>
           <label className="input-row flex flex-col gap-2 text-sm text-[var(--nv-muted)]">
             Company
@@ -145,8 +251,14 @@ export function ContactForm() {
               value={company}
               onChange={handleCompanyChange}
               required
-              className="input-control rounded-[12px] border border-[var(--nv-border)] bg-transparent px-3 py-2 text-base text-[var(--nv-ink)] transition focus:border-[var(--nv-primary-strong)]"
+              className={getInputClasses(fieldErrors.company)}
+              aria-invalid={Boolean(fieldErrors.company)}
             />
+            {fieldErrors.company && (
+              <span className="text-[var(--nv-accent)] text-xs leading-tight">
+                {fieldErrors.company}
+              </span>
+            )}
           </label>
         </div>
         <label className="input-row flex flex-col gap-2 text-sm text-[var(--nv-muted)]">
@@ -157,20 +269,27 @@ export function ContactForm() {
             value={message}
             onChange={handleMessageChange}
             required
-            className="input-control rounded-[12px] border border-[var(--nv-border)] bg-transparent px-3 py-2 text-base text-[var(--nv-ink)] transition focus:border-[var(--nv-primary-strong)]"
+            className={getInputClasses(fieldErrors.message)}
+            aria-invalid={Boolean(fieldErrors.message)}
           />
+          {fieldErrors.message && (
+            <span className="text-[var(--nv-accent)] text-xs leading-tight">
+              {fieldErrors.message}
+            </span>
+          )}
         </label>
         {responseState && (
-          <p
-            className={`text-sm ${
+          <div
+            className={`rounded-[14px] border px-4 py-3 text-sm ${
               responseState.type === "success"
-                ? "text-[var(--nv-primary-strong)]"
-                : "text-[var(--nv-accent)]"
+                ? "border-[var(--nv-primary-strong)] bg-[var(--nv-primary-strong)]/10 text-[var(--nv-primary-strong)] shadow-[0_20px_40px_rgba(17,153,133,0.25)]"
+                : "border-[var(--nv-accent)] bg-[var(--nv-accent)]/10 text-[var(--nv-accent)] shadow-[0_10px_30px_rgba(248,113,113,0.25)]"
             }`}
+            role="status"
             aria-live="polite"
           >
             {responseState.message}
-          </p>
+          </div>
         )}
         <div className="flex justify-end">
           <button

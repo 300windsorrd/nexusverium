@@ -49,12 +49,20 @@ async function storeInSupabase(
     auth: { persistSession: false, autoRefreshToken: false },
   });
 
+  const digitsOnly = submission.phone.replace(/\D/g, "");
+  const segment = digitsOnly.slice(-4);
+  const phoneForSmallint = segment
+    ? Number.parseInt(segment, 10)
+    : null;
+
+  const messageWithPhone = `${submission.message}\n\nTel: ${submission.phone}`;
+
   const record = {
     name: submission.name,
     email: submission.email,
-    phone: submission.phone,
+    phone: phoneForSmallint ?? 0,
     company: submission.company,
-    Message: submission.message,
+    Message: messageWithPhone,
   };
 
   const { error } = await supabase.from(TABLE_NAME).insert(record);
