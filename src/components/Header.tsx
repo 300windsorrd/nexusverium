@@ -38,6 +38,7 @@ export function Header({ searchItems }: HeaderProps) {
   const pathname = usePathname();
   const [query, setQuery] = useState("");
   const [focused, setFocused] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const currentPath = normalizePath(stripBasePath(pathname || "/"));
 
   const results = useMemo(() => {
@@ -150,26 +151,60 @@ export function Header({ searchItems }: HeaderProps) {
           </div>
         </div>
       </div>
-      <div className="flex items-center gap-3 border-t border-[var(--nv-border)]/70 px-4 py-2 text-xs text-[var(--nv-muted)] md:hidden">
-        {navLinks.map((item) => {
-          const active = currentPath === normalizePath(item.href);
-          return (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={`nv-nav-link nv-nav-link--mobile ${
-                active
-                  ? "nv-nav-link--active"
-                  : "nv-nav-link--inactive"
-              }`}
-            >
-              {item.label}
-            </Link>
-          );
-        })}
-        <div className="ml-auto">
-          <ThemeToggle />
+      <div className="md:hidden">
+        <div className="flex items-center justify-end border-t border-[var(--nv-border)]/70 px-4 py-2">
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen((prev) => !prev)}
+            className="relative flex h-10 w-10 items-center justify-center rounded-full border border-[var(--nv-border)] bg-[var(--nv-bg)]/70 transition hover:border-[var(--nv-primary-strong)] animate-pulse"
+            aria-haspopup="true"
+            aria-expanded={mobileMenuOpen}
+            aria-label="Abrir menu de navegacion"
+          >
+            <span
+              aria-hidden="true"
+              className="absolute inset-0 rounded-full bg-[var(--nv-primary-strong)]/30 shadow-[0_0_25px_rgba(0,210,255,0.85)] animate-pulse"
+            />
+            <span className="sr-only">Menú móvil</span>
+            <Image
+              src={withBasePath("/Logo.png")}
+              alt="Logo de Nexus Verium"
+              width={32}
+              height={32}
+              className="h-8 w-8 rounded-full object-cover"
+              style={{ transform: "rotate(-0.3turn)" }}
+              priority
+            />
+          </button>
         </div>
+        {mobileMenuOpen ? (
+          <div className="divide-y divide-[var(--nv-border)]/70 border-t border-[var(--nv-border)]/70 bg-[var(--nv-surface)]">
+            <nav className="flex flex-col gap-2 px-4 py-3">
+              {navLinks.map((item) => {
+                const active = currentPath === normalizePath(item.href);
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`nv-nav-link nv-nav-link--mobile ${
+                      active
+                        ? "nv-nav-link--active"
+                        : "nv-nav-link--inactive"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
+            </nav>
+            <div className="px-4 py-3">
+              <div className="flex justify-end">
+                <ThemeToggle />
+              </div>
+            </div>
+          </div>
+        ) : null}
       </div>
     </header>
   );
