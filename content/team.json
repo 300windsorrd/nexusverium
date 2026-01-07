@@ -4,7 +4,7 @@
     "role": "Founder & Systems Architect",
     "bio": "Nexus Verium was founded by Jonathan Eleonidas Arroyo Yunda, an environmental science student and systems thinker focused on the responsible integration of AI into environmental and human systems. With a background in environmental science, engineering concepts, and AI systems design, he guides applied research, prototyping, and real-world implementation across the River Veins initiative.",
     "image": "/team/Johnathan%20Pro.png",
-    "focus": "Environmental science, engineering concepts, AI systems design"
+    "focus": ""
   },
   {
     "name": "Jensy Jimenez",
@@ -25,13 +25,20 @@
     "role": "AI Systems Engineer & Robotics Research",
     "bio": "Dewansh Gupta is an AI Systems Engineer and Robotics Researcher at Nexus Verium, where he designs intelligent, autonomous systems at the intersection of artificial intelligence, robotics, and environmental technology. With a foundation in computer science, systems engineering, and applied machine learning, his work focuses on translating advanced AI models, theoretical frameworks, and experimental findings into robust, real-world robotic and cyber-physical solutions. He contributes to scalable, data-driven system architectures that integrate sensing, decision-making, and autonomous control, including applied research and prototyping on AI-assisted environmental platforms for ecosystem monitoring and restoration.",
     "image": "/team/Dewansh%20pro.png",
-    "focus": "AI Systems Engineer & Robotics Research"
+    "focus": ""
   },
   {
     "name": "Fasih Ur Rehman Abbasi",
     "role": "Chief Research Coordinator & Operations Lead",
     "bio": "Fasih Ur Rehman Abbasi is the Chief Research Coordinator and Operations Lead at Nexus Verium, where he oversees the design, coordination, and execution of interdisciplinary research and applied innovation initiatives. With a strong foundation in STEM and systems thinking, he bridges environmental science, engineering, and AI-assisted technologies to translate complex ideas into structured research frameworks, scalable prototypes, and real-world implementations. His work focuses on ensuring methodological rigor, operational efficiency, and responsible deployment across Nexus Verium's projects.",
     "image": "/team/Fasih%20pro.png",
-    "focus": "Chief Research Coordinator & Operations Lead"
+    "focus": ""
+  },
+  {
+    "name": "Eidan Jimenez",
+    "role": "Web Systems & Database Architect",
+    "bio": "Serving as a pivotal member of the team, this individual is responsible for the comprehensive development and strategic management of the project's entire web infrastructure. They specialize in crafting robust frontend architectures that prioritize user experience, while building highly scalable backend systems designed for peak performance. Furthermore, they oversee efficient database administration and ensure data integrity, providing a stable foundation that allows the platform to evolve alongside shifting business objectives.",
+    "image": "/team/Eidan%20pro.png",
+    "focus": ""
   }
 ]
