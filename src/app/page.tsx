@@ -299,8 +299,8 @@ export default function Home() {
                 <ul className="space-y-2">
                   {riverVeinsFocus.map((item) => (
                     <li key={item} className="flex gap-2">
-                      <span className="mt-1 h-2 w-2 rounded-full bg-[var(--nv-primary-strong)]" />
-                      <span>{item}</span>
+                      <span className="mt-0.5 h-2 w-2 rounded-full bg-[var(--nv-primary-strong)] shrink-0" />
+                      <span className="flex-1">{item}</span>
                     </li>
                   ))}
                 </ul>
