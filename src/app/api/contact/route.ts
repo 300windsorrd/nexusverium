@@ -1,11 +1,32 @@
 import { storeContactSubmission } from "@/lib/contactStore";
 import type { ContactSubmission } from "@/types/contact";
 
-function getFormValue(formData: FormData, key: string) {
-  const value = formData.get(key);
-  if (!value) {
-    return "";
+type RawPayload = Record<string, unknown>;
+
+async function parsePayload(request: Request): Promise<RawPayload> {
+  const contentType = (request.headers.get("content-type") ?? "").toLowerCase();
+  if (contentType.includes("application/json")) {
+    try {
+      const parsed = await request.json();
+      if (parsed && typeof parsed === "object") {
+        return parsed as RawPayload;
+      }
+    } catch (error) {
+      console.error("Unable to parse JSON payload", error);
+    }
+    return {};
   }
+
+  const formData = await request.formData();
+  const payload: RawPayload = {};
+  formData.forEach((value, key) => {
+    payload[key] = value;
+  });
+  return payload;
+}
+
+function getValue(payload: RawPayload, key: string) {
+  const value = payload[key];
   if (typeof value === "string") {
     return value.trim();
   }
@@ -13,9 +34,9 @@ function getFormValue(formData: FormData, key: string) {
 }
 
 export async function POST(request: Request) {
-  const formData = await request.formData();
-  const honeypot = formData.get("honeypot");
-  if (typeof honeypot === "string" && honeypot.trim().length > 0) {
+  const payload = await parsePayload(request);
+  const honeypot = getValue(payload, "honeypot");
+  if (honeypot) {
     return Response.json(
       { message: "Blocked by spam protection." },
       { status: 400 },
@@ -23,12 +44,12 @@ export async function POST(request: Request) {
   }
 
   const submission: ContactSubmission = {
-    name: getFormValue(formData, "name"),
-    email: getFormValue(formData, "email"),
-    phone: getFormValue(formData, "phone"),
-    company: getFormValue(formData, "company"),
-    message: getFormValue(formData, "message"),
-    captchaToken: getFormValue(formData, "captchaToken") || "captcha-placeholder",
+    name: getValue(payload, "name"),
+    email: getValue(payload, "email"),
+    phone: getValue(payload, "phone"),
+    company: getValue(payload, "company"),
+    message: getValue(payload, "message"),
+    captchaToken: getValue(payload, "captchaToken") || "captcha-placeholder",
   };
 
   if (

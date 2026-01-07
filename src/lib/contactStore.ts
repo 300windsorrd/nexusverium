@@ -3,6 +3,7 @@ import { promises as fs } from "fs";
 import path from "path";
 
 import { Client } from "pg";
+import { createClient } from "@supabase/supabase-js";
 
 import type { ContactSubmission } from "@/types/contact";
 
@@ -18,6 +19,16 @@ interface LocalContactRecord extends ContactSubmission {
 }
 
 export async function storeContactSubmission(submission: ContactSubmission) {
+  const supabaseUrl = process.env.SUPABASE_URL?.trim();
+  const supabaseKey =
+    process.env.SUPABASE_SERVICE_ROLE_KEY?.trim() ??
+    process.env.SUPABASE_ANON_KEY?.trim();
+
+  if (supabaseUrl && supabaseKey) {
+    await storeInSupabase(supabaseUrl, supabaseKey, submission);
+    return;
+  }
+
   const dbUrl =
     process.env.CONTACT_FORM_DATABASE_URL?.trim() ||
     process.env.DATABASE_URL?.trim();
@@ -25,7 +36,31 @@ export async function storeContactSubmission(submission: ContactSubmission) {
     await storeInPostgres(dbUrl, submission);
     return;
   }
+
   await storeLocally(submission);
+}
+
+async function storeInSupabase(
+  url: string,
+  key: string,
+  submission: ContactSubmission,
+) {
+  const supabase = createClient(url, key, {
+    auth: { persistSession: false, autoRefreshToken: false },
+  });
+
+  const record = {
+    name: submission.name,
+    email: submission.email,
+    phone: submission.phone,
+    company: submission.company,
+    Message: submission.message,
+  };
+
+  const { error } = await supabase.from(TABLE_NAME).insert(record);
+  if (error) {
+    throw new Error(error.message);
+  }
 }
 
 async function storeInPostgres(dbUrl: string, submission: ContactSubmission) {
