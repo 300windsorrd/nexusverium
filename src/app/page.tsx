@@ -299,27 +299,28 @@ export default function Home() {
                   environmental restoration systems through research, modeling,
                   and prototype development.
                 </p>
-                <div className="space-y-3">
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--nv-muted)]">
-                    What&apos;s Coming
-                  </p>
-                  <div className="grid gap-3 sm:grid-cols-2">
-                    {comingItems.map((item) => (
-                      <Link
-                        key={item.title}
-                        href={`/research/${item.slug}`}
-                        className="rounded-[14px] border border-[var(--nv-border)]/50 bg-[var(--nv-bg)]/70 p-3 transition hover:-translate-y-0.5 hover:border-[var(--nv-border)] hover:bg-[var(--nv-bg)]"
-                      >
-                        <p className="text-sm font-semibold text-[var(--nv-primary-strong)]">
-                          {item.title}
-                        </p>
-                        <p className="text-xs text-[var(--nv-muted)]">
-                          {item.description}
-                        </p>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
+
+              </div>
+            </div>
+            <div className="mt-6 space-y-3">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--nv-muted)]">
+                What&apos;s Coming
+              </p>
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {comingItems.map((item) => (
+                  <Link
+                    key={item.title}
+                    href={`/research/${item.slug}`}
+                    className="rounded-[14px] border border-[var(--nv-border)]/50 bg-[var(--nv-bg)]/70 p-3 transition hover:-translate-y-0.5 hover:border-[var(--nv-border)] hover:bg-[var(--nv-bg)]"
+                  >
+                    <p className="text-sm font-semibold text-[var(--nv-primary-strong)]">
+                      {item.title}
+                    </p>
+                    <p className="text-xs text-[var(--nv-muted)]">
+                      {item.description}
+                    </p>
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
