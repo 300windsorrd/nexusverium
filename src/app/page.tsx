@@ -198,7 +198,7 @@ export default function Home() {
 
       <section className="nv-reveal nv-reveal--delay-1 mt-12 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(150deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)]">
         <SectionHeading
-          eyebrow="What we are building"
+          eyebrow=""
           title="Restoration systems you can see"
           description="Floating wetlands, the River Veins initiative, and active restoration prototypes are front and center."
         />
