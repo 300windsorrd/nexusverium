@@ -37,14 +37,14 @@ export function Hero({ title, subtitle, ctaLabel, ctaHref }: HeroProps) {
         className="pointer-events-none absolute inset-0 bg-gradient-to-l from-[rgba(0,11,20,0.78)] via-[rgba(0,11,20,0.52)] to-[rgba(0,11,20,0.12)]"
       />
       <div className="relative z-10 flex min-h-screen w-full flex-col justify-start px-6 pt-20 pb-10 sm:pt-24 sm:pb-14 md:items-start md:justify-start md:px-10">
-        <div className="hero-copy w-full max-w-xl rounded-[24px] p-6 text-right shadow-[0_25px_60px_rgba(0,11,20,0.35)] backdrop-blur-md md:mr-auto md:p-7 md:text-left">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--nv-accent)] opacity-80">
+        <div className="hero-copy w-full max-w-xl rounded-[24px] p-6 text-right shadow-[0_25px_60px_rgba(0,11,20,0.35),0_0_30px_rgba(168,240,255,0.15)] backdrop-blur-md backdrop-brightness-150 md:mr-auto md:p-7 md:text-left">
+          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--nv-primary)]">
             Human Well-Being & Responsible Innovation
           </p>
-          <h1 className="mt-3 text-3xl font-semibold leading-tight text-[var(--nv-ink)] sm:text-4xl">
+          <h1 className="mt-3 text-3xl font-semibold leading-tight text-[var(--nv-primary)] sm:text-4xl">
             {title}
           </h1>
-          <p className="hero-subtitle mt-3 text-base font-medium leading-relaxed sm:text-lg md:text-left">
+          <p className="hero-subtitle mt-3 text-base font-medium leading-relaxed !text-slate-900 sm:text-lg md:text-left">
             {subtitle}
           </p>
           <div className="mt-5 flex justify-end md:justify-start">
