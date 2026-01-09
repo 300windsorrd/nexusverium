@@ -25,6 +25,12 @@
   --nv-card-shadow: 0 20px 60px rgba(0, 11, 20, 0.55),
     0 0 40px rgba(0, 210, 255, 0.12);
   --nv-selection: rgba(0, 210, 255, 0.35);
+
+  /* Menu Button Colors (Dark Mode Default) */
+  --nv-menu-bg: rgba(0, 42, 71, 0.8);
+  --nv-menu-icon: #00d2ff;
+  --nv-menu-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --nv-menu-border: rgba(0, 210, 255, 0.25);
 }
 
 :root[data-theme="light"] {
@@ -49,6 +55,12 @@
   --nv-glass-border: rgba(12, 74, 110, 0.16);
   --nv-card-shadow: 0 15px 45px rgba(15, 23, 42, 0.12);
   --nv-selection: rgba(14, 116, 183, 0.22);
+
+  /* Menu Button Colors (Light Mode) */
+  --nv-menu-bg: #ffffff;
+  --nv-menu-icon: rgb(0, 122, 255);
+  --nv-menu-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --nv-menu-border: rgba(12, 74, 110, 0.1);
 }
 
 @theme inline {
@@ -293,4 +305,62 @@ body {
   .nv-nav-link--elevated {
     box-shadow: 0 0 14px rgba(0, 210, 255, 0.25);
   }
+}
+
+/* Menu Button Styles */
+.menu-background {
+  border-radius: 12px;
+  background: var(--nv-menu-bg) !important;
+  box-shadow: var(--nv-menu-shadow);
+  border: 1px solid var(--nv-menu-border);
+  backdrop-filter: blur(15px);
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.menu__icon {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform .4s;
+  border: none;
+  background: none;
+  margin: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.menu__icon span {
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+
+  background-color: var(--nv-menu-icon) !important;
+  box-shadow: none;
+  transition: width .4s, transform .4s, background-color .4s;
+}
+
+.menu__icon :nth-child(1) {
+  width: 75%;
+}
+
+.menu__icon :nth-child(2) {
+  width: 50%;
+}
+
+.menu__icon[aria-expanded="true"] {
+  transform: rotate(-90deg);
+}
+
+.menu__icon[aria-expanded="true"] span {
+  transform: translateX(0);
+  background-color: var(--nv-menu-icon) !important;
 }

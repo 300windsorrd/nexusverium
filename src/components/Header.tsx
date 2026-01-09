@@ -128,30 +128,23 @@ export function Header({ searchItems }: HeaderProps) {
               </div>
             ) : null}
           </div>
-          <button
-            type="button"
-            onClick={() => setMobileMenuOpen((prev) => !prev)}
-            className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[var(--nv-border)] bg-[var(--nv-bg)]/70 transition hover:border-[var(--nv-primary-strong)] md:hidden"
-            aria-haspopup="true"
-            aria-expanded={mobileMenuOpen}
-            aria-label="Abrir menu de navegacion"
-          >
-            <span
-              aria-hidden="true"
-              className="absolute inset-0 rounded-full bg-[var(--nv-primary-strong)]/30 shadow-[0_0_25px_rgba(0,210,255,0.85)] animate-pulse"
-            />
-            <span className="sr-only">Menú móvil</span>
-            <Image
-              src={withBasePath("/Logo.png")}
-              alt="Logo de Nexus Verium"
-              width={32}
-              height={32}
-              className="h-8 w-8 rounded-full object-cover"
-              style={{ transform: "rotate(-0.3turn)" }}
-              priority
-            />
-          </button>
-          <div className="hidden items-center gap-3 md:ml-auto md:flex">
+          <div className="min-[1000px]:hidden">
+            <div className="menu-background">
+              <button
+                type="button"
+                className="menu__icon"
+                onClick={() => setMobileMenuOpen((prev) => !prev)}
+                aria-haspopup="true"
+                aria-expanded={mobileMenuOpen}
+                aria-label="Abrir menu de navegacion"
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+          <div className="hidden items-center gap-3 min-[1000px]:ml-auto min-[1000px]:flex">
             <nav className="flex items-center gap-4">
               {navLinks.map((item) => {
                 const active = currentPath === normalizePath(item.href);
@@ -173,7 +166,7 @@ export function Header({ searchItems }: HeaderProps) {
           </div>
         </div>
       </div>
-      <div className="md:hidden">
+      <div className="min-[1000px]:hidden">
         {mobileMenuOpen ? (
           <div className="divide-y divide-[var(--nv-border)]/70 border-t border-[var(--nv-border)]/70 bg-[var(--nv-surface)]">
             <nav className="flex flex-col gap-2 px-4 py-3">
