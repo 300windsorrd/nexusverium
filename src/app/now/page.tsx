@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "@/components/SectionHeading";
-import { Timeline } from "@/components/Timeline";
+import VisionPillars from "@/components/VisionPillars";
 import { buildMetadata } from "@/lib/metadata";
 import { withBasePath } from "@/lib/paths";
-import { projects, timeline } from "@/lib/content";
+import { projects } from "@/lib/content";
 
 export const metadata: Metadata = buildMetadata({
   title: "Timeline | Nexus Verium",
@@ -169,14 +169,7 @@ export default function TimelinePage() {
         </div>
       </section>
 
-      <section>
-        <SectionHeading
-          eyebrow="Timeline"
-          title="Graphic timeline introducing three long-term pillars"
-          description="Pillar One: Environmental Restoration & Sustainability (Primary Focus). Pillar Two: Mental Health, Emotional Support, and Human-AI Harmony. Pillar Three: Integrated Intelligence (Long-Term Research Vision)."
-        />
-        <Timeline items={timeline} />
-      </section>
+      <VisionPillars />
     </div>
   );
 }
