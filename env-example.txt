@@ -1,0 +1,11 @@
+# Required for Contact Form in Production
+# You must set these in your deployment provider (e.g. Vercel, Netlify)
+
+# Option 1: Supabase (Recommended)
+SUPABASE_URL=https://your-project-id.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+# or SUPABASE_ANON_KEY=your-anon-key
+
+# Option 2: PostgreSQL Direct Connection
+# CONTACT_FORM_DATABASE_URL=postgres://user:password@host:port/database
+# DATABASE_URL=postgres://user:password@host:port/database
