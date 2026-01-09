@@ -355,7 +355,7 @@ function TimelineNode({
                                     alt={node.title}
                                     width={200}
                                     height={200}
-                                    className="w-full h-full object-contain p-4 opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
+                                    className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
                                 />
                             </div>
                         )}
