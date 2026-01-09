@@ -54,7 +54,7 @@ export function Header({ searchItems }: HeaderProps) {
   }, [query, searchItems]);
 
   return (
-    <header className="glass-surface sticky top-0 z-50 border-b border-[var(--nv-border)]/60 bg-[var(--nv-surface)]/80 backdrop-blur-md shadow-[var(--nv-card-shadow)]">
+    <header className="glass-surface fixed top-0 left-0 w-full z-50 border-b border-[var(--nv-border)]/60 bg-[var(--nv-surface)]/80 backdrop-blur-md shadow-[var(--nv-card-shadow)]">
       <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:gap-6">
         <Link href="/" className="flex items-start gap-2">
           <Image
@@ -74,7 +74,7 @@ export function Header({ searchItems }: HeaderProps) {
             </span>
           </div>
         </Link>
-        <div className="flex w-full flex-col gap-3 sm:ml-auto sm:flex-row sm:items-center sm:gap-4">
+        <div className="flex w-full flex-row items-center gap-3 sm:ml-auto sm:gap-4">
           <div className="relative w-full flex-1 max-w-full sm:max-w-[460px]">
             <label className="sr-only" htmlFor="site-search">
               Search Nexus Verium
@@ -128,35 +128,10 @@ export function Header({ searchItems }: HeaderProps) {
               </div>
             ) : null}
           </div>
-          <div className="hidden items-center gap-3 md:ml-auto md:flex">
-            <nav className="flex items-center gap-4">
-              {navLinks.map((item) => {
-                const active = currentPath === normalizePath(item.href);
-                return (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className={`nv-nav-link nv-nav-link--desktop ${
-                      active
-                        ? "nv-nav-link--active nv-nav-link--elevated"
-                        : "nv-nav-link--inactive"
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                );
-              })}
-            </nav>
-            <ThemeToggle />
-          </div>
-        </div>
-      </div>
-      <div className="md:hidden">
-        <div className="flex items-center justify-end border-t border-[var(--nv-border)]/70 px-4 py-2">
           <button
             type="button"
             onClick={() => setMobileMenuOpen((prev) => !prev)}
-            className="relative flex h-10 w-10 items-center justify-center rounded-full border border-[var(--nv-border)] bg-[var(--nv-bg)]/70 transition hover:border-[var(--nv-primary-strong)] animate-pulse"
+            className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[var(--nv-border)] bg-[var(--nv-bg)]/70 transition hover:border-[var(--nv-primary-strong)] md:hidden"
             aria-haspopup="true"
             aria-expanded={mobileMenuOpen}
             aria-label="Abrir menu de navegacion"
@@ -176,7 +151,29 @@ export function Header({ searchItems }: HeaderProps) {
               priority
             />
           </button>
+          <div className="hidden items-center gap-3 md:ml-auto md:flex">
+            <nav className="flex items-center gap-4">
+              {navLinks.map((item) => {
+                const active = currentPath === normalizePath(item.href);
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`nv-nav-link nv-nav-link--desktop ${active
+                      ? "nv-nav-link--active nv-nav-link--elevated"
+                      : "nv-nav-link--inactive"
+                      }`}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
+            </nav>
+            <ThemeToggle />
+          </div>
         </div>
+      </div>
+      <div className="md:hidden">
         {mobileMenuOpen ? (
           <div className="divide-y divide-[var(--nv-border)]/70 border-t border-[var(--nv-border)]/70 bg-[var(--nv-surface)]">
             <nav className="flex flex-col gap-2 px-4 py-3">
@@ -187,11 +184,10 @@ export function Header({ searchItems }: HeaderProps) {
                     key={item.href}
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`nv-nav-link nv-nav-link--mobile ${
-                      active
-                        ? "nv-nav-link--active"
-                        : "nv-nav-link--inactive"
-                    }`}
+                    className={`nv-nav-link nv-nav-link--mobile ${active
+                      ? "nv-nav-link--active"
+                      : "nv-nav-link--inactive"
+                      }`}
                   >
                     {item.label}
                   </Link>
