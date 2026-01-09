@@ -155,8 +155,8 @@ export default function Home() {
   return (
     <>
       <SeoHead jsonLd={orgJsonLd} />
-      {/* Mobile Layout: Static Hero Image + Content, then IMS below */}
-      <section className="md:hidden relative min-h-screen w-full overflow-hidden border-b border-[var(--nv-border)] bg-slate-900 shadow-[var(--shadow-card)]">
+      {/* Mobile Layout: Static Hero Image + Content, then IMS below (< 800px) */}
+      <section className="min-[800px]:hidden relative min-h-screen w-full overflow-hidden border-b border-[var(--nv-border)] bg-slate-900 shadow-[var(--shadow-card)]">
         <div className="absolute inset-0 w-full h-full">
           <Image
             src={withBasePath("/images/BackGround4k.png")}
@@ -196,13 +196,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Mobile IMS: Standalone Component */}
-      <div className="md:hidden block">
+      {/* Mobile IMS: Standalone Component (< 800px) */}
+      <div className="min-[800px]:hidden block">
         <IntegratedMissionSystem />
       </div>
 
-      {/* Desktop Layout: IMS wraps content */}
-      <div className="hidden md:block">
+      {/* Desktop Layout: IMS wraps content (>= 800px) */}
+      <div className="hidden min-[800px]:block">
         <IntegratedMissionSystem>
           <div className="hero-copy mt-20 w-full max-w-2xl rounded-[24px] p-4 text-right shadow-[0_25px_60px_rgba(0,11,20,0.35),0_0_30px_rgba(168,240,255,0.15)] backdrop-blur-sm backdrop-brightness-110 md:backdrop-blur-md md:backdrop-brightness-150 md:mr-auto md:p-6 md:text-left md:-mt-20">
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--nv-primary)]">
