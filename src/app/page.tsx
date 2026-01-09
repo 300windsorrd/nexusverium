@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Hero } from "@/components/Hero";
+import { IntegratedMissionSystem } from "@/components/IntegratedMissionSystem";
 import { SeoHead } from "@/components/SeoHead";
 import { ServiceList } from "@/components/ServiceList";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -155,16 +155,68 @@ export default function Home() {
   return (
     <>
       <SeoHead jsonLd={orgJsonLd} />
-      <Hero
-        title="Nexus Verium - Restoration Systems and Environmental Engineering"
-        subtitle="To use AI to heal ecosystems, support human well-being, and guide innovation toward improving life on Earth. We are building the River Veins initiative, floating wetlands, and active restoration prototypes that make waterway recovery visible and measurable."
-        ctaLabel="Let's Build Responsibly"
-        ctaHref="/contact"
-      />
+      <IntegratedMissionSystem>
+        <div className="hero-copy mt-20 w-full max-w-2xl rounded-[24px] p-4 text-right shadow-[0_25px_60px_rgba(0,11,20,0.35),0_0_30px_rgba(168,240,255,0.15)] backdrop-blur-sm backdrop-brightness-110 md:backdrop-blur-md md:backdrop-brightness-150 md:mr-auto md:p-6 md:text-left md:-mt-20">
+          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--nv-primary)]">
+            Human Well-Being &amp; Responsible Innovation
+          </p>
+          <h1 className="mt-3 text-3xl font-semibold leading-tight text-[var(--nv-primary)] sm:text-4xl">
+            Nexus Verium - Restoration Systems and Environmental Engineering
+          </h1>
+          <p className="hero-subtitle mt-3 text-base font-medium leading-relaxed !text-slate-900 sm:text-lg md:text-left">
+            To use AI to heal ecosystems, support human well-being, and guide
+            innovation toward improving life on Earth. We are building the River
+            Veins initiative, floating wetlands, and active restoration
+            prototypes that make waterway recovery visible and measurable.
+          </p>
+          <div className="mt-5 flex justify-end md:justify-start">
+            <Link
+              className="rounded-full bg-[var(--nv-primary-strong)] px-5 py-3 text-sm font-semibold text-[var(--nv-bg)] shadow-[0_0_20px_rgba(0,210,255,0.35)] transition hover:-translate-y-0.5 hover:bg-[var(--nv-accent)]"
+              href="/contact/"
+            >
+              Let&apos;s Build Responsibly
+            </Link>
+          </div>
+        </div>
+      </IntegratedMissionSystem>
+
+      <section className="nv-reveal nv-reveal--delay-2 mt-12 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)]">
+        <SectionHeading
+          eyebrow="Active prototypes"
+          title="Living Systems We&apos;re Building"
+          description="River Veins prototypes aligned with the restoration network in active development."
+        />
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {prototypeGallery.map((item) => (
+            <article
+              key={item.title}
+              className="overflow-hidden rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 shadow-[0_12px_28px_rgba(0,11,20,0.55)]"
+            >
+              <div className="relative h-36 w-full">
+                <Image
+                  src={withBasePath(item.image)}
+                  alt={item.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="space-y-2 p-4">
+                <h3 className="text-base font-semibold text-[var(--nv-primary-strong)]">
+                  {item.title}
+                </h3>
+                <p className="text-xs text-[var(--nv-muted)]">
+                  {item.description}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
 
       <section className="nv-reveal nv-reveal--delay-1 mt-12 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(150deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)]">
         <SectionHeading
-          eyebrow="What we are building"
+          eyebrow=""
           title="Restoration systems you can see"
           description="Floating wetlands, the River Veins initiative, and active restoration prototypes are front and center."
         />
@@ -236,11 +288,11 @@ export default function Home() {
                 </h3>
                 <ul className="space-y-3">
                   {riverVeinsHow.map((item) => (
-                    <li key={item.title} className="flex gap-2">
-                      <span className="font-semibold text-[var(--nv-ink)]">
+                    <li key={item.title} className="flex gap-3 items-start">
+                      <span className="w-28 sm:w-36 flex-shrink-0 font-semibold text-[var(--nv-ink)]">
                         {item.title}:
                       </span>
-                      <span>{item.description}</span>
+                      <span className="flex-1">{item.description}</span>
                     </li>
                   ))}
                 </ul>
@@ -265,8 +317,8 @@ export default function Home() {
                 <ul className="space-y-2">
                   {riverVeinsFocus.map((item) => (
                     <li key={item} className="flex gap-2">
-                      <span className="mt-1 h-2 w-2 rounded-full bg-[var(--nv-primary-strong)]" />
-                      <span>{item}</span>
+                      <span className="mt-0.5 h-2 w-2 rounded-full bg-[var(--nv-primary-strong)] shrink-0" />
+                      <span className="flex-1">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -353,40 +405,6 @@ export default function Home() {
         ctaLabel="Meet the team"
         ctaHref="/team"
       />
-
-      <section className="nv-reveal nv-reveal--delay-2 mt-12 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)]">
-        <SectionHeading
-          eyebrow="Active prototypes"
-          title="Living Systems We&apos;re Building"
-          description="River Veins prototypes aligned with the restoration network in active development."
-        />
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {prototypeGallery.map((item) => (
-            <article
-              key={item.title}
-              className="overflow-hidden rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70 shadow-[0_12px_28px_rgba(0,11,20,0.55)]"
-            >
-              <div className="relative h-36 w-full">
-                <Image
-                  src={withBasePath(item.image)}
-                  alt={item.title}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover"
-                />
-              </div>
-              <div className="space-y-2 p-4">
-                <h3 className="text-base font-semibold text-[var(--nv-primary-strong)]">
-                  {item.title}
-                </h3>
-                <p className="text-xs text-[var(--nv-muted)]">
-                  {item.description}
-                </p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
 
       <ServiceList services={services} />
 
