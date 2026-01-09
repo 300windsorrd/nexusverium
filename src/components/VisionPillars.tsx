@@ -2,6 +2,8 @@
 
 import React, { useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import Image from "next/image";
+import { withBasePath } from "@/lib/paths";
 
 // --- Types ---
 type VisionNode = {
@@ -29,21 +31,25 @@ const pillarsData: VisionPillar[] = [
                 year: "2025",
                 title: "Meadowlands Digital Twin",
                 description: "Real-time environmental simulation.",
+                image: "/images/ico/Digital Twin Ico.png",
             },
             {
                 year: "2026",
                 title: "Water-cleaning Robotics",
                 description: "Autonomous purification units deployed.",
+                image: "/images/ico/Water Cleaning Robotics Ico.png",
             },
             {
                 year: "2028",
                 title: "Innovation Pipeline",
                 description: "Scaling research to field application.",
+                image: "/images/ico/Innovation Pipeline.png",
             },
             {
                 year: "2030",
                 title: "Smart Sediment Mapping",
                 description: "AI-driven soil analysis stations.",
+                image: "/images/ico/Smart Sediment Mapping Ico.png",
             },
         ],
     },
@@ -56,21 +62,25 @@ const pillarsData: VisionPillar[] = [
                 year: "2030",
                 title: "Emotional-Awareness AI",
                 description: "Models that understand human sentiment.",
+                image: "/images/ico/emotional awareness ai.png",
             },
             {
                 year: "2033",
                 title: "Therapeutic AI Companions",
                 description: "Support for mental health integration.",
+                image: "/images/ico/Therapeutic AI Companions.png",
             },
             {
                 year: "2035",
                 title: "Education Integration",
                 description: "AI-assisted developmental learning.",
+                image: "/images/ico/Education Integration (The Handshake).png",
             },
             {
                 year: "2037",
                 title: "Human-AI Harmony Framework",
                 description: "Standardized protocols for interaction.",
+                image: "/images/ico/Human-AI Harmony Framework.png",
             },
         ],
     },
@@ -83,21 +93,25 @@ const pillarsData: VisionPillar[] = [
                 year: "2035",
                 title: "Autonomous Construction",
                 description: "Self-building eco-infrastructure.",
+                image: "/images/ico/Autonomous Construction.png",
             },
             {
                 year: "2038",
                 title: "AI Sewer & Sanitation",
                 description: "Smart waste management systems.",
+                image: "/images/ico/AI Sewer & Sanitation.png",
             },
             {
                 year: "2040",
                 title: "Home AI Robots",
                 description: "Domestic assistance and automation.",
+                image: "/images/ico/Home AI Robots.png",
             },
             {
                 year: "2045",
                 title: "Citywide Eco-AI Networks",
                 description: "Fully integrated disaster response & balance.",
+                image: "/images/ico/Citywide Eco-AI Networks.png",
             },
         ],
     },
@@ -333,13 +347,18 @@ function TimelineNode({
                         </p>
 
                         {/* Placeholder Image Area */}
-                        <div className="mt-4 w-full h-32 rounded-lg bg-surface/50 overflow-hidden relative border border-border/50 group-hover:border-border transition-colors">
-                            <img
-                                src="https://placehold.co/600x400/0f172a/64748b?text=Visual+Placeholder"
-                                alt="Visualization"
-                                className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
-                            />
-                        </div>
+                        {/* Image Area */}
+                        {node.image && (
+                            <div className="mt-6 mx-auto w-48 h-48 rounded-full bg-surface/50 overflow-hidden relative border border-border/50 group-hover:border-border transition-colors flex items-center justify-center shadow-lg">
+                                <Image
+                                    src={withBasePath(node.image)}
+                                    alt={node.title}
+                                    width={200}
+                                    height={200}
+                                    className="w-full h-full object-contain p-4 opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
+                                />
+                            </div>
+                        )}
                     </div>
                 </motion.div>
             </div>
