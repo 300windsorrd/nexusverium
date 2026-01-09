@@ -109,7 +109,7 @@ export function IntegratedMissionSystem({ children }: { children?: React.ReactNo
         // object-[70%_center] for mobile (<768px usually)
         // md:object-center (which is 50% 50%)
 
-        const isDesktop = containerSize.width >= 768;
+        const isDesktop = containerSize.width >= 800;
         const alignmentX = isDesktop ? 0.5 : 0.7;
         const alignmentY = 0.5; // always center vertically
 
@@ -130,7 +130,7 @@ export function IntegratedMissionSystem({ children }: { children?: React.ReactNo
     return (
         <section
             ref={containerRef}
-            className="nv-reveal relative left-1/2 right-1/2 min-h-[60vh] md:min-h-screen w-screen -ml-[50vw] -mr-[50vw] overflow-hidden rounded-none border border-[var(--nv-border)] bg-slate-900 flex flex-col shadow-[var(--shadow-card)]"
+            className="nv-reveal relative min-h-[60vh] min-[800px]:min-h-screen w-full min-[800px]:w-screen min-[800px]:left-1/2 min-[800px]:right-1/2 min-[800px]:-ml-[50vw] min-[800px]:-mr-[50vw] overflow-hidden rounded-xl min-[800px]:rounded-none border border-[var(--nv-border)] bg-slate-900 flex flex-col shadow-[var(--shadow-card)]"
         >
             {/* Container for the image and overlays */}
             <div className="absolute inset-0 w-full h-full">
@@ -140,7 +140,7 @@ export function IntegratedMissionSystem({ children }: { children?: React.ReactNo
                     fill
                     priority
                     sizes="100vw"
-                    className="object-cover object-[70%_center] md:object-center"
+                    className="object-cover object-[70%_center] min-[800px]:object-center"
                     onLoadingComplete={(img) => {
                         setImageSize({ width: img.naturalWidth, height: img.naturalHeight });
                     }}
@@ -182,7 +182,7 @@ export function IntegratedMissionSystem({ children }: { children?: React.ReactNo
                                 {/* Connecting Line and Card */}
                                 <AnimatePresence>
                                     {activeHotspot === hotspot.id && (
-                                        <div className="hidden md:block absolute left-full top-1/2 -translate-y-1/2 ml-6 w-max max-w-xs">
+                                        <div className="hidden min-[800px]:block absolute left-full top-1/2 -translate-y-1/2 ml-6 w-max max-w-xs">
 
                                             {/* Visual Connector Line */}
                                             <motion.div
@@ -228,7 +228,7 @@ export function IntegratedMissionSystem({ children }: { children?: React.ReactNo
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: 50 }}
                                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                                className="md:hidden absolute bottom-4 left-4 right-4 z-40 rounded-xl bg-slate-900/80 p-4 shadow-2xl backdrop-blur-md border border-white/10"
+                                className="min-[800px]:hidden absolute bottom-4 left-4 right-4 z-40 rounded-xl bg-slate-900/80 p-4 shadow-2xl backdrop-blur-md border border-white/10"
                             >
                                 <div className="flex items-start justify-between">
                                     <div>
@@ -258,7 +258,7 @@ export function IntegratedMissionSystem({ children }: { children?: React.ReactNo
 
             {/* Content Overlay (passed as children, e.g. Hero Copy) */}
             {children && (
-                <div className="relative z-30 flex min-h-screen w-full flex-col justify-start px-6 pt-20 pb-10 sm:pt-24 sm:pb-14 md:items-start md:justify-start md:px-10 pointer-events-none">
+                <div className="relative z-30 flex min-h-screen w-full flex-col justify-start px-6 pt-20 pb-10 sm:pt-24 sm:pb-14 min-[800px]:items-start min-[800px]:justify-start min-[800px]:px-10 pointer-events-none">
                     <div className="pointer-events-auto">
                         {children}
                     </div>

@@ -197,9 +197,15 @@ export default function Home() {
       </section>
 
       {/* Mobile IMS: Standalone Component (< 800px) */}
-      <div className="min-[800px]:hidden block">
-        <IntegratedMissionSystem />
-      </div>
+      <section className="min-[800px]:hidden block nv-reveal mt-12 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)]">
+        <SectionHeading
+          title="Integrated Mission System"
+          description="Interactive visualization of our restoration technologies."
+        />
+        <div className="mt-6">
+          <IntegratedMissionSystem />
+        </div>
+      </section>
 
       {/* Desktop Layout: IMS wraps content (>= 800px) */}
       <div className="hidden min-[800px]:block">
