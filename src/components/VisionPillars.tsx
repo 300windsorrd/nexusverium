@@ -181,7 +181,7 @@ export default function VisionPillars() {
                 </header>
 
                 {/* Central Vertical Line Container */}
-                <div className="absolute left-[20px] md:left-1/2 top-32 bottom-20 w-1 md:-ml-[0.5px] h-full z-0">
+                <div className="absolute left-[20px] md:left-1/2 top-80 md:top-32 bottom-20 w-1 md:-ml-[0.5px] h-full z-0">
                     {/* Background track line */}
                     <div className="w-full h-full bg-border/50 rounded-full" />
                     {/* Animated fill line */}
