@@ -160,8 +160,8 @@ export function Header({ searchItems }: HeaderProps) {
                     key={item.href}
                     href={item.href}
                     className={`nv-nav-link nv-nav-link--desktop ${active
-                        ? "nv-nav-link--active nv-nav-link--elevated"
-                        : "nv-nav-link--inactive"
+                      ? "nv-nav-link--active nv-nav-link--elevated"
+                      : "nv-nav-link--inactive"
                       }`}
                   >
                     {item.label}
@@ -185,8 +185,8 @@ export function Header({ searchItems }: HeaderProps) {
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
                     className={`nv-nav-link nv-nav-link--mobile ${active
-                        ? "nv-nav-link--active"
-                        : "nv-nav-link--inactive"
+                      ? "nv-nav-link--active"
+                      : "nv-nav-link--inactive"
                       }`}
                   >
                     {item.label}
