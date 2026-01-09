@@ -18,7 +18,7 @@ const hotspots: HotspotConfig[] = [
     {
         id: "wetland",
         x: 20,
-        y: 40,
+        y: 70,
         title: "Bio-Filtration Matrix",
         description: "Native root systems sequester nitrates and phosphates.",
         color: "cyan",
@@ -26,7 +26,7 @@ const hotspots: HotspotConfig[] = [
     {
         id: "boat",
         x: 60,
-        y: 65,
+        y: 85,
         title: "Autonomous Debris Collector",
         description: "AI-driven pathfinding with 50kg capacity.",
         color: "cyan",
