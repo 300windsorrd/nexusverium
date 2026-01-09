@@ -57,10 +57,8 @@ export default function RootLayout({
         className={`${bodyFont.variable} ${displayFont.variable} antialiased bg-[var(--nv-bg)] text-[var(--nv-ink)]`}
       >
         <LogoWatermarkLayout>
-          <div className="sticky top-0 z-50">
-            <Header searchItems={searchItems} />
-          </div>
-          <main className="mx-auto max-w-6xl px-4 pb-16 pt-8 sm:px-6 sm:pt-12">
+          <Header searchItems={searchItems} />
+          <main className="mx-auto max-w-6xl px-4 pb-16 pt-24 sm:px-6 sm:pt-28">
             {children}
           </main>
           <Footer />
