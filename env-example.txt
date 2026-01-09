@@ -2,10 +2,6 @@
 # You must set these in your deployment provider (e.g. Vercel, Netlify)
 
 # Option 1: Supabase (Recommended)
-SUPABASE_URL=https://your-project-id.supabase.co
-SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
-# or SUPABASE_ANON_KEY=your-anon-key
+SUPABASE_URL=https://dnpxmnvvnrkvxbxzotoa.supabase.co
+SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRucHhtbnZ2bnJrdnhieHpvdG9hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc1OTIwOTMsImV4cCI6MjA4MzE2ODA5M30.Diesqm0X89LsnKDNzoSsIZu8OpNGZc7jkRpujiVe3Rg
 
-# Option 2: PostgreSQL Direct Connection
-# CONTACT_FORM_DATABASE_URL=postgres://user:password@host:port/database
-# DATABASE_URL=postgres://user:password@host:port/database
