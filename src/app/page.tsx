@@ -156,7 +156,7 @@ export default function Home() {
     <>
       <SeoHead jsonLd={orgJsonLd} />
       <IntegratedMissionSystem>
-        <div className="hero-copy w-full max-w-2xl rounded-[24px] p-6 text-right shadow-[0_25px_60px_rgba(0,11,20,0.35),0_0_30px_rgba(168,240,255,0.15)] backdrop-blur-md backdrop-brightness-150 md:mr-auto md:p-6 md:text-left md:-mt-20">
+        <div className="hero-copy mt-20 w-full max-w-2xl rounded-[24px] p-4 text-right shadow-[0_25px_60px_rgba(0,11,20,0.35),0_0_30px_rgba(168,240,255,0.15)] backdrop-blur-sm backdrop-brightness-110 md:backdrop-blur-md md:backdrop-brightness-150 md:mr-auto md:p-6 md:text-left md:-mt-20">
           <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--nv-primary)]">
             Human Well-Being &amp; Responsible Innovation
           </p>
@@ -174,7 +174,7 @@ export default function Home() {
               className="rounded-full bg-[var(--nv-primary-strong)] px-5 py-3 text-sm font-semibold text-[var(--nv-bg)] shadow-[0_0_20px_rgba(0,210,255,0.35)] transition hover:-translate-y-0.5 hover:bg-[var(--nv-accent)]"
               href="/contact/"
             >
-              Let's Build Responsibly
+              Let&apos;s Build Responsibly
             </Link>
           </div>
         </div>
