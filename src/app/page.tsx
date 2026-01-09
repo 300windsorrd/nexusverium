@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Hero } from "@/components/Hero";
+import { IntegratedMissionSystem } from "@/components/IntegratedMissionSystem";
 import { SeoHead } from "@/components/SeoHead";
 import { ServiceList } from "@/components/ServiceList";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -155,12 +155,30 @@ export default function Home() {
   return (
     <>
       <SeoHead jsonLd={orgJsonLd} />
-      <Hero
-        title="Nexus Verium - Restoration Systems and Environmental Engineering"
-        subtitle="To use AI to heal ecosystems, support human well-being, and guide innovation toward improving life on Earth. We are building the River Veins initiative, floating wetlands, and active restoration prototypes that make waterway recovery visible and measurable."
-        ctaLabel="Let's Build Responsibly"
-        ctaHref="/contact"
-      />
+      <IntegratedMissionSystem>
+        <div className="hero-copy w-full max-w-2xl rounded-[24px] p-6 text-right shadow-[0_25px_60px_rgba(0,11,20,0.35),0_0_30px_rgba(168,240,255,0.15)] backdrop-blur-md backdrop-brightness-150 md:mr-auto md:p-6 md:text-left md:-mt-20">
+          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--nv-primary)]">
+            Human Well-Being &amp; Responsible Innovation
+          </p>
+          <h1 className="mt-3 text-3xl font-semibold leading-tight text-[var(--nv-primary)] sm:text-4xl">
+            Nexus Verium - Restoration Systems and Environmental Engineering
+          </h1>
+          <p className="hero-subtitle mt-3 text-base font-medium leading-relaxed !text-slate-900 sm:text-lg md:text-left">
+            To use AI to heal ecosystems, support human well-being, and guide
+            innovation toward improving life on Earth. We are building the River
+            Veins initiative, floating wetlands, and active restoration
+            prototypes that make waterway recovery visible and measurable.
+          </p>
+          <div className="mt-5 flex justify-end md:justify-start">
+            <Link
+              className="rounded-full bg-[var(--nv-primary-strong)] px-5 py-3 text-sm font-semibold text-[var(--nv-bg)] shadow-[0_0_20px_rgba(0,210,255,0.35)] transition hover:-translate-y-0.5 hover:bg-[var(--nv-accent)]"
+              href="/contact/"
+            >
+              Let's Build Responsibly
+            </Link>
+          </div>
+        </div>
+      </IntegratedMissionSystem>
 
       <section className="nv-reveal nv-reveal--delay-2 mt-12 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)]">
         <SectionHeading

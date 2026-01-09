@@ -41,7 +41,7 @@ const hotspots: HotspotConfig[] = [
     },
 ];
 
-export function IntegratedMissionSystem() {
+export function IntegratedMissionSystem({ children }: { children?: React.ReactNode }) {
     const [activeHotspot, setActiveHotspot] = useState<string | null>(null);
 
     // Helper to handle touch/click toggling on mobile
@@ -50,9 +50,9 @@ export function IntegratedMissionSystem() {
     };
 
     return (
-        <section className="relative w-full overflow-hidden bg-slate-900">
+        <section className="nv-reveal relative left-1/2 right-1/2 min-h-screen w-screen -ml-[50vw] -mr-[50vw] overflow-hidden rounded-none border border-[var(--nv-border)] bg-slate-900 flex flex-col shadow-[var(--shadow-card)]">
             {/* Container for the image and overlays */}
-            <div className="relative aspect-[16/9] w-full max-h-screen">
+            <div className="absolute inset-0 w-full h-full">
                 <Image
                     src={withBasePath("/images/Interactive Hero.png")}
                     alt="Integrated Mission System showing Drone, Boat, and Wetland"
@@ -97,18 +97,18 @@ export function IntegratedMissionSystem() {
                             {/* Connecting Line and Card */}
                             <AnimatePresence>
                                 {activeHotspot === hotspot.id && (
-                                    <div className="absolute left-1/2 top-full mt-2 w-max max-w-[200px] -translate-x-1/2 sm:max-w-xs md:left-full md:top-1/2 md:-translate-y-1/2 md:ml-6 md:translate-x-0">
+                                    <div className="hidden md:block absolute left-full top-1/2 -translate-y-1/2 ml-6 w-max max-w-xs">
 
-                                        {/* Visual Connector Line (Hidden on mobile, visible on MD+) */}
+                                        {/* Visual Connector Line */}
                                         <motion.div
-                                            className="hidden md:block absolute right-full top-1/2 h-[1px] w-6 bg-cyan-400/50 origin-right"
+                                            className="absolute right-full top-1/2 h-[1px] w-6 bg-cyan-400/50 origin-right"
                                             initial={{ scaleX: 0, opacity: 0 }}
                                             animate={{ scaleX: 1, opacity: 1 }}
                                             exit={{ scaleX: 0, opacity: 0 }}
                                             transition={{ duration: 0.2 }}
                                         />
 
-                                        {/* Glassmorphism Card */}
+                                        {/* Glassmorphism Card (Desktop) */}
                                         <motion.div
                                             initial={{ opacity: 0, y: 10, scale: 0.95 }}
                                             animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -129,7 +129,55 @@ export function IntegratedMissionSystem() {
                         </div>
                     ))}
                 </div>
+
+                {/* Mobile Card (Bottom Sheet Style) */}
+                <AnimatePresence>
+                    {activeHotspot && (() => {
+                        const activeData = hotspots.find(h => h.id === activeHotspot);
+                        if (!activeData) return null;
+                        return (
+                            <motion.div
+                                key="mobile-card"
+                                initial={{ opacity: 0, y: 50 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: 50 }}
+                                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                                className="md:hidden absolute bottom-4 left-4 right-4 z-40 rounded-xl bg-slate-900/80 p-4 shadow-2xl backdrop-blur-md border border-white/10"
+                            >
+                                <div className="flex items-start justify-between">
+                                    <div>
+                                        <h3 className="text-sm font-bold text-cyan-50 uppercase tracking-wider mb-1">
+                                            {activeData.title}
+                                        </h3>
+                                        <p className="text-xs text-slate-200 leading-relaxed">
+                                            {activeData.description}
+                                        </p>
+                                    </div>
+                                    <button
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setActiveHotspot(null);
+                                        }}
+                                        className="ml-2 -mt-1 text-cyan-400 p-1"
+                                        aria-label="Close"
+                                    >
+                                        ✕
+                                    </button>
+                                </div>
+                            </motion.div>
+                        );
+                    })()}
+                </AnimatePresence>
             </div>
+
+            {/* Content Overlay (passed as children, e.g. Hero Copy) */}
+            {children && (
+                <div className="relative z-30 flex min-h-screen w-full flex-col justify-start px-6 pt-20 pb-10 sm:pt-24 sm:pb-14 md:items-start md:justify-start md:px-10 pointer-events-none">
+                    <div className="pointer-events-auto">
+                        {children}
+                    </div>
+                </div>
+            )}
         </section>
     );
 }
