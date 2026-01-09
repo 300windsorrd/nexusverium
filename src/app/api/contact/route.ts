@@ -69,6 +69,7 @@ export async function POST(request: Request) {
     await storeContactSubmission(submission);
     return Response.json({ ok: true });
   } catch (error) {
+    console.error("Contact form submission error:", error);
     const message =
       error instanceof Error ? error.message : "Unable to store the message.";
     return Response.json({ message }, { status: 500 });
