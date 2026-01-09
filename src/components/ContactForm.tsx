@@ -1,5 +1,7 @@
 "use client";
 
+import { createClient } from "@supabase/supabase-js";
+
 import { ChangeEvent, FormEvent, useState } from "react";
 
 type ResponseState = {
@@ -51,8 +53,17 @@ export function ContactForm() {
   const [responseState, setResponseState] = useState<ResponseState | null>(null);
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
 
-  const endpoint =
-    process.env.NEXT_PUBLIC_CONTACT_FORM_ENDPOINT ?? "/api/contact";
+  // Initialize Supabase Client
+  // Using environment variables or falling back to the provided keys for immediate deployment fix.
+  // Note: ideally these should be strictly in env vars.
+  const supabaseUrl =
+    process.env.NEXT_PUBLIC_SUPABASE_URL ||
+    "https://dnpxmnvvnrkvxbxzotoa.supabase.co";
+  const supabaseKey =
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRucHhtbnZ2bnJrdnhieHpvdG9hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc1OTIwOTMsImV4cCI6MjA4MzE2ODA5M30.Diesqm0X89LsnKDNzoSsIZu8OpNGZc7jkRpujiVe3Rg";
+
+  const supabase = createClient(supabaseUrl, supabaseKey);
 
   const getInputClasses = (error?: string) =>
     `input-control rounded-[12px] border border-[var(--nv-border)] bg-transparent px-3 py-2 text-base text-[var(--nv-ink)] transition focus:border-[var(--nv-primary-strong)] focus:outline-none ${
@@ -146,19 +157,17 @@ export function ContactForm() {
     setResponseState(null);
 
     try {
-      const response = await fetch(endpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+      // Direct submission to Supabase for Static Export compatibility
+      const { error } = await supabase.from("Contacted").insert({
+        name,
+        email,
+        phone: phone.trim(),
+        company,
+        Message: message.trim(), // Note: Case sensitive column matching backend logic
       });
-      const data = (await response.json().catch(() => null)) as
-        | { message?: string }
-        | null;
 
-      if (!response.ok) {
-        const errorMessage =
-          data?.message || "Unable to send your message right now.";
-        throw new Error(errorMessage);
+      if (error) {
+        throw new Error(error.message);
       }
 
       setResponseState({
@@ -181,6 +190,7 @@ export function ContactForm() {
       setIsSubmitting(false);
     }
   };
+
 
   return (
     <section className="contact-panel mx-auto w-full max-w-3xl rounded-[20px] border border-[var(--nv-border)] bg-[var(--nv-surface)]/70 p-6 shadow-[var(--shadow-card)] transition hover:border-[var(--nv-primary)]">
