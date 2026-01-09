@@ -151,7 +151,7 @@ export default function VisionPillars() {
     });
 
     return (
-        <div className="relative w-full min-h-screen bg-background text-ink py-20 px-4 md:px-8 overflow-hidden font-sans">
+        <div className="relative w-full min-h-screen bg-background/80 text-ink py-20 px-4 md:px-8 overflow-hidden font-sans">
             {/* Background Decor */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden">
                 <div className="absolute -top-[10%] left-[20%] w-[500px] h-[500px] bg-blue-900/20 rounded-full blur-[100px]" />
@@ -181,7 +181,7 @@ export default function VisionPillars() {
                 </header>
 
                 {/* Central Vertical Line Container */}
-                <div className="absolute left-[20px] md:left-1/2 top-80 md:top-32 bottom-20 w-1 md:-ml-[0.5px] h-full z-0">
+                <div className="absolute left-[20px] md:left-1/2 top-80 md:top-32 bottom-20 w-px -ml-[0.5px] h-full z-0">
                     {/* Background track line */}
                     <div className="w-full h-full bg-border/50 rounded-full" />
                     {/* Animated fill line */}
