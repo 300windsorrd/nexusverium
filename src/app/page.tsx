@@ -155,30 +155,79 @@ export default function Home() {
   return (
     <>
       <SeoHead jsonLd={orgJsonLd} />
-      <IntegratedMissionSystem>
-        <div className="hero-copy mt-20 w-full max-w-2xl rounded-[24px] p-4 text-right shadow-[0_25px_60px_rgba(0,11,20,0.35),0_0_30px_rgba(168,240,255,0.15)] backdrop-blur-sm backdrop-brightness-110 md:backdrop-blur-md md:backdrop-brightness-150 md:mr-auto md:p-6 md:text-left md:-mt-20">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--nv-primary)]">
-            Human Well-Being &amp; Responsible Innovation
-          </p>
-          <h1 className="mt-3 text-3xl font-semibold leading-tight text-[var(--nv-primary)] sm:text-4xl">
-            Nexus Verium - Restoration Systems and Environmental Engineering
-          </h1>
-          <p className="hero-subtitle mt-3 text-base font-medium leading-relaxed !text-slate-900 sm:text-lg md:text-left">
-            To use AI to heal ecosystems, support human well-being, and guide
-            innovation toward improving life on Earth. We are building the River
-            Veins initiative, floating wetlands, and active restoration
-            prototypes that make waterway recovery visible and measurable.
-          </p>
-          <div className="mt-5 flex justify-end md:justify-start">
-            <Link
-              className="rounded-full bg-[var(--nv-primary-strong)] px-5 py-3 text-sm font-semibold text-[var(--nv-bg)] shadow-[0_0_20px_rgba(0,210,255,0.35)] transition hover:-translate-y-0.5 hover:bg-[var(--nv-accent)]"
-              href="/contact/"
-            >
-              Let&apos;s Build Responsibly
-            </Link>
+      {/* Mobile Layout: Static Hero Image + Content, then IMS below */}
+      <section className="md:hidden relative min-h-screen w-full overflow-hidden border-b border-[var(--nv-border)] bg-slate-900 shadow-[var(--shadow-card)]">
+        <div className="absolute inset-0 w-full h-full">
+          <Image
+            src={withBasePath("/images/BackGround4k.png")}
+            alt="Hero Background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[70%_center]"
+          />
+          {/* Overlay Gradient */}
+          <div className="absolute inset-0 bg-black/10 pointer-events-none" />
+        </div>
+
+        <div className="relative z-10 flex min-h-screen w-full flex-col justify-start px-6 pt-20 pb-10">
+          <div className="hero-copy w-full rounded-[24px] p-4 text-right shadow-[0_25px_60px_rgba(0,11,20,0.35),0_0_30px_rgba(168,240,255,0.15)] backdrop-blur-sm backdrop-brightness-110">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--nv-primary)]">
+              Human Well-Being &amp; Responsible Innovation
+            </p>
+            <h1 className="mt-3 text-3xl font-semibold leading-tight text-[var(--nv-primary)] sm:text-4xl">
+              Nexus Verium - Restoration Systems and Environmental Engineering
+            </h1>
+            <p className="hero-subtitle mt-3 text-base font-medium leading-relaxed !text-slate-900">
+              To use AI to heal ecosystems, support human well-being, and guide
+              innovation toward improving life on Earth. We are building the River
+              Veins initiative, floating wetlands, and active restoration
+              prototypes that make waterway recovery visible and measurable.
+            </p>
+            <div className="mt-5 flex justify-end">
+              <Link
+                className="rounded-full bg-[var(--nv-primary-strong)] px-5 py-3 text-sm font-semibold text-[var(--nv-bg)] shadow-[0_0_20px_rgba(0,210,255,0.35)] transition hover:-translate-y-0.5 hover:bg-[var(--nv-accent)]"
+                href="/contact/"
+              >
+                Let&apos;s Build Responsibly
+              </Link>
+            </div>
           </div>
         </div>
-      </IntegratedMissionSystem>
+      </section>
+
+      {/* Mobile IMS: Standalone Component */}
+      <div className="md:hidden block">
+        <IntegratedMissionSystem />
+      </div>
+
+      {/* Desktop Layout: IMS wraps content */}
+      <div className="hidden md:block">
+        <IntegratedMissionSystem>
+          <div className="hero-copy mt-20 w-full max-w-2xl rounded-[24px] p-4 text-right shadow-[0_25px_60px_rgba(0,11,20,0.35),0_0_30px_rgba(168,240,255,0.15)] backdrop-blur-sm backdrop-brightness-110 md:backdrop-blur-md md:backdrop-brightness-150 md:mr-auto md:p-6 md:text-left md:-mt-20">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--nv-primary)]">
+              Human Well-Being &amp; Responsible Innovation
+            </p>
+            <h1 className="mt-3 text-3xl font-semibold leading-tight text-[var(--nv-primary)] sm:text-4xl">
+              Nexus Verium - Restoration Systems and Environmental Engineering
+            </h1>
+            <p className="hero-subtitle mt-3 text-base font-medium leading-relaxed !text-slate-900 sm:text-lg md:text-left">
+              To use AI to heal ecosystems, support human well-being, and guide
+              innovation toward improving life on Earth. We are building the River
+              Veins initiative, floating wetlands, and active restoration
+              prototypes that make waterway recovery visible and measurable.
+            </p>
+            <div className="mt-5 flex justify-end md:justify-start">
+              <Link
+                className="rounded-full bg-[var(--nv-primary-strong)] px-5 py-3 text-sm font-semibold text-[var(--nv-bg)] shadow-[0_0_20px_rgba(0,210,255,0.35)] transition hover:-translate-y-0.5 hover:bg-[var(--nv-accent)]"
+                href="/contact/"
+              >
+                Let&apos;s Build Responsibly
+              </Link>
+            </div>
+          </div>
+        </IntegratedMissionSystem>
+      </div>
 
       <section className="nv-reveal nv-reveal--delay-2 mt-12 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)]">
         <SectionHeading
