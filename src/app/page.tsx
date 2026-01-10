@@ -156,7 +156,7 @@ export default function Home() {
     <>
       <SeoHead jsonLd={orgJsonLd} />
       {/* Mobile Layout: Static Hero Image + Content, then IMS below (< 800px) */}
-      <section className="min-[800px]:hidden relative min-h-screen w-full overflow-hidden border-b border-[var(--nv-border)] bg-slate-900 shadow-[var(--shadow-card)]">
+      <section className="min-[800px]:hidden relative min-h-screen w-full overflow-hidden bg-slate-900 shadow-[var(--shadow-card)]">
         <div className="absolute inset-0 w-full h-full">
           <Image
             src={withBasePath("/images/BackGround4k.png")}

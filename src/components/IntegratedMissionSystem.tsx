@@ -130,7 +130,7 @@ export function IntegratedMissionSystem({ children }: { children?: React.ReactNo
     return (
         <section
             ref={containerRef}
-            className="nv-reveal relative min-h-[60vh] min-[800px]:min-h-screen w-full min-[800px]:w-screen min-[800px]:left-1/2 min-[800px]:right-1/2 min-[800px]:-ml-[50vw] min-[800px]:-mr-[50vw] overflow-hidden rounded-xl min-[800px]:rounded-none border border-[var(--nv-border)] bg-slate-900 flex flex-col shadow-[var(--shadow-card)]"
+            className="nv-reveal relative min-h-[60vh] min-[800px]:min-h-screen w-full min-[800px]:w-screen min-[800px]:left-1/2 min-[800px]:right-1/2 min-[800px]:-ml-[50vw] min-[800px]:-mr-[50vw] overflow-hidden rounded-xl min-[800px]:rounded-none border border-[var(--nv-border)] min-[800px]:border-none bg-slate-900 flex flex-col shadow-[var(--shadow-card)]"
         >
             {/* Container for the image and overlays */}
             <div className="absolute inset-0 w-full h-full">
