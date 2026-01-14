@@ -12,12 +12,13 @@ export async function generateStaticParams() {
   return services.map((service) => ({ slug: service.slug }));
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
-}): Metadata {
-  const page = services.find((item) => item.slug === params.slug);
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const page = services.find((item) => item.slug === slug);
   if (!page) return {};
   return buildMetadataForSeoPage("services", page);
 }
@@ -31,8 +32,13 @@ function relatedLinks(slugs?: string[]) {
   );
 }
 
-export default function ServicePage({ params }: { params: { slug: string } }) {
-  const page = services.find((item) => item.slug === params.slug);
+export default async function ServicePage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const page = services.find((item) => item.slug === slug);
   if (!page) return notFound();
 
   const jsonLd = buildJsonLdForSeoPage("services", page);

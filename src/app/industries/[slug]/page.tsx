@@ -12,12 +12,13 @@ export async function generateStaticParams() {
   return industries.map((industry) => ({ slug: industry.slug }));
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
-}): Metadata {
-  const page = industries.find((item) => item.slug === params.slug);
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const page = industries.find((item) => item.slug === slug);
   if (!page) return {};
   return buildMetadataForSeoPage("industries", page);
 }
@@ -31,8 +32,13 @@ function relatedLinks(slugs?: string[]) {
   );
 }
 
-export default function IndustryPage({ params }: { params: { slug: string } }) {
-  const page = industries.find((item) => item.slug === params.slug);
+export default async function IndustryPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const page = industries.find((item) => item.slug === slug);
   if (!page) return notFound();
 
   const jsonLd = buildJsonLdForSeoPage("industries", page);
