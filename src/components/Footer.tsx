@@ -43,6 +43,9 @@ export function Footer() {
               <Link href="/team">Team</Link>
             </li>
             <li>
+              <Link href="/research">Research</Link>
+            </li>
+            <li>
               <Link href="/timeline">Timeline</Link>
             </li>
             <li>
