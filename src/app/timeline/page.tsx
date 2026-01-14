@@ -39,6 +39,7 @@ export default function TimelinePage() {
   return (
     <div className="space-y-10">
       <h1 className="sr-only">Timeline</h1>
+      <VisionPillars />
       <SectionHeading
         eyebrow=""
         title=""
@@ -61,34 +62,19 @@ export default function TimelinePage() {
             wildlife, and air, predict future environmental problems, and
             digitally test solutions before physical investment.
           </p>
-          <div className="grid gap-4 sm:grid-cols-2">
-            <figure className="overflow-hidden rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70">
-              <Image
-                src={withBasePath("/now/Digital-Twin.jpg")}
-                alt="Real-time digital model of the Meadowlands ecosystem"
-                width={800}
-                height={360}
-                className="h-full w-full object-cover"
-              />
-              <figcaption className="px-3 py-2 text-xs text-[var(--nv-muted)]">
-                Simulations will show: Cost, effectiveness, environmental
-                impact, and long-term outcomes.
-              </figcaption>
-            </figure>
-            <figure className="overflow-hidden rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70">
-              <Image
-                src={withBasePath("/now/blueprint-2.svg")}
-                alt="Digital Twin - Meadowlands, NJ (Prototype)"
-                width={600}
-                height={360}
-                className="h-full w-full object-cover"
-              />
-              <figcaption className="px-3 py-2 text-xs text-[var(--nv-muted)]">
-                Digital Twin - Meadowlands, NJ (Prototype). 3D model of the
-                Meadowlands area for initial planning.
-              </figcaption>
-            </figure>
-          </div>
+          <figure className="mt-4 overflow-hidden rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70">
+            <Image
+              src={withBasePath("/now/Digital-Twin.jpg")}
+              alt="Real-time digital model of the Meadowlands ecosystem"
+              width={800}
+              height={360}
+              className="h-full w-full object-cover"
+            />
+            <figcaption className="px-3 py-2 text-xs text-[var(--nv-muted)]">
+              Simulations will show: Cost, effectiveness, environmental
+              impact, and long-term outcomes.
+            </figcaption>
+          </figure>
         </div>
         {progressSection}
       </section>
@@ -169,7 +155,6 @@ export default function TimelinePage() {
         </div>
       </section>
 
-      <VisionPillars />
     </div>
   );
 }
