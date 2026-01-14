@@ -30,9 +30,7 @@ export const metadata: Metadata = {
   title: `${siteConfig.name} | Environmental Engineering & Restoration Organization`,
   description: siteConfig.description,
   metadataBase: new URL(siteConfig.url),
-  icons: {
-    icon: "favicon.ico",
-  },
+
   openGraph: {
     title: `${siteConfig.name} | Environmental Engineering & Restoration Organization`,
     description: siteConfig.description,
