@@ -6,18 +6,20 @@ export async function generateStaticParams() {
   return research.map((item) => ({ slug: item.slug }));
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
-}): Metadata {
-  return buildResearchMetadata(params.slug);
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  return buildResearchMetadata(slug);
 }
 
-export default function ResearchPage({
+export default async function ResearchPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  return renderResearchPage(params.slug);
+  const { slug } = await params;
+  return renderResearchPage(slug);
 }
