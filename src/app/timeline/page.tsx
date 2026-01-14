@@ -41,8 +41,8 @@ export default function TimelinePage() {
       <h1 className="sr-only">Timeline</h1>
       <SectionHeading
         eyebrow=""
-        title="The Pillars of Our Vision"
-        description="Graphic timeline introducing three long-term pillars."
+        title=""
+        description=""
       />
 
       <section className="nv-reveal nv-reveal--delay-1 grid gap-6 rounded-[24px] border border-[var(--nv-border)] bg-[linear-gradient(160deg,var(--nv-surface),var(--nv-bg))] p-6 shadow-[var(--shadow-card)] lg:grid-cols-2">

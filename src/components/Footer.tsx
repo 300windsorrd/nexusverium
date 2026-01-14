@@ -43,7 +43,7 @@ export function Footer() {
               <Link href="/team">Team</Link>
             </li>
             <li>
-              <Link href="/now">Timeline</Link>
+              <Link href="/timeline">Timeline</Link>
             </li>
             <li>
               <Link href="/contact">Contact</Link>

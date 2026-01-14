@@ -15,7 +15,7 @@ interface HeaderProps {
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/team", label: "Team" },
-  { href: "/now", label: "Timeline" },
+  { href: "/timeline", label: "Timeline" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -55,9 +55,8 @@ export function Header({ searchItems }: HeaderProps) {
 
   return (
     <header
-      className={`glass-surface fixed top-0 left-0 w-full z-50 ${
-        currentPath === "/" ? "!border-b-0" : "border-b border-[var(--nv-border)]/60"
-      } bg-[var(--nv-surface)]/80 backdrop-blur-md shadow-[var(--nv-card-shadow)]`}
+      className={`glass-surface fixed top-0 left-0 w-full z-50 ${currentPath === "/" ? "!border-b-0" : "border-b border-[var(--nv-border)]/60"
+        } bg-[var(--nv-surface)]/80 backdrop-blur-md shadow-[var(--nv-card-shadow)]`}
     >
       <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:gap-6">
         <Link href="/" className="flex items-start gap-2">

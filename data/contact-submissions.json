@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Test User",
+    "email": "test@example.com",
+    "phone": "1234567890",
+    "company": "Test Co",
+    "message": "This is a test message",
+    "captchaToken": "captcha-placeholder",
+    "submittedAt": "2026-01-09T08:23:44.767Z"
+  }
+]
