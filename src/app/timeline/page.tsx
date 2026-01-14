@@ -96,7 +96,7 @@ export default function TimelinePage() {
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           <figure className="overflow-hidden rounded-[16px] border border-[var(--nv-border)]/60 bg-[var(--nv-bg)]/70">
             <Image
-              src={withBasePath("")}
+              src={withBasePath("/images/old-new.png")}
               alt="Current approaches in the Meadowlands"
               width={600}
               height={360}
