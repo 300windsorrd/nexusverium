@@ -24,35 +24,41 @@ type VisionPillar = {
 const pillarsData: VisionPillar[] = [
     {
         id: "pillar-1",
-        title: "Pillar 1: Environmental AI Restoration (2025–2030)",
+        title: "Pillar 1: Environmental AI Restoration (2027–2032)",
         theme: "teal",
         nodes: [
             {
-                year: "2025",
+                year: "2027",
                 title: "Meadowlands Digital Twin",
                 description: "Real-time environmental simulation.",
                 image: "/images/ico/Digital Twin Ico.png",
             },
             {
-                year: "2025",
+                year: "2027",
                 title: "Floating Wetland",
                 description: "Modular biological filtration and habitat regeneration.",
                 image: "/images/ico/Floating Wetland.png",
             },
             {
-                year: "2026",
+                year: "2027",
+                title: "Environmental Monitoring Drones",
+                description: "Aerial and surface surveillance for pollution detection.",
+                image: "/images/ico/Environmental Monitoring Drones Ico.png",
+            },
+            {
+                year: "2028",
                 title: "Water-cleaning Robotics",
                 description: "Autonomous purification units deployed.",
                 image: "/images/ico/Water Cleaning Robotics Ico.png",
             },
             {
-                year: "2028",
+                year: "2030",
                 title: "Innovation Pipeline",
                 description: "Scaling research to field application.",
                 image: "/images/ico/Innovation Pipeline.png",
             },
             {
-                year: "2030",
+                year: "2032",
                 title: "Smart Sediment Mapping",
                 description: "AI-driven soil analysis stations.",
                 image: "/images/ico/Smart Sediment Mapping Ico.png",
@@ -61,29 +67,29 @@ const pillarsData: VisionPillar[] = [
     },
     {
         id: "pillar-2",
-        title: "Pillar 2: Human & AI Emotional Compatibility (2030–2037)",
+        title: "Pillar 2: Human & AI Emotional Compatibility (2032–2039)",
         theme: "purple",
         nodes: [
             {
-                year: "2030",
+                year: "2032",
                 title: "Emotional-Awareness AI",
                 description: "Models that understand human sentiment.",
                 image: "/images/ico/emotional awareness ai.png",
             },
             {
-                year: "2033",
+                year: "2035",
                 title: "Therapeutic AI Companions",
                 description: "Support for mental health integration.",
                 image: "/images/ico/Therapeutic AI Companions.png",
             },
             {
-                year: "2035",
+                year: "2037",
                 title: "Education Integration",
                 description: "AI-assisted developmental learning.",
                 image: "/images/ico/Education Integration (The Handshake).png",
             },
             {
-                year: "2037",
+                year: "2039",
                 title: "Human-AI Harmony Framework",
                 description: "Standardized protocols for interaction.",
                 image: "/images/ico/Human-AI Harmony Framework.png",
@@ -92,29 +98,29 @@ const pillarsData: VisionPillar[] = [
     },
     {
         id: "pillar-3",
-        title: "Pillar 3: AI Infrastructure for the Future (2035–2045)",
+        title: "Pillar 3: AI Infrastructure for the Future (2037–2047)",
         theme: "orange",
         nodes: [
             {
-                year: "2035",
+                year: "2037",
                 title: "Autonomous Construction",
                 description: "Self-building eco-infrastructure.",
                 image: "/images/ico/Autonomous Construction.png",
             },
             {
-                year: "2038",
+                year: "2040",
                 title: "AI Sewer & Sanitation",
                 description: "Smart waste management systems.",
                 image: "/images/ico/AI Sewer & Sanitation.png",
             },
             {
-                year: "2040",
+                year: "2042",
                 title: "Home AI Robots",
                 description: "Domestic assistance and automation.",
                 image: "/images/ico/Home AI Robots.png",
             },
             {
-                year: "2045",
+                year: "2047",
                 title: "Citywide Eco-AI Networks",
                 description: "Fully integrated disaster response & balance.",
                 image: "/images/ico/Citywide Eco-AI Networks.png",
