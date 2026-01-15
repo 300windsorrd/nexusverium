@@ -315,6 +315,15 @@ export default function Home() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--nv-muted)]">
               System Architecture
             </p>
+            <div className="relative mt-6 mb-8 h-64 w-full overflow-hidden rounded-[16px] border border-[var(--nv-border)]/40 bg-[var(--nv-bg)] shadow-md sm:h-80 md:h-96">
+              <Image
+                src={withBasePath("/images/River%20Veins.png")}
+                alt="River Veins System Architecture"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 800px"
+              />
+            </div>
             <div className="mt-4 grid gap-6 lg:grid-cols-2">
               <div className="space-y-4 text-sm text-[var(--nv-muted)]">
                 <h3 className="text-base font-semibold text-[var(--nv-ink)]">
