@@ -34,6 +34,12 @@ const pillarsData: VisionPillar[] = [
                 image: "/images/ico/Digital Twin Ico.png",
             },
             {
+                year: "2025",
+                title: "Floating Wetland",
+                description: "Modular biological filtration and habitat regeneration.",
+                image: "/images/ico/Floating Wetland.png",
+            },
+            {
                 year: "2026",
                 title: "Water-cleaning Robotics",
                 description: "Autonomous purification units deployed.",
