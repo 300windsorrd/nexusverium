@@ -88,30 +88,35 @@ const comingItems = [
     description:
       "A virtual model of the Meadowlands ecosystem used to study water conditions, test restoration strategies, and visualize long-term impact before physical deployment.",
     slug: "ai-meadowlands-digital-twin",
+    image: "/images/ico/Digital%20Twin%20Ico.png",
   },
   {
     title: "Floating Wetland Expansion",
     description:
       "Next-generation floating wetland systems designed to adapt to changing water conditions and support long-term ecosystem health after prototype success.",
     slug: "floating-wetland-expansion",
+    image: "/images/ico/Floating%20Wetland.png",
   },
   {
     title: "Autonomous Cleaning Robots",
     description:
       "Targeted cleanup systems designed to remove debris and surface pollution around restoration zones and floating wetlands.",
     slug: "autonomous-cleaning-robots",
+    image: "/images/ico/Water%20Cleaning%20Robotics%20Ico.png",
   },
   {
     title: "Environmental Monitoring Drones",
     description:
       "Drones used to monitor waterways from above and at the surface, helping detect pollution, debris, and ecosystem changes.",
     slug: "environmental-monitoring-drones",
+    image: "/images/ico/Environmental%20Monitoring%20Drones%20Ico.png",
   },
   {
     title: "Advanced Sensor Networks",
     description:
       "Expanded sensor systems that continuously measure water quality, flow, and environmental conditions.",
     slug: "advanced-sensor-networks",
+    image: "/images/ico/Smart%20Sediment%20Mapping%20Ico.png",
   },
 ];
 
@@ -422,19 +427,30 @@ export default function Home() {
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--nv-muted)]">
                 What&apos;s Coming
               </p>
-              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {comingItems.map((item) => (
                   <Link
                     key={item.title}
                     href={`/research/${item.slug}`}
-                    className="rounded-[14px] border border-[var(--nv-border)]/50 bg-[var(--nv-bg)]/70 p-3 transition hover:-translate-y-0.5 hover:border-[var(--nv-border)] hover:bg-[var(--nv-bg)]"
+                    className="group flex flex-col gap-3 rounded-[14px] border border-[var(--nv-border)]/50 bg-[var(--nv-bg)]/70 p-3 transition hover:-translate-y-0.5 hover:border-[var(--nv-border)] hover:bg-[var(--nv-bg)]"
                   >
-                    <p className="text-sm font-semibold text-[var(--nv-primary-strong)]">
-                      {item.title}
-                    </p>
-                    <p className="text-xs text-[var(--nv-muted)]">
-                      {item.description}
-                    </p>
+                    <div className="relative mx-auto h-32 w-32 overflow-hidden rounded-full border border-[var(--nv-border)]/30 bg-slate-900/50 shadow-inner">
+                      <Image
+                        src={withBasePath(item.image)}
+                        alt={item.title}
+                        fill
+                        className="object-cover transition duration-500 group-hover:scale-110"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    </div>
+                    <div className="text-center">
+                      <p className="text-sm font-semibold text-[var(--nv-primary-strong)]">
+                        {item.title}
+                      </p>
+                      <p className="mt-1 text-xs text-[var(--nv-muted)]">
+                        {item.description}
+                      </p>
+                    </div>
                   </Link>
                 ))}
               </div>
