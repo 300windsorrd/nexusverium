@@ -62,25 +62,26 @@ const Slide1_Clarity = () => {
             <FadeIn>
                 <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,var(--nv-bg-glow-1)_0%,transparent_60%)] opacity-40 blur-3xl" />
                 <h2 className="text-[var(--nv-muted)] text-sm md:text-base uppercase tracking-[0.2em] mb-6">
-                    The Pitch
+                    Environmental Restoration
                 </h2>
                 <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8 bg-gradient-to-br from-[var(--nv-surface)] via-[var(--nv-ink)] to-[var(--nv-primary-strong)] bg-clip-text text-transparent drop-shadow-sm">
                     Nexus Verium
                 </h1>
                 <p className="text-xl md:text-3xl text-[var(--nv-muted)] max-w-3xl mx-auto leading-relaxed">
-                    We build <Highlight>autonomous environmental drones</Highlight> for{" "}
-                    <Highlight>government agencies</Highlight> that reduce monitoring
-                    costs by <Highlight>90%</Highlight>.
+                    By combining <Highlight>Floating Wetlands</Highlight> with <Highlight>Advanced AI</Highlight>, we are restoring the <Highlight>Hackensack & Meadowlands</Highlight> waterways to their natural pre-Industrial state.
                 </p>
+                <div className="mt-8 text-sm text-[var(--nv-muted)] italic opacity-80">
+                    Inspired by the Harbor Wetlands Project in Maryland.
+                </div>
                 <div className="mt-12 flex justify-center gap-4 text-sm font-medium text-[var(--nv-muted)]">
                     <span className="px-4 py-2 rounded-full bg-[var(--nv-surface)] border border-[var(--nv-border)]">
-                        Instant
+                        Purify
                     </span>
                     <span className="px-4 py-2 rounded-full bg-[var(--nv-surface)] border border-[var(--nv-border)]">
-                        Accurate
+                        Restore
                     </span>
                     <span className="px-4 py-2 rounded-full bg-[var(--nv-surface)] border border-[var(--nv-border)]">
-                        Scalable
+                        Monitor
                     </span>
                 </div>
             </FadeIn>
@@ -95,19 +96,17 @@ const Slide2_Problem = () => {
             <FadeIn className="max-w-5xl w-full mx-auto grid md:grid-cols-2 gap-12 items-center">
                 <div>
                     <h2 className="text-4xl md:text-5xl font-bold mb-6 text-red-500/90">
-                        The Problem is Expensive & Dangerous
+                        The "Metalands" Legacy
                     </h2>
                     <p className="text-lg text-[var(--nv-muted)] mb-6">
-                        Current water quality monitoring relies on{" "}
-                        <span className="text-[var(--nv-ink)]">manual labor</span> and{" "}
-                        <span className="text-[var(--nv-ink)]">outdated sensors</span>.
+                        The Industrial Revolution left New Jersey with the most polluted rivers in the country. Factory runoff turned the beautiful freshwater ways of Hackensack into <span className="text-[var(--nv-ink)]">toxic waste zones</span>.
                     </p>
                     <ul className="space-y-4">
                         {[
-                            "Slow response times (days to weeks)",
-                            "Dangerous conditions for workers",
-                            "High cost per sample ($500+)",
-                            "Inconsistent data",
+                            "Pollution spikes from industrial boom",
+                            "Massive factory waste runoff",
+                            "Loss of natural ecosystems",
+                            "Most polluted waters in the US",
                         ].map((item, i) => (
                             <li
                                 key={i}
@@ -125,10 +124,13 @@ const Slide2_Problem = () => {
                     </div>
                     <div className="text-center">
                         <h3 className="text-2xl font-bold text-[var(--nv-ink)] mb-2">
-                            $4.2 Billion
+                            Critical
                         </h3>
                         <p className="text-sm text-[var(--nv-muted)]">
-                            Wasted annually on inefficient monitoring
+                            Urgent need for restoration
+                        </p>
+                        <p className="text-xs text-[var(--nv-muted)] mt-2 opacity-60">
+                            Hackensack / Meadowlands
                         </p>
                     </div>
                 </div>
@@ -145,33 +147,41 @@ const Slide3_Solution = () => {
                 <h2 className="text-[var(--nv-primary)] text-sm uppercase tracking-widest mb-6">
                     The Solution
                 </h2>
-                <h3 className="text-4xl md:text-6xl font-bold mb-12">
-                    Autonomous. Continuous. Actionable.
+                <h3 className="text-3xl md:text-5xl font-bold mb-12">
+                    Floating Wetlands + AI
                 </h3>
 
-                <div className="grid md:grid-cols-3 gap-6">
+                <p className="text-xl text-[var(--nv-muted)] max-w-3xl mx-auto mb-12">
+                    We are creating floating wetlands to <b>purify water</b> and <b>bring back the natural ecosystem</b>, powered by AI for comprehensive management.
+                </p>
+
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {[
                         {
-                            title: "Deploy",
-                            desc: "One-touch deployment of autonomous swam units.",
+                            title: "AI Monitoring",
+                            desc: "Continuous, autonomous water quality tracking.",
                         },
                         {
-                            title: "Monitor",
-                            desc: "Real-time AI analysis of 50+ water parameters.",
+                            title: "AI Cleaning",
+                            desc: "Active purification and debris management.",
                         },
                         {
-                            title: "Resolve",
-                            desc: "Instant alerts and automated containment.",
+                            title: "AI Reporting",
+                            desc: "Automated data analysis and compliance reporting.",
+                        },
+                        {
+                            title: "AI Research",
+                            desc: "Actively researching new ways to restore water.",
                         },
                     ].map((card, i) => (
                         <div
                             key={i}
-                            className="glass-surface p-8 rounded-2xl border border-[var(--nv-border)] hover:border-[var(--nv-primary)] transition-colors duration-300"
+                            className="glass-surface p-6 rounded-2xl border border-[var(--nv-border)] hover:border-[var(--nv-primary)] transition-colors duration-300"
                         >
-                            <div className="w-12 h-12 rounded-full bg-[var(--nv-bg-glow-2)] flex items-center justify-center text-[var(--nv-primary-strong)] font-bold text-xl mb-6 mx-auto">
+                            <div className="w-10 h-10 rounded-full bg-[var(--nv-bg-glow-2)] flex items-center justify-center text-[var(--nv-primary-strong)] font-bold text-lg mb-4 mx-auto">
                                 {i + 1}
                             </div>
-                            <h4 className="text-xl font-bold mb-3">{card.title}</h4>
+                            <h4 className="text-lg font-bold mb-2">{card.title}</h4>
                             <p className="text-[var(--nv-muted)] text-sm">{card.desc}</p>
                         </div>
                     ))}
@@ -192,13 +202,12 @@ const Slide4_Wedge = () => {
                 <div className="flex flex-col md:flex-row gap-4 items-stretch justify-center">
                     <div className="flex-1 p-8 rounded-2xl bg-[var(--nv-surface)] border border-[var(--nv-border)] relative overflow-hidden group">
                         <div className="absolute top-0 left-0 w-1 h-full bg-[var(--nv-primary-strong)]" />
-                        <h3 className="text-2xl font-bold mb-2">Step 1: Ports</h3>
+                        <h3 className="text-2xl font-bold mb-2">Step 1: Meadowlands</h3>
                         <p className="text-[var(--nv-muted)] mb-4 font-mono text-xs uppercase tracking-wider">
-                            High Pain • High Value
+                            Proof of Concept
                         </p>
                         <p className="text-sm opacity-80">
-                            Target major shipping ports requiring mandatory 24/7 compliance
-                            monitoring.
+                            Deploy initial floating wetlands in the Hackensack River to demonstrate rapid water purification.
                         </p>
                     </div>
                     <div className="hidden md:flex items-center text-[var(--nv-muted)]">
@@ -206,13 +215,13 @@ const Slide4_Wedge = () => {
                     </div>
                     <div className="flex-1 p-8 rounded-2xl bg-[var(--nv-surface)]/50 border border-[var(--nv-border)]/50 group hover:bg-[var(--nv-surface)] transition-all">
                         <h3 className="text-2xl font-bold mb-2 opacity-60 group-hover:opacity-100">
-                            Step 2: Municipal
+                            Step 2: Industrial
                         </h3>
                         <p className="text-[var(--nv-muted)] mb-4 font-mono text-xs uppercase tracking-wider">
-                            Scale • Stability
+                            Expansion
                         </p>
                         <p className="text-sm opacity-60 group-hover:opacity-100">
-                            Expand to city water supplies using data validation from ports.
+                            Target heavily polluted industrial zones and urban waterways nationwide.
                         </p>
                     </div>
                     <div className="hidden md:flex items-center text-[var(--nv-muted)]">
@@ -223,10 +232,10 @@ const Slide4_Wedge = () => {
                             Step 3: Global
                         </h3>
                         <p className="text-[var(--nv-muted)] mb-4 font-mono text-xs uppercase tracking-wider">
-                            Standard • Network
+                            Standard
                         </p>
                         <p className="text-sm opacity-60 group-hover:opacity-100">
-                            Become the global standard for environmental data exchange.
+                            Establish Nexus Verium wetlands as the global standard for ecosystem restoration.
                         </p>
                     </div>
                 </div>
@@ -243,29 +252,27 @@ const Slide5_Differentiation = () => {
                 <h2 className="text-4xl font-bold mb-16">Why We Win</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="p-8 text-left border-l-2 border-[var(--nv-primary)] pl-6">
-                        <h3 className="text-xl font-bold mb-2">Proprietary AI Sensor</h3>
+                        <h3 className="text-xl font-bold mb-2">Nature + Technology</h3>
                         <p className="text-[var(--nv-muted)]">
-                            Patented optical sensor array that detects pollutants 10x faster
-                            than chemlabs.
+                            The only solution combining biological wetland restoration with advanced AI monitoring.
                         </p>
                     </div>
                     <div className="p-8 text-left border-l-2 border-[var(--nv-ink)]/20 pl-6">
-                        <h3 className="text-xl font-bold mb-2">Swarm Autonomy</h3>
+                        <h3 className="text-xl font-bold mb-2">Active Cleaning</h3>
                         <p className="text-[var(--nv-muted)]">
-                            Full mesh network capability allowing large-area coverage without
-                            pilots.
+                            We don't just monitor pollution; we actively remove it through bio-filtration.
                         </p>
                     </div>
                     <div className="p-8 text-left border-l-2 border-[var(--nv-ink)]/20 pl-6">
-                        <h3 className="text-xl font-bold mb-2">Data Moat</h3>
+                        <h3 className="text-xl font-bold mb-2">Ecosystem First</h3>
                         <p className="text-[var(--nv-muted)]">
-                            First-mover advantage in collecting labeled toxicological datasets.
+                            Focus on restoring the entire food chain, not just chemical balance.
                         </p>
                     </div>
                     <div className="p-8 text-left border-l-2 border-[var(--nv-ink)]/20 pl-6">
-                        <h3 className="text-xl font-bold mb-2">Hardware Agnostic</h3>
+                        <h3 className="text-xl font-bold mb-2">Research Driven</h3>
                         <p className="text-[var(--nv-muted)]">
-                            Software runs on 3rd party hulls, reducing hardware dependency.
+                            Continuous AI analysis creates a feedback loop for better restoration techniques.
                         </p>
                     </div>
                 </div>
