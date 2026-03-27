@@ -1,0 +1,13 @@
+<svg width="760" height="180" viewBox="0 0 760 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M70 76H116C124.837 76 132 83.1634 132 92V93H70V76Z" fill="#F7A033"/>
+  <path d="M73 75C69.0954 49.8125 82.5352 28.4404 105.456 14.3632C93.7488 30.2015 93.8539 44.4516 112.309 57.6734C123.173 65.4604 129.377 78.7924 128.6 93H112.667C114.318 82.588 110.796 73.7482 102.112 67.077C90.8424 58.4178 81.8325 48.1548 84.0926 31.9504C73.8026 44.9992 69.4953 58.9905 73 75Z" fill="#F7A033"/>
+  <path d="M70 96H140V109C140 112.314 137.314 115 134 115H70V96Z" fill="#8C45BF"/>
+  <path d="M70 98H140" stroke="#350455" stroke-width="2"/>
+  <path d="M70 117H129V130C129 133.314 126.314 136 123 136H70V117Z" fill="#7B35B3"/>
+  <path d="M70 119H129" stroke="#280343" stroke-width="2"/>
+  <path d="M70 138H107V151C107 154.314 104.314 157 101 157H70V138Z" fill="#67269E"/>
+  <path d="M70 140H107" stroke="#1E022F" stroke-width="2"/>
+  <path d="M107 138H124L114 151H107V138Z" fill="#67269E"/>
+  <text x="155" y="98" fill="#4F1D7A" font-family="Georgia, 'Times New Roman', serif" font-size="94" letter-spacing="-2">Bergen</text>
+  <text x="158" y="138" fill="#4F1D7A" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700" letter-spacing="1.6">COMMUNITY COLLEGE</text>
+</svg>

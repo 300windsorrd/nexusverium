@@ -12,6 +12,19 @@ interface HeaderProps {
   searchItems: SearchItem[];
 }
 
+function BCCLogo() {
+  return (
+    <Image
+      src={withBasePath("/bcc-logo.svg")}
+      alt="Bergen Community College logo"
+      width={190}
+      height={45}
+      sizes="190px"
+      className="h-9 w-auto shrink-0 sm:h-10"
+    />
+  );
+}
+
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/team", label: "Team" },
@@ -59,7 +72,7 @@ export function Header({ searchItems }: HeaderProps) {
       className={`glass-surface fixed top-0 left-0 w-full z-50 ${currentPath === "/" ? "!border-b-0" : "border-b border-[var(--nv-border)]/60"
         } bg-[var(--nv-surface)]/80 backdrop-blur-md shadow-[var(--nv-card-shadow)]`}
     >
-      <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:gap-6">
+      <div className="mx-auto flex max-w-[1380px] flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:gap-6 lg:px-6">
         <Link href="/" className="flex items-start gap-2">
           <Image
             src={withBasePath("/Logo.png")}
@@ -79,7 +92,7 @@ export function Header({ searchItems }: HeaderProps) {
           </div>
         </Link>
         <div className="flex w-full flex-row items-center gap-3 sm:ml-auto sm:gap-4">
-          <div className="relative w-full flex-1 max-w-full sm:max-w-[460px]">
+          <div className="relative w-full flex-1 max-w-full sm:max-w-[560px] lg:max-w-[640px]">
             <label className="sr-only" htmlFor="site-search">
               Search Nexus Verium
             </label>
@@ -148,8 +161,8 @@ export function Header({ searchItems }: HeaderProps) {
               </button>
             </div>
           </div>
-          <div className="hidden items-center gap-3 min-[1000px]:ml-auto min-[1000px]:flex">
-            <nav className="flex items-center gap-4">
+          <div className="hidden items-center gap-2 min-[1000px]:ml-auto min-[1000px]:flex xl:gap-3">
+            <nav className="flex items-center gap-2 xl:gap-3">
               {navLinks.map((item) => {
                 const active = currentPath === normalizePath(item.href);
                 return (
@@ -167,6 +180,7 @@ export function Header({ searchItems }: HeaderProps) {
               })}
             </nav>
             <ThemeToggle />
+            <BCCLogo />
           </div>
         </div>
       </div>
@@ -192,8 +206,9 @@ export function Header({ searchItems }: HeaderProps) {
               })}
             </nav>
             <div className="px-4 py-3">
-              <div className="flex justify-end">
+              <div className="flex items-center justify-end gap-3">
                 <ThemeToggle />
+                <BCCLogo />
               </div>
             </div>
           </div>
