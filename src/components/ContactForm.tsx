@@ -143,15 +143,7 @@ export function ContactForm() {
       return;
     }
 
-    const payload = {
-      name,
-      email,
-      phone,
-      company,
-      message,
-      honeypot: "",
-      captchaToken: "",
-    };
+
 
     setIsSubmitting(true);
     setResponseState(null);
@@ -199,7 +191,7 @@ export function ContactForm() {
           Want to talk?
         </div>
         <p className="text-base leading-relaxed text-[var(--nv-ink)]">
-Tell us about your project and we'll get in touch.        </p>
+Tell us about your project and we&apos;ll get in touch.        </p>
         <div className="input-grid grid gap-4 md:grid-cols-2">
           <label className="input-row flex flex-col gap-2 text-sm text-[var(--nv-muted)]">
             Name

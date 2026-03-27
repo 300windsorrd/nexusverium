@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
-import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import { motion, useScroll, useInView } from "framer-motion";
 
 // --- Shared Components ---
 
@@ -96,7 +96,7 @@ const Slide2_Problem = () => {
             <FadeIn className="max-w-5xl w-full mx-auto grid md:grid-cols-2 gap-12 items-center">
                 <div>
                     <h2 className="text-4xl md:text-5xl font-bold mb-6 text-red-500/90">
-                        The "Metalands" Legacy
+                        The &quot;Metalands&quot; Legacy
                     </h2>
                     <p className="text-lg text-[var(--nv-muted)] mb-6">
                         The Industrial Revolution left New Jersey with the most polluted rivers in the country. Factory runoff turned the beautiful freshwater ways of Hackensack into <span className="text-[var(--nv-ink)]">toxic waste zones</span>.
@@ -260,7 +260,7 @@ const Slide5_Differentiation = () => {
                     <div className="p-8 text-left border-l-2 border-[var(--nv-ink)]/20 pl-6">
                         <h3 className="text-xl font-bold mb-2">Active Cleaning</h3>
                         <p className="text-[var(--nv-muted)]">
-                            We don't just monitor pollution; we actively remove it through bio-filtration.
+                            We don&apos;t just monitor pollution; we actively remove it through bio-filtration.
                         </p>
                     </div>
                     <div className="p-8 text-left border-l-2 border-[var(--nv-ink)]/20 pl-6">

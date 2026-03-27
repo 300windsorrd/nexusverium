@@ -1,0 +1,20 @@
+
+> nexus-verium@0.1.0 dev
+> next dev
+
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.162.51.240:3000
+- Environments: .env.local
+
+✓ Starting...
+
+  We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+  The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+  	- include was updated to add '.next/dev/dev/types/**/*.ts'
+
+✓ Ready in 3.9s
+✓ Finished writing to filesystem cache in 21.2s
+✓ Finished writing to filesystem cache in 20.2s
+✓ Finished writing to filesystem cache in 23.7s

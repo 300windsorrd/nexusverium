@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 import Image from "next/image";
 import { withBasePath } from "@/lib/paths";
 
@@ -268,7 +268,6 @@ function PillarSection({
                         node={node}
                         theme={theme}
                         isEven={nodeIndex % 2 === 0}
-                        pillarIndex={index}
                     />
                 ))}
             </div>
@@ -280,12 +279,10 @@ function TimelineNode({
     node,
     theme,
     isEven,
-    pillarIndex,
 }: {
     node: VisionNode;
-    theme: any;
+    theme: Record<string, string>;
     isEven: boolean;
-    pillarIndex: number;
 }) {
     // Mobile: all nodes align left (w/ line on left). Desktop: alternates (left/right).
     // Actually, for a single central line, desktop usually alternates left/right.
@@ -320,7 +317,7 @@ function TimelineNode({
                     whileInView={{
                         scale: 1.05,
                         boxShadow: `0 0 30px ${theme.shadowColor}`,
-                        backgroundColor: "var(--nv-surface-active, rgba(15, 23, 42, 0.6))", // subtle bg shift
+                        backgroundColor: "rgba(192, 192, 192, 0.15)", // Silver light effect
                         borderColor: "rgba(255,255,255,0.15)"
                     }}
                     viewport={{ margin: "-40% 0px -40% 0px" }}
